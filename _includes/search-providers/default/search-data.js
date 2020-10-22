@@ -1,4 +1,3 @@
-console.log(1120);
 window.TEXT_SEARCH_DATA={
   {%- for _collection in site.collections -%}
     {%- unless forloop.first -%},{%- endunless -%}
