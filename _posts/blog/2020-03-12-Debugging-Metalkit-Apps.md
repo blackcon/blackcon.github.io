@@ -1,7 +1,7 @@
 ---
 title: "vmware의 metalkit 프로그램 디버깅"
 date: 2021-03-12 19:55:00 +0900
-categories: vmware SVGA
+categories: vmware SVGA blog
 ---
 
 Debugging Metalkit Apps
