@@ -1,7 +1,7 @@
 ---
 title: "VMware SVGA 장치 인터페이스 및 프로그래밍 모델"
 date: 2021-03-12 11:55:00 +0900
-categories: vmware SVGA
+categories: vmware SVGA blog
 ---
 
 본 게시글은 vmware에서 제공하는 [vmware-svga](https://github.com/prepare/vmware-svga/blob/master/doc/svga_interface.txt)의 내용입니다.
