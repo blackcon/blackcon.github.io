@@ -51,8 +51,11 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : /feed.xml # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
+  
+# 블로그 검색기능 설정
+search                   : true # true로 해야 활성화됨
+search_full_content      : true # 내용까지 검색되게 하려면 true
+
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
