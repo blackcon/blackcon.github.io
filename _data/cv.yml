@@ -79,12 +79,9 @@ career:
 
 technicalSkills:
   list:
-    - tr: "Impulsive, creative and very social"
-    - tr: "Heart and soul of the Ninja Turtles"
-    - tr: "Master of the Kusarigama and nunchucks"
-    - tr: "Labeled as 'The Wild One' and 'The Party Dude'"
-    - tr: "First of the turtles to taste pizza"
-    - tr: "Very proud of his talent for naming thing"
+    - tr: "Reverse Engineering"
+    - tr: "Exploit"
+    - tr: "Virtualization (kids level)"
     
   pentest:
    - name: Web Service 
