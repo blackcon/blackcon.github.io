@@ -4,7 +4,7 @@ projectUrl: jekyl-cv-crafter
 # leave blank fields which you don't want to fill/be displayed
 person:
   name: Jihwan Yoon
-  depiction: headshot.png
+  depiction: 윤지환 Yoon Jihwan_3.jpg
   profession: Security Researcher, Penetration tester
   location: Seongnam-si, South Korea
   citizenship: South Korea
@@ -61,6 +61,7 @@ technicalSkills:
     - tr: "Labeled as 'The Wild One' and 'The Party Dude'"
     - tr: "First of the turtles to taste pizza"
     - tr: "Very proud of his talent for naming thing"
+    
   Pentration Test:
    - name: Web Service 
      level: 90
@@ -70,6 +71,7 @@ technicalSkills:
      level: 80
    - name: Rebuilding Network Packets
      level: 80
+     
   Analysis:
    - name: User Application (Windows,Linux / x64,x86)
      level: 90
@@ -79,6 +81,7 @@ technicalSkills:
      level: 85
    - name: Application on other platforms (ARM, MIPS)
      level: 85
+     
   Language:
    - name: Python
      level: 90
