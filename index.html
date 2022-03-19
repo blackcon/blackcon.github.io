@@ -140,22 +140,32 @@
       </div>
       <div class="col-xs-9">
         <div class="row">
+          
          <div class="col-xs-4">
-
-           <h4 class="techSkillHeader"><i class="fa fa-terminal"></i> Backend</h4>
-            {% for item in site.data.cv.technicalSkills.backend %} {{item.name}}
+           <h4 class="techSkillHeader"><i class="fa fa-terminal"></i> Analysis</h4>
+            {% for item in site.data.cv.technicalSkills.analysis %} {{item.name}}
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
           </div>
           {% endfor %}
         </div>
+          
         <div class="col-xs-4">
-          <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> {% for item in site.data.cv.technicalSkills.frontend %} {{item.name}}
+          <h4 class="techSkillHeader"><i class="fa fa-code"></i> Penetration Test</h4> {% for item in site.data.cv.technicalSkills.pentest %} {{item.name}}
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
           </div>
           {% endfor %}
         </div>
+          
+        <div class="col-xs-4">
+          <h4 class="techSkillHeader"><i class="fa fa-code"></i> Languages </h4> {% for item in site.data.cv.technicalSkills.language %} {{item.name}}
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
+          </div>
+          {% endfor %}
+        </div>
+          
         <div class="col-xs-4">
           <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Other</h4> {% for item in site.data.cv.technicalSkills.other %} {{item.name}}
           <div class="progress">
