@@ -11,8 +11,8 @@ person:
   email: 131ackcon@gmail.com
   site: https://blackcon.github.io
   phone: +82-10-2172-8008
-  github: https://github.com/blackcon/
-  linkedin: https://www.linkedin.com/in/jihwan-yoon-844b9a80/
+  github: /blackcon
+  linkedin: /jihwan-yoon-844b9a80
 
 career:
  - position: Security Analyst
@@ -91,17 +91,30 @@ technicalSkills:
      level: 70
 
 sideProjects:
-  - name: jekyll-clean-dark
-    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
-    link: https://github.com/streetturtle/jekyll-clean-dark
+  - name: GPU Keylogger
+    description: It is a keylogger's poc code running in gpu memory.
+    link: https://github.com/blackcon/gpu-keylogger
     type: github
-    langs: HTML/CSS/Bootstrap
+    langs: C/Cuda
 
-  - name: number-writing-trainer
-    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as well as to practice AngularJS.
-    link: http://pavelmakhov.com/number-writing-trainer/#/
-    type: site
-    langs: AngularJS/HTML/CSS/Bootstrap
+  - name: vmware-rpc-tools
+    description: This tool(rpc-sniffer.py) was made for easy viewing of data between Host and Guest on VMWARE.
+    link: https://github.com/blackcon/vmware-rpc-tools
+    type: github
+    langs: Python
+    
+  - name: Call Driver on windows
+    description: This module connects to the loaded driver on Windows10
+    link: https://github.com/blackcon/call-driver
+    type: github
+    langs: C++/C
+    
+    
+  - name: HVFUZZER ( In progress..)
+    description: The Fuzzer for discover vulnerability of Hyper-v on Windows 10
+    link: https://github.com/blackcon/HVFUZZ
+    type: github
+    langs: C++/C
 
 education:
   - name: Pukyong National University
