@@ -23,10 +23,36 @@ career:
    accomplishments:
     - accomplishment: Mikey is the most agile of all his brothers; his training as a ninja helped to balance and improve this, but his skills in skateboarding and dancing also gives Mikey an edge that will often shock his brothers. Mikey is an extremely good fighter. He's got a great knowledge with ninjutsu, which is why he is a good fighter. He may have the most raw talent of the four, but he does not seem to have the skill to develop it.
     - accomplishment: He refers to himself as the king of pranks. Since he the most funniest of his brothers and he hasn't shown to be wrong since he was able to show his pranking skills against his brothers like water balloons as he wants to prank them all and he was able to use his prank of water ballon to use against the tank of the truck.
-    - list:
-        - tr: "blak1"
-        - tr: "blak2"
-      
+        
+ - position: Security Analyst
+   company: NAVER BUSINESS PLATFORM
+   location: South Korea
+   dates: March 2016 - September 2020
+   summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   accomplishments:
+    - accomplishment: Mikey is the most agile of all his brothers; his training as a ninja helped to balance and improve this, but his skills in skateboarding and dancing also gives Mikey an edge that will often shock his brothers. Mikey is an extremely good fighter. He's got a great knowledge with ninjutsu, which is why he is a good fighter. He may have the most raw talent of the four, but he does not seem to have the skill to develop it.
+    - accomplishment: He refers to himself as the king of pranks. Since he the most funniest of his brothers and he hasn't shown to be wrong since he was able to show his pranking skills against his brothers like water balloons as he wants to prank them all and he was able to use his prank of water ballon to use against the tank of the truck.
+
+ - position: Security Analyst (Intern)
+   company: NAVER BUSINESS PLATFORM
+   location: South Korea
+   dates: Dec 2015 - Feb 2016
+   summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   accomplishments:
+    - accomplishment: Mikey is the most agile of all his brothers; his training as a ninja helped to balance and improve this, but his skills in skateboarding and dancing also gives Mikey an edge that will often shock his brothers. Mikey is an extremely good fighter. He's got a great knowledge with ninjutsu, which is why he is a good fighter. He may have the most raw talent of the four, but he does not seem to have the skill to develop it.
+    - accomplishment: He refers to himself as the king of pranks. Since he the most funniest of his brothers and he hasn't shown to be wrong since he was able to show his pranking skills against his brothers like water balloons as he wants to prank them all and he was able to use his prank of water ballon to use against the tank of the truck.
+
+
+ - position: Security Research as a student
+   company: Best Of Best 3rd (KITRI)
+   location: South Korea
+   dates: Jul 2014 - Feb 2015
+   summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   accomplishments:
+    - accomplishment: Mikey is the most agile of all his brothers; his training as a ninja helped to balance and improve this, but his skills in skateboarding and dancing also gives Mikey an edge that will often shock his brothers. Mikey is an extremely good fighter. He's got a great knowledge with ninjutsu, which is why he is a good fighter. He may have the most raw talent of the four, but he does not seem to have the skill to develop it.
+    - accomplishment: He refers to himself as the king of pranks. Since he the most funniest of his brothers and he hasn't shown to be wrong since he was able to show his pranking skills against his brothers like water balloons as he wants to prank them all and he was able to use his prank of water ballon to use against the tank of the truck.
+
+
 technicalSkills:
   list:
     - tr: "Impulsive, creative and very social"
@@ -35,21 +61,31 @@ technicalSkills:
     - tr: "Labeled as 'The Wild One' and 'The Party Dude'"
     - tr: "First of the turtles to taste pizza"
     - tr: "Very proud of his talent for naming thing"
-  backend:
-   - name: Ninjutsu
+  Pentration Test:
+   - name: Web Service 
      level: 90
-   - name: Kusarigama
+   - name: Linux/Windows Service
      level: 80
-  frontend:
-   - name: Cooking Skills
+   - name: Android Service
      level: 80
-   - name: Pranks
+   - name: Rebuilding Network Packets
+     level: 80
+  Analysis:
+   - name: User Application (Windows,Linux / x64,x86)
      level: 90
-  other:
-   - name: Shadow Puppet Skill
+   - name: Kernel Application (Windows,Linux / x64,x86)
+     level: 70
+   - name: Android Application (SDK, NDK)
+     level: 85
+   - name: Application on other platforms (ARM, MIPS)
+     level: 85
+  Language:
+   - name: Python
      level: 90
-   - name: Teaching
-     level: 100
+   - name: C/C++
+     level: 70
+   - name: Java Script
+     level: 70
 
 sideProjects:
   - name: jekyll-clean-dark
@@ -65,8 +101,8 @@ sideProjects:
     langs: AngularJS/HTML/CSS/Bootstrap
 
 education:
-  - name: Master Splinter Academy
-    degree: Mutant Red-Eared Slider
-    location: sewers of New York City
-    dates: 2007 – 2012
-    link: http://tmnt2012series.wikia.com/
+  - name: Pukyong National University
+    degree: Computer Engineering Bachelor
+    location: Busan of South Korea
+    dates: 2010 – 2016
+    link: https://en.wikipedia.org/wiki/Pukyong_National_University
