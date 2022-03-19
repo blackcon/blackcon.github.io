@@ -102,6 +102,7 @@
             <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
             </div>
+            {% endfor %}
             
             <!--            <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Other</h4> -->
             {% for item in site.data.cv.technicalSkills.other %} {{item.name}}
