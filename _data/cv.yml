@@ -21,13 +21,18 @@ career:
    dates: September 2020 - current
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
    pentests:
-    - pentests: Penetration testing to NAVER SERVICES
+    - pentests: Web Service
+    - pentests: Mobile Service (Android, Webapp)
+    - pentests: Application Service (PC)
+    - pentests: Cloud Platform
    researches:
-    - research: Penetration testing to NAVER SERVICES
+    - research: Discover vulnerabilities on Hypervisor(Hyper-v)
+    - research: Vulnerability research that can occur on machine learning platforms
    develops:
-    - develop: Penetration testing to NAVER SERVICES
+    - develop: Web Security Checker for Cloud Service (2018 ~ )
+    - develop: Hyper-v FUZZER (2022)
    others:
-    - other: Penetration testing to NAVER SERVICES
+    - other: Support for penetration testing to customer service
 
  - position: Security Analyst
    company: NAVER BUSINESS PLATFORM
@@ -35,41 +40,41 @@ career:
    dates: March 2016 - September 2020
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
    pentests:
-    - pentests: Penetration testing to NAVER SERVICES
+    - pentests: Web Service
+    - pentests: Mobile Service (Android, Webapp)
+    - pentests: Application Service (PC)
+    - pentests: Cloud Platform
    researches:
-    - research: Penetration testing to NAVER SERVICES
+    - research: Hooking for android sdk (2016)
+    - research: Prevention and detection of server security incidents (2017)
+    - research: Research about Anti Exploit  (2017)
+    - research: Detect ransomware on Linux (2018)
+    - research: Architecture of Hypervisor (2019)
    develops:
-    - develop: Penetration testing to NAVER SERVICES
+    - develop: Web Security Checker for Cloud Service (crawler, web scan module .. )
    others:
-    - other: Penetration testing to NAVER SERVICES
+    - other: Discover 0-day CITRIX Netscaler (2018)
+    - other: Patent application - Method, apparatus and computer program for processing URL collected in web site (2019)
+    - other: Patent application - Method, apparatus and computer program for collecting URL in web page (2019)
+    - other: Patent application - Appratus and method for degermining types of Uniform Resource Locator (2019)
+    - other: Patent application - Method, apparatus and computer program for diagnosing SQL injection vulnerability (2020)
 
  - position: Security Analyst (Intern)
    company: NAVER BUSINESS PLATFORM
    location: South Korea
    dates: Dec 2015 - Feb 2016
-   #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   pentests:
-    - pentests: Penetration testing to NAVER SERVICES
-   researches:
-    - research: Penetration testing to NAVER SERVICES
-   develops:
-    - develop: Penetration testing to NAVER SERVICES
-   others:
-    - other: Penetration testing to NAVER SERVICES
+   summary: Carry out the mission to be hired as a full-time employee.
 
  - position: Security Research as a student
    company: Best Of Best 3rd (KITRI)
    location: South Korea
    dates: Jul 2014 - Feb 2015
-   summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   pentests:
-    - pentests: Penetration testing to NAVER SERVICES
-   researches:
-    - research: Penetration testing to NAVER SERVICES
-   develops:
-    - develop: Penetration testing to NAVER SERVICES
-   others:
-    - other: Penetration testing to NAVER SERVICES
+   summary: I did Project about "investigating POS(VAN) Vulnerability" as Project Manager and Researcher.
+   <br> Find some vulnerabilities of POS(VAN)
+<br> Connect remote DB of POS
+<br> Remote command execute of POS
+<br> Leak Credit Info
+<br> - Packet reply to pay with any credit card ...
 
 technicalSkills:
   list:
