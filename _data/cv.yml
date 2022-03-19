@@ -21,10 +21,10 @@ career:
    dates: September 2020 - current
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
    pentests:
-    - pentests: Web Service
-    - pentests: Mobile Service (Android, Webapp)
-    - pentests: Application Service (PC)
-    - pentests: Cloud Platform
+    - pentest: Web Service
+    - pentest: Mobile Service (Android, Webapp)
+    - pentest: Application Service (PC)
+    - pentest: Cloud Platform
    researches:
     - research: Discover vulnerabilities on Hypervisor(Hyper-v)
     - research: Vulnerability research that can occur on machine learning platforms
@@ -40,10 +40,10 @@ career:
    dates: March 2016 - September 2020
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
    pentests:
-    - pentests: Web Service
-    - pentests: Mobile Service (Android, Webapp)
-    - pentests: Application Service (PC)
-    - pentests: Cloud Platform
+    - pentest: Web Service
+    - pentest: Mobile Service (Android, Webapp)
+    - pentest: Application Service (PC)
+    - pentest: Cloud Platform
    researches:
     - research: Hooking for android sdk (2016)
     - research: Prevention and detection of server security incidents (2017)
