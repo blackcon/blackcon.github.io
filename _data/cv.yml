@@ -62,7 +62,7 @@ technicalSkills:
     - tr: "First of the turtles to taste pizza"
     - tr: "Very proud of his talent for naming thing"
     
-  Pentration Test:
+  pentest:
    - name: Web Service 
      level: 90
    - name: Linux/Windows Service
@@ -72,7 +72,7 @@ technicalSkills:
    - name: Rebuilding Network Packets
      level: 80
      
-  Analysis:
+  analysis:
    - name: User Application (Windows,Linux / x64,x86)
      level: 90
    - name: Kernel Application (Windows,Linux / x64,x86)
@@ -82,7 +82,7 @@ technicalSkills:
    - name: Application on other platforms (ARM, MIPS)
      level: 85
      
-  Language:
+  language:
    - name: Python
      level: 90
    - name: C/C++
