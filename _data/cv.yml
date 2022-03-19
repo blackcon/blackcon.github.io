@@ -20,41 +20,56 @@ career:
    location: South Korea
    dates: September 2020 - current
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   accomplishments:
-    - accomplishment: Penetration testing to NAVER SERVICES
-    - accomplishment: Research
-    - accomplishment: Develop
-    - accomplishment: Other
-    
+   pentests:
+    - pentests: Penetration testing to NAVER SERVICES
+   researches:
+    - research: Penetration testing to NAVER SERVICES
+   develops:
+    - develop: Penetration testing to NAVER SERVICES
+   others:
+    - other: Penetration testing to NAVER SERVICES
+
  - position: Security Analyst
    company: NAVER BUSINESS PLATFORM
    location: South Korea
    dates: March 2016 - September 2020
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   accomplishments:
-    - accomplishment: Penetration testing to NAVER SERVICES
-    - accomplishment: Research
-    - accomplishment: Develop
-    - accomplishment: Other
-    
+   pentests:
+    - pentests: Penetration testing to NAVER SERVICES
+   researches:
+    - research: Penetration testing to NAVER SERVICES
+   develops:
+    - develop: Penetration testing to NAVER SERVICES
+   others:
+    - other: Penetration testing to NAVER SERVICES
+
  - position: Security Analyst (Intern)
    company: NAVER BUSINESS PLATFORM
    location: South Korea
    dates: Dec 2015 - Feb 2016
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   accomplishments:
-    - accomplishment: Penetration testing to NAVER SERVICES
-    - accomplishment: Research
-    - accomplishment: Develop
-    - accomplishment: Other
+   pentests:
+    - pentests: Penetration testing to NAVER SERVICES
+   researches:
+    - research: Penetration testing to NAVER SERVICES
+   develops:
+    - develop: Penetration testing to NAVER SERVICES
+   others:
+    - other: Penetration testing to NAVER SERVICES
 
  - position: Security Research as a student
    company: Best Of Best 3rd (KITRI)
    location: South Korea
    dates: Jul 2014 - Feb 2015
    summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
-   accomplishments:
-    - accomplishment: Penetration testing to NAVER SERVICES
+   pentests:
+    - pentests: Penetration testing to NAVER SERVICES
+   researches:
+    - research: Penetration testing to NAVER SERVICES
+   develops:
+    - develop: Penetration testing to NAVER SERVICES
+   others:
+    - other: Penetration testing to NAVER SERVICES
 
 technicalSkills:
   list:
