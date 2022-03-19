@@ -118,16 +118,33 @@
           <div class="row">
             <div class="col-xs-12">
 
-           {% if item.accomplishments.size > 0 %}
-            <b>Accomplishments:</b>
+           {% if item.pentests.size > 0 %}
+            <b>Penteration Test:</b>
            {% endif %}
             <ul>
-            {% for itemm in item.accomplishments %}
-              <li>{{itemm.accomplishment}}</li>
+            {% for itemm in item.pentests %}
+              <li>{{itemm.pentest}}</li>
+            {% endfor %}
+            </ul>
+              
+           {% if item.researches.size > 0 %}
+            <b>Researches:</b>
+           {% endif %}
+            <ul>
+            {% for itemm in item.researches %}
+              <li>{{itemm.research}}</li>
+            {% endfor %}
+            </ul>
+              
+            {% if item.develops.size > 0 %}
+            <b>Develops:</b>
+           {% endif %}
+            <ul>
+            {% for itemm in item.develops %}
+              <li>{{itemm.develop}}</li>
             {% endfor %}
             </ul>
           </div>
-           </div>
         </div>
         {% endfor %}
       </div>
