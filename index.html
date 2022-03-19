@@ -115,6 +115,12 @@
               <p>{{ item.summary }}</p>
             </div>
           </div>
+            <ul>
+            {% for itemm in item.list %}
+              <li>{{itemm.tr}}</li>
+            {% endfor %}
+            </ul>
+           
           <div class="row">
             <div class="col-xs-12">
 
