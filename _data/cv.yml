@@ -70,11 +70,12 @@ career:
    location: South Korea
    dates: Jul 2014 - Feb 2015
    summary: I did Project about "investigating POS(VAN) Vulnerability" as Project Manager and Researcher.
-   <br> Find some vulnerabilities of POS(VAN)
-<br> Connect remote DB of POS
-<br> Remote command execute of POS
-<br> Leak Credit Info
-<br> - Packet reply to pay with any credit card ...
+   list:
+    - tr: Find some vulnerabilities of POS(VAN)
+    - tr: Connect remote DB of POS
+    - tr: Remote command execute of POS
+    - tr: Leak Credit Info
+    - tr:  Packet reply to pay with any credit card ...
 
 technicalSkills:
   list:
