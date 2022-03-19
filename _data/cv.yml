@@ -87,7 +87,7 @@ technicalSkills:
    - name: Web Service 
      level: 90
    - name: Linux/Windows Service
-     level: 80
+     level: 90
    - name: Android Service
      level: 80
    - name: Rebuilding Network Packets
@@ -101,7 +101,7 @@ technicalSkills:
    - name: Android Application (SDK, NDK)
      level: 85
    - name: Application on other platforms (ARM, MIPS)
-     level: 85
+     level: 65
      
   language:
    - name: Python
@@ -109,7 +109,7 @@ technicalSkills:
    - name: C/C++
      level: 70
    - name: Java Script
-     level: 70
+     level: 60
 
 sideProjects:
   - name: GPU Keylogger
