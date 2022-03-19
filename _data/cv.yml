@@ -3,17 +3,16 @@ projectUrl: jekyl-cv-crafter
 
 # leave blank fields which you don't want to fill/be displayed
 person:
-  name: Michelangelo
+  name: Jihwan Yoon
   depiction: headshot.png
-  profession: Teenage Mutant Ninja Turtle
-  location: sewers of New York City
-  citizenship: USA
-  email: mikey@tmnt.com
-  site: http://mikeystmnt.com
-  phone: +8-tmnt-mickey
-  github: /streetturtle
-  stackoverflow: /streetturtle
-  linkedin: /streetturtle
+  profession: Security Researcher, Penetration tester
+  location: Seongnam-si, South Korea
+  citizenship: South Korea
+  email: 131ackcon@gmail.com
+  site: https://blackcon.github.io
+  phone: +82-10-2172-8008
+  github: https://github.com/blackcon/
+  linkedin: https://www.linkedin.com/in/jihwan-yoon-844b9a80/
 
 career:
  - position: Foot Clan Antagonist
