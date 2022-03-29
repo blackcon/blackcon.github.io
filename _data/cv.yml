@@ -4,7 +4,7 @@ projectUrl: jekyl-cv-crafter
 # leave blank fields which you don't want to fill/be displayed
 person:
   name: Jihwan Yoon
-  depiction: image.jpg
+  depiction: image
   profession: Security Researcher, Penetration tester
   location: Seongnam-si, South Korea
   citizenship: South Korea
