@@ -16,7 +16,7 @@ person:
 
 career:
  - position: Security Analyst
-   company: NAVER CLOUD
+   company: NAVER CLOUD Corp
    location: South Korea
    dates: September 2020 - current
    #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
@@ -131,7 +131,7 @@ sideProjects:
     langs: C++/C
     
     
-  - name: HVFUZZER ( 2022, In progress..)
+  - name: HVFUZZER ( 2022 )
     description: The Fuzzer for discover vulnerability of Hyper-v on Windows 10
     link: https://github.com/blackcon/HVFUZZ
     type: github
