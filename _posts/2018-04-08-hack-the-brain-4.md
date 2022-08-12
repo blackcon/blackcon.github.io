@@ -1,5 +1,5 @@
 ---
-date: 2018-04-08 13:09:00 +0900
+date: 2018-04-08 21:09:00 +0900
 title: 4. 뇌전도(EEG)와 P300
 categories: [Research, EEGBCI]
 tags: [research, EEG, BCI, hacking]
