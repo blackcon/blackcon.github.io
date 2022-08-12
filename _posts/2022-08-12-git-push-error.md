@@ -1,5 +1,5 @@
 ---
-title: \[github\] git push 권한 오류시 해결 방법
+title: github push 권한 오류시 해결 방법
 categories: [Blogging, github]
 tags: [github, PersonalAccessToken]
 ---
@@ -37,16 +37,16 @@ github에서는 `August 13, 2021`부로 패스워드 인증 방식을 제거한�
 
 ### 1) Personal Access Token 발급
 - github 페이지에서 `Settings`를 클릭  
-    ![settings](/assets/img/posts/github_developer_settings.png)
+    ![settings](/posts/github_developer_settings.png)
 - Settings 페이지에 왔다면 좌측 하단에서 `Developer Settings` 클릭  
-    ![developer_settings](/assets/img/posts/github_developer_settings.png)
+    ![developer_settings](/posts/github_developer_settings.png)
 - `Personal Access Token` 클릭  
-    ![access_token](/assets/img/posts/github_personal_token.png)
+    ![access_token](/posts/github_personal_token.png)
 - `Generate New Token` 버튼을 클릭하여 새로운 토큰 설정하는 페이지로 이동! 
-    ![new_token](/assets/img/posts/github_generate_new_token.png)
+    ![new_token](/posts/github_generate_new_token.png)
 - 해당 토큰에 부여할 권한을 체크한 후, 페이지 하단에 있는 `Generate Token` 클릭  
-    ![generate1](/assets/img/posts/github_generate_new_token2.png)
-    ![generate2](/assets/img/posts/github_generate_new_token3.png)
+    ![generate1](/posts/github_generate_new_token2.png)
+    ![generate2](/posts/github_generate_new_token3.png)
 
 ### 2) git clone 시 Personal Access Token을 사용하여 clone하기
 -   Access key를 사용하여 clone하기
