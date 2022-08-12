@@ -1,5 +1,5 @@
-title: devlopr
-subtitle: A Portfolio Jekyll Theme Built for Developers
+title: Hello, Stranger
+subtitle: All about hack and somethings.
 description: >- # this means to ignore newlines until "baseurl:"
   devlopr-jekyll is a beautiful Jekyll Theme Built For Developers, which is optimized for speed and readability.
 
@@ -24,19 +24,19 @@ urls:
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
-author_logo: profile.png
+author_logo: profile.jpeg
 author: Jihwan Yoon
-author_bio: Hi, my name is John Doe. I built this site using devlopr-jekyll :D
+author_bio: Hi, my name is Jihwan yoon, I interested in all about hack and security. also I almost research about virtualmachines(ex. Hyper-v, vmware ...), but It is my role that I findout vulnerabilities as a pentester in the company.
 author_email: "131ackcon@gmail.com"
 author_location: South Korea
 author_website_url: "https://blackcon.tistory.com/"
-typewrite-text: devlopr is a jekyll framework built for developers. You can edit this in _config.yml file
+typewrite-text: 
 hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
 # Experiences
 author_work_experiences:
             - company_name: Naver Cloud
-              company_logo: ""
+              company_logo: https://www.navercloudcorp.com/static/images/main_logo_w.svg
               company_url: https://www.navercloudcorp.com/
               designation: Security Analyst
               description: Security Researcher and Penetration tester
@@ -45,36 +45,47 @@ author_work_experiences:
 # Education
 author_education_details:
               - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
+                college_name: Pukyong National University
+                college_url: https://en.wikipedia.org/wiki/Pukyong_National_University
                 college_degree: CS Engineer
                 description: Bachelor of Technology
-                visibility: true
+                visibility: false
 
 # Projects
 author_project_details:
               - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
+                project_title: HVFUZZER ( 2022 )
+                project_description: The Fuzzer for discover vulnerability of Hyper-v on Windows 10
+                project_url: https://github.com/blackcon/HVFUZZ
                 visibility: true
               - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
+                project_title: Call Driver on windows (2020)
+                project_description: This module connects to the loaded driver on Windows10
+                project_url: https://github.com/blackcon/call-driver
+                visibility: true
+              - project_thumbnail: hack4r.PNG
+                project_title: vmware-rpc-tools (2019)
+                project_description: This tool(rpc-sniffer.py) was made for easy viewing of data between Host and Guest on VMWARE.
+                project_url: https://github.com/blackcon/vmware-rpc-tools
+                visibility: true
+              - project_thumbnail: hack4r.PNG
+                project_title: GPU Keylogger (2015)
+                project_description: It is a keylogger's poc code running in gpu memory.
+                project_url: https://github.com/blackcon/gpu-keylogger
                 visibility: true
 
+
 # social links
-twitter_username: johndoe
-github_username:  sujaykundu777
-facebook_username: johndoe
-linkedin_username: johndoe
-behance_username: johndoe
-instagram_username: johndoe
-medium_username: johndoe
-telegram_username: johndoe
-dribbble_username: johndoe
-flickr_username: johndoe
+twitter_username: jh_blank
+github_username:  blackcon
+linkedin_username: blackcon
+#facebook_username: johndoe
+#behance_username: johndoe
+#instagram_username: johndoe
+#medium_username: johndoe
+#telegram_username: johndoe
+#dribbble_username: johndoe
+#flickr_username: johndoe
 
 #for comments ( we got Disqus and Hyvor Commenting, uncomment the one you want to use )
 
