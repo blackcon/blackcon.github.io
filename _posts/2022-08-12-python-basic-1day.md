@@ -3,11 +3,11 @@ title: Python basic day1
 categories: [programming, Python]
 tags: [python, basic, programming]
 ---
-# ToDo
+# 0\. ToDo
 - 변수 정의 (데이터 타입: string, integer, float,// list, ...)
 - 사용자 입력/출력 (input, print)
 
-# 1. 변수 정의
+# 1\. 변수 정의
 - 기본 형태
   ```python
   number1 = 1 # 기본 형태
@@ -45,7 +45,7 @@ tags: [python, basic, programming]
    ```
    
 
-# 2. 데이터 출력 (print())
+# 2\. 데이터 출력 (print())
 - 컴퓨터 화면에 데이터가 출력되는 기능
 - print 출력 방법 (여러 개)
    ```python
@@ -61,7 +61,7 @@ tags: [python, basic, programming]
   print( "'Test 1'" )
   print( "\"Test 2\"" )   # 특수문자 앞에는 역슬러시(\)를 입력해준다.
    ```
-# 3. 데이터 입력 (input())
+# 3\. 데이터 입력 (input())
 - 사용자가 컴퓨터로 입력하는것
 - 예시
    ```python
@@ -85,7 +85,7 @@ tags: [python, basic, programming]
   print( str(string) + str(string2) ) # str(): int to string
    ```
 
-# 4. 주석
+# 4\. 주석
 - 타입1
   ```python
   # 주석: python 코드에서 실행되지 않고, 개발자가 메모용 또는 설명용으로 넘기기 위한 멘트
@@ -100,6 +100,6 @@ tags: [python, basic, programming]
   '''
    ```
 
-# 5. 숙제
+# 5\. 숙제
   - 사용자한테 4개의 입력을 받고, 이 값들을 각 4개의 변수에 저장을 한다.
   - 각 변수를 출력할 때는 형태가 다른 print() 로 출력하는 코드를 짜세요

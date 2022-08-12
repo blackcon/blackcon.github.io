@@ -4,12 +4,12 @@ title: 1. 뇌를 해킹하자.
 categories: [Research, EEGBCI]
 tags: [research, EEG, BCI, hacking]
 ---
-# 1. 제목을 이렇게 해도 되나?
+# 1\. 제목을 이렇게 해도 되나?
 
 해당 글의 카테고리가 "EEG & BCI"인데, 처음 접하는 분야이다보니 카테고리 이름도 맞는지 모르겠다 (추후에 아니다싶으면 바꾸는걸로하고,,)
 
-# 2. 생각의 흐름대로 
-최근들어서 뇌파(EEG), BCI(Brain-Computer Interface)에 눈길이 가고 있다. (기반 지식이 다져진다면 brain to brain\_/\*일종의 텔레파시\*/\_도 해보고 싶은 연구하고 싶은 분야이다.)
+# 2\. 생각의 흐름대로 
+최근들어서 뇌파(EEG), BCI(Brain-Computer Interface)에 눈길이 가고 있다. (기반 지식이 다져진다면 brain to brain 도 해보고 싶은 연구하고 싶은 분야이다.)
 
 사실 해당 분야는 영화나 만화에서만 존재할법했는데, 이미 많은 연구가 이루어지고 있는듯 하다. 먼 미래에는 뇌에 칩셋을 이식하거나 헤어밴드 식으로 장비를 가지고 다니면서 생각하는데로 다른 장치를 조정하는 기술이 보편화될것인데(추측), 이 제품이 해킹된다면?...뇌를 해킹하는 엄청난 일을 초래할 수 있다.
 
@@ -24,10 +24,10 @@ tags: [research, EEG, BCI, hacking]
 
 일단 이정도를 목표로 해서 '뇌 해킹' 세계에 발을 담아본다.
 
-# 3. 엄청 어렵겠지?
+# 3\. 엄청 어렵겠지?
 해당 분야는 전문가들이 몇 년에 걸쳐서 도출해낸 기술이다. 이 대단한 것을 혼자서 이끌어나갈 수 있을지는 의문이지만c재미있는 분야이기 때문에 충분히 의미있는 일이라고 생각한다.
 
-# 4. Appendix
+# 4\. Appendix
 아래의 글&링크는 "EEG Hacker([http://eeghacker.blogspot.kr/)"](http://eeghacker.blogspot.kr/)") 블로그에서 따온 내용이다. 이 사람이 처음 시작할때 첨고했던 링크들을 공유해둔...친절한 분 :D
 
 - 원본: [eeg-hacking-begins](http://eeghacker.blogspot.kr/2013/10/eeg-hacking-begins.html)
