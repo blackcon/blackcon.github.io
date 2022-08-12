@@ -32,7 +32,6 @@ layout: page
         {{ post.date | date: df_strftime_m }}
         </span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <br><details>{{ post.summary }}</details>
     </li>
 
     {% if forloop.last %}</ul>{% endif %}
