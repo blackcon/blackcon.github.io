@@ -99,7 +99,7 @@ comments:
   # utterances settings › https://utteranc.es/
   utterances:
     repo: blackcon/blackcon.github.io        # <gh-username>/<repo>
-    issue_term: comments3  # < url | pathname | title | ...>
+    issue_term: Comment  # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo:             # <gh-username>/<repo>
