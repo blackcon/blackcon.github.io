@@ -12,51 +12,48 @@ baseurl: ''
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-# Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
-prefer_datetime_locale:
-
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: 하얀눈길 블로그                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: 반갑습니다. 하얀눈길입니다.<br> 잊어버리기 전에 기록하려 합니다.
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  검색엔진 개발자 그룹이었으나, 현재는 개인 블로그로만 운영합니다. 예전 글들은 천천히 올려보려 합니다. 개발자로서 새롭게 알게된 것이나, 잊어버리고 있는 많은 것을 기록해 보려 합니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://www.irgroup.org'
 
 github:
-  username: github_username             # change to your github username
+  username: focuschange             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+#twitter:
+#  username: twitter_username            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@doamin.com             # change to your email address
+  name: '하얀눈길'
+  email: focuschange@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    #- https://twitter.com/username      # change to your twitter homepage
+    - https://github.com/focuschange       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://www.facebook.com/focuschange
     # - https://www.linkedin.com/in/username
 
-google_site_verification:               # fill in to your verification string
+google_site_verification: i7DonAsg2XevX1vbo0yJyGpmzhwsylBrYop20xy_Z48 # change to your verification string
 
 # ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
+
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: 'UA-1872238-1'              # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -80,43 +77,18 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/commons/avatar.jpg'
+#avatar: '/assets/img/myava.jpg'
+avatar: '/assets/img/ir.jpeg'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
-comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
-  disqus:
-    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
-  giscus:
-    repo:             # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping:          # optional, default to 'pathname'
-    input_position:   # optional, default to 'bottom'
-    lang:             # optional, default to the value of `site.lang`
-
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
-assets:
-  self_host:
-    enabled:      # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env:          # [development|production]
-
-pwa:
-  enabled: true   # the option for PWA feature
+disqus:
+  comments: false  # boolean type, the global switch for posts comments.
+  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 paginate: 10
 
@@ -138,8 +110,10 @@ collections:
     output: true
     sort_by: order
 
+
 defaults:
-  - scope:
+  -
+    scope:
       path: ''          # An empty string here means all files in the project
       type: posts
     values:
@@ -149,24 +123,21 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
-  - scope:
-      path: _drafts
+  -
+    scope:
+      path: drafts
     values:
-      comments: false
-  - scope:
+      layout: post
+      comments: false    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+  -
+    scope:
       path: ''
       type: tabs             # see `site.collections`
     values:
       layout: page
       permalink: /:title/
-  - scope:
-      path: assets/img/favicons
-    values:
-      swcache: true
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
+      dynamic_title: true    # Hide title in mobile screens.
 
 sass:
   style: compressed
@@ -184,8 +155,8 @@ exclude:
   - '*.gem'
   - '*.gemspec'
   - tools
+  - docs
   - README.md
-  - CHANGELOG.md
   - LICENSE
   - gulpfile.js
   - node_modules
