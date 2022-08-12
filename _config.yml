@@ -172,7 +172,7 @@ defaults:
       swcache: true
   - scope:
       path: ''          # An empty string here means all files in the project
-      type: careers
+      type: career
     values:
       layout: careers
       comments: true    # Enable comments in posts.
