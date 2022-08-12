@@ -37,7 +37,7 @@ github에서는 `August 13, 2021`부로 패스워드 인증 방식을 제거한�
 
 ### 1) Personal Access Token 발급
 - github 페이지에서 `Settings`를 클릭  
-    ![settings](/posts/github_developer_settings.png)
+    ![settings](/posts/github_settings.png)
 - Settings 페이지에 왔다면 좌측 하단에서 `Developer Settings` 클릭  
     ![developer_settings](/posts/github_developer_settings.png)
 - `Personal Access Token` 클릭  
