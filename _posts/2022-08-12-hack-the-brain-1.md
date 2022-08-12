@@ -1,5 +1,5 @@
 ---
-date: 2022-08-12 19:07:00
+date: 2022-08-12 19:09:00 +0900
 title: 1. 뇌를 해킹하자.
 categories: [Research, EEGBCI]
 tags: [research, EEG, BCI, hacking]
