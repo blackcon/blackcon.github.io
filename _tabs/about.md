@@ -3,18 +3,18 @@ title: About
 icon: fas fa-info-circle
 order: 2
 ---
-## Major
+## 💻 Major
   - `Penetration tester` (All about systems)
   - `Security Researcher` (virtualmachine, eeg)
   - `Developer` (Python, Typescript..)
 
-## Interests
+## 🤩 Interests
   - Virtual machines (Hyper-v, vmware ... )
   - Pentest
   - Exploit
   - Resersing
 
-## Contact
+## 🔗 Contact
 - E-mail: 📨 [131ackcon@gmail.com](mailto://131ackcon@gmail.com)
 - SNS:  [Linkedin](https://www.linkedin.com/in/blackcon/) / [Twitter](https://twitter.com/jh_blank)
 - Blog: [Tistory](https://blackcon.tistory.com/)
