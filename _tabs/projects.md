@@ -1,6 +1,6 @@
 ---
 title: Projects
-icon: fas fa-industry
+icon: fas fa fa-terminal
 order: 3
 ---
 

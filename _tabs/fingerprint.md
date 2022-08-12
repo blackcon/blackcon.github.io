@@ -1,7 +1,7 @@
 ---
 layout: careers
 title: fingerprint
-icon: fas fa-hand-o-right
+icon: fas fa-book
 order: 6
 ---
 
