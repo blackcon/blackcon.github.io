@@ -14,9 +14,8 @@ layout: page
 {% endif %}
 
 <div id="archives" class="pl-xl-3">
-{% assign category_name = 'Career' %}
 {% for post in site.posts %}
-  {% if category_name contains post.categories %}
+  {% if post.categories contains 'Career' %}
     {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
     {% if cur_year != last_year %}
