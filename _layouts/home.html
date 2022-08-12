@@ -11,7 +11,9 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 {% for item in site.data.authors %}
-<p> {{ item }} </p>
+{%for item2 in item %}
+<p> {{ item2 }} </p>
+{% endfor %}
 <h1>{{ item.bio.size }}</h1>
       <h2 id="-Bio">😎 Bio</h2>
       <ul>
