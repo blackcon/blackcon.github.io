@@ -23,7 +23,7 @@ timezone: Asia/Seoul
 
 title: blackcon                          # the main title
 
-tagline: 🏠 Work from home as a hacker .
+tagline: 🏠 Working from home as a Security Analyst.
 
 description: >-                        # used by seo meta and the atom feed
   All of the hacking.
@@ -98,8 +98,8 @@ comments:
     shortname: blackcon   # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
+    repo: blackcon/blackcon.github.io        # <gh-username>/<repo>
+    issue_term: comments3  # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo:             # <gh-username>/<repo>
