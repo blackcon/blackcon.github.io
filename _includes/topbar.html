@@ -57,7 +57,7 @@
         {{- site.data.locales[lang].layout[page.layout] | default: page.layout | capitalize -}}
       {% endif %}
     </div>
-    <div id="topbar-switch" >
+    <div class="align-items-center" id="topbar-switch" >
       {% unless site.theme_mode %}
         <button class="mode-toggle btn" aria-label="Switch Mode">
           <i class="fas fa-adjust"></i>
