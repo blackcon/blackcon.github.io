@@ -52,9 +52,9 @@ social-network-links:
   email: "131ackcon@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: deanattali
-  github: https://github.com/blackcon
-  twitter: https://twitter.com/jh_blank
-  linkedin: https://www.linkedin.com/in/blackcon/
+  github: /blackcon
+  twitter: /jh_blank
+  linkedin: /blackcon/
 #  patreon: DeanAttali
 #  youtube: c/daattali
 #  medium: yourname
