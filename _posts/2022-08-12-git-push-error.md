@@ -1,5 +1,5 @@
 ---
-title: \[github\] git push 권한 오류시 해결 방법
+title: [github] git push 권한 오류시 해결 방법
 categories: [Blogging, github]
 tags: [github, PersonalAccessToken]
 ---
@@ -77,6 +77,6 @@ github에서는 `August 13, 2021`부로 패스워드 인증 방식을 제거한�
     Username: <my-username>
     Password: <my-personal-access-token>
     ```
+    
 # 3\. EOD (End of Document)
-
 이상 개발중에 삽질을 하다가 발견한 이슈였습니다.. 동일한 증상이 있을 많은 개발자분들을 위해 포스팅을 하여보았고, 좀 더 새롭고 안전한 git life를 즐겨보도록 하겠습니다.
