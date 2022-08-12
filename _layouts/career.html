@@ -15,7 +15,7 @@ layout: page
 
 <div id="archives" class="pl-xl-3">
 
-{% for career in site.careers %}
+{% for career in site.posts %}
   {% capture cur_year %}{{ career.date | date: "%Y" }}{% endcapture %}
 
   {% if cur_year != last_year %}
