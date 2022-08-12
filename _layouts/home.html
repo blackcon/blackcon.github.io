@@ -11,14 +11,13 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 {% for author in site.data.authors %}
-    {% if author.bio.size > 0 %}
+<h1>{{ author.bio.size }}</h1>
       <h2 id="-Bio">😎 Bio</h2>
       <ul>
         <li>Name: {{ author.bio.name }}</li>
         <li>Loation: {{ author.bio.location }}</li>
         <li>E-mail: 📨 <a href="mailto://{{ author.bio.email }}">/{{ author.bio.email }}</a></li>
       </ul>
-    {% endif %}
 {% endfor %}
 
 <h2 id="-major">💻 Major</h2>
