@@ -3,6 +3,7 @@ date: 2020-09-21 00:00:00 +0900
 title: NAVER CLOUD Corp (Sep 2020 - ?)
 categories: [Career]
 tags: []
+summary: Carry out the mission to be hired as a full-time employee. I work on pentest, research, develops ..
 ---
 
 # Security Analyst
