@@ -15,8 +15,8 @@ layout: page
 
 <div id="archives" class="pl-xl-3">
 
-{% for post in site.careers %}
-  {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+{% for career in site.careers %}
+  {% capture cur_year %}{{ career.date | date: "%Y" }}{% endcapture %}
 
   {% if cur_year != last_year %}
     {% unless forloop.first %}</ul>{% endunless %}
@@ -26,12 +26,12 @@ layout: page
   {% endif %}
 
   <li class="d-flex align-items-center">
-  {% assign ts = post.date | date: '%s' %}
-    <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: "%d" }}</span>
+  {% assign ts = career.date | date: '%s' %}
+    <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ career.date | date: "%d" }}</span>
     <span class="date month small text-muted ml-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
-      {{ post.date | date: df_strftime_m }}
+      {{ career.date | date: df_strftime_m }}
     </span>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a href="{{ career.url | relative_url }}">{{ career.title }}</a>
   </li>
 
   {% if forloop.last %}</ul>{% endif %}
