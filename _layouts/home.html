@@ -12,6 +12,8 @@ layout: page
 
 {% for author in site.data.authors %}
   <p>{{ author }}</p>
+  {% for item in author %}
+  <p>{{ item }}</p>
 {% endfor %}
 <h2 id="-major">💻 Major</h2>
 <ul>
