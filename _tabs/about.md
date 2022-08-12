@@ -1,7 +1,7 @@
 ---
 title: About
 icon: fas fa-info-circle
-order: 3
+order: 4
 ---
 ## 💻 Major
   - `Penetration tester` (All about systems)
