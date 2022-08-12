@@ -57,6 +57,17 @@
         {{- site.data.locales[lang].layout[page.layout] | default: page.layout | capitalize -}}
       {% endif %}
     </div>
+    <div id="topbar-switch" >
+      {% unless site.theme_mode %}
+        <button class="mode-toggle btn" aria-label="Switch Mode">
+          <i class="fas fa-adjust"></i>
+        </button>
+
+        {% if site.data.contact.size > 0 %}
+          <span class="icon-border"></span>
+        {% endif %}
+      {% endunless %}
+    </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
     <span id="search-wrapper" class="align-items-center">
