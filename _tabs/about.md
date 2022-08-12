@@ -3,24 +3,20 @@ title: About
 icon: fas fa-info-circle
 order: 2
 ---
-## 👋 Hi there 
-- Name: Jihwan Yoon
-- Major
-  - Penetration tester
-  - Security Researcher
-  - Developer
-- Interested in
+
+# About me
+## Major
+  - `Penetration tester` (All about systems)
+  - `Security Researcher` (virtualmachine, eeg)
+  - `Developer` (Python, Typescript..)
+
+## Interests
   - Virtual machines (Hyper-v, vmware ... )
   - Pentest
   - Exploit
   - Resersing
 
-## 🔗 Link List
-- SNS
-  - [Linkedin](https://www.linkedin.com/in/blackcon/)
-  - [Twitter](https://twitter.com/jh_blank)
-- Blog
-  - [Tistory](https://blackcon.tistory.com/)
-
----
-## 💻 Career
+## Contact
+- E-mail: 📨 [131ackcon@gmail.com](mailto://131ackcon@gmail.com)
+- SNS:  [Linkedin](https://www.linkedin.com/in/blackcon/) / [Twitter](https://twitter.com/jh_blank)
+- Blog: [Tistory](https://blackcon.tistory.com/)
