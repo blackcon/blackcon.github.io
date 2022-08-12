@@ -17,7 +17,8 @@ layout: page
 
 {% for post in site.posts %}
   {% for category in post.categories %}
-    <p>category</p>
+    <p>{{ category }}</p>
+  {% endfor %}
   {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
   {% if cur_year != last_year %}
