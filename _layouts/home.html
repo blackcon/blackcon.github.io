@@ -11,9 +11,9 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 {% for author in site.data.authors %}
-  <p>{{ author }}</p>
   {% for item in author %}
-  <p>{{ item }}</p>
+    <p>{{ item }}</p>
+  {% endfor %}
 {% endfor %}
 <h2 id="-major">💻 Major</h2>
 <ul>
