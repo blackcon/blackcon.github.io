@@ -21,7 +21,7 @@ tags: [research, EEG, BCI, hacking]
 # 2. 장비 오픈
 ![neurosky](/posts/neuronow3.jpeg)
 
-[이전 포스트](https://blackcon.github.io/posts/hack-the-brain-2/#2-1-eeg%EB%87%8C%ED%8C%8C-%EC%B8%A1%EC%A0%95-%EC%9E%A5%EB%B9%84-%EC%A0%9C%EC%9E%91)에서도 외형 사진을 올려서 알겠지만, 제품을 배송받자마자 바로 나사들을 풀었다! 
+[이전 포스트](https://blackcon.github.io/posts/hack-the-brain-2/)에서도 외형 사진을 올려서 알겠지만, 제품을 배송받자마자 바로 나사들을 풀었다! 
 
 내부구조는 생각보다 심플한 구조다. 내부에는 board 2개가 겹쳐져있고, 뇌파측정을 위한 파란색 연장선이 외부로 뻗어 있다.
 
