@@ -16,6 +16,10 @@ layout: page
 <div id="archives" class="pl-xl-3">
 {% assign category_name = 'Career' %}
 {% for post in site.posts %}
+<p> {{ post.categoies }}</p>
+<p> {{ post.categoies|str }}</p>
+<p> {{ post.categoies|string }}</p>
+<p> {{ post.categoies|string == category_name }} </p>
   {% if post.categories|str == category_name %}
     {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
