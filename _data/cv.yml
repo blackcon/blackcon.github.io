@@ -1,0 +1,145 @@
+url: http://streetturtle.github.io
+projectUrl: jekyl-cv-crafter
+
+# leave blank fields which you don't want to fill/be displayed
+person:
+  name: Jihwan Yoon
+  depiction: image.png
+  profession: Security Researcher, Penetration tester
+  location: Seongnam-si, South Korea
+  citizenship: South Korea
+  email: 131ackcon@gmail.com
+  site: https://blackcon.tistory.com/
+  # phone: 
+  github: /blackcon
+  linkedin: /blackcon
+
+career:
+ - position: Security Analyst
+   company: NAVER CLOUD Corp
+   location: South Korea
+   dates: September 2020 - current
+   #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   pentests:
+    - pentest: Web Service
+    - pentest: Mobile Service (Android, Webapp)
+    - pentest: Application Service (PC)
+    - pentest: Cloud Platform
+   researches:
+    - research: Discover vulnerabilities on Hypervisor(Hyper-v)
+    - research: Vulnerability research that can occur on machine learning platforms
+   develops:
+    - develop: Web Security Checker for Cloud Service (2018 ~ )
+    - develop: Hyper-v FUZZER (2022)
+   others:
+    - other: Support for penetration testing to customer service
+
+ - position: Security Analyst
+   company: NAVER BUSINESS PLATFORM
+   location: South Korea
+   dates: March 2016 - September 2020
+   #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   pentests:
+    - pentest: Web Service
+    - pentest: Mobile Service (Android, Webapp)
+    - pentest: Application Service (PC)
+    - pentest: Cloud Platform
+   researches:
+    - research: Hooking for android sdk (2016)
+    - research: Prevention and detection of server security incidents (2017)
+    - research: Research about Anti Exploit  (2017)
+    - research: Detect ransomware on Linux (2018)
+    - research: Architecture of Hypervisor (2019)
+   develops:
+    - develop: Web Security Checker for Cloud Service (crawler, web scan module .. )
+   others:
+    - other: Discover 0-day CITRIX Netscaler (2018)
+    - other: Patent application - Method, apparatus and computer program for processing URL collected in web site (2019)
+    - other: Patent application - Method, apparatus and computer program for collecting URL in web page (2019)
+    - other: Patent application - Appratus and method for degermining types of Uniform Resource Locator (2019)
+    - other: Patent application - Method, apparatus and computer program for diagnosing SQL injection vulnerability (2020)
+
+ - position: Security Analyst (Intern)
+   company: NAVER BUSINESS PLATFORM
+   location: South Korea
+   dates: Dec 2015 - Feb 2016
+   summary: Carry out the mission to be hired as a full-time employee.
+
+ - position: Security Research as a student
+   company: Best Of Best 3rd (KITRI)
+   location: South Korea
+   dates: Jul 2014 - Feb 2015
+   summary: I did Project about "investigating POS(VAN) Vulnerability" as Project Manager and Researcher.
+   list:
+    - tr: Find some vulnerabilities of POS(VAN)
+    - tr: Connect remote DB of POS
+    - tr: Remote command execute of POS
+    - tr: Leak Credit Info
+    - tr:  Packet reply to pay with any credit card ...
+
+technicalSkills:
+  list:
+    - tr: "Reverse Engineering"
+    - tr: "Exploit"
+    - tr: "Virtualization (kids level)"
+    
+  pentest:
+   - name: Web Service 
+     level: 90
+   - name: Linux/Windows Service
+     level: 90
+   - name: Android Service
+     level: 80
+   - name: Rebuilding Network Packets
+     level: 80
+     
+  analysis:
+   - name: User Application (Windows,Linux / x64,x86)
+     level: 90
+   - name: Kernel Application (Windows,Linux / x64,x86)
+     level: 70
+   - name: Android Application (SDK, NDK)
+     level: 85
+   - name: Application on other platforms (ARM, MIPS)
+     level: 65
+     
+  language:
+   - name: Python
+     level: 90
+   - name: C/C++
+     level: 70
+   - name: Java Script
+     level: 60
+
+sideProjects:
+  - name: GPU Keylogger (2015)
+    description: It is a keylogger's poc code running in gpu memory.
+    link: https://github.com/blackcon/gpu-keylogger
+    type: github
+    langs: C/Cuda
+
+  - name: vmware-rpc-tools (2019)
+    description: This tool(rpc-sniffer.py) was made for easy viewing of data between Host and Guest on VMWARE.
+    link: https://github.com/blackcon/vmware-rpc-tools
+    type: github
+    langs: Python
+    
+  - name: Call Driver on windows (2020)
+    description: This module connects to the loaded driver on Windows10
+    link: https://github.com/blackcon/call-driver
+    type: github
+    langs: C++/C
+    
+    
+  - name: HVFUZZER ( 2022 )
+    description: The Fuzzer for discover vulnerability of Hyper-v on Windows 10
+    link: https://github.com/blackcon/HVFUZZ
+    type: github
+    langs: C++/C
+
+education:
+  - name: Pukyong National University
+    degree: Computer Engineering Bachelor
+    location: Busan of South Korea
+    dates: 2010 – 2016
+    link: https://en.wikipedia.org/wiki/Pukyong_National_University
