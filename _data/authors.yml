@@ -1,4 +1,19 @@
 blackcon:
-  name: Jihwan
-  twitter: cotes2020
-  url: https://github.com/cotes2020/
+  bio:
+    name: 🧑‍💻 Jihwan yoon
+    location: 🇰🇷 South Korea 
+    email: 131ackcon@gmail.com
+  Majors:
+    Major: Penetration tester (All about systems)
+    Major: Security Researcher (virtualmachine, eeg)
+    Major: Developer (Python, Typescript..)
+  Interests:
+    Interest: irtual machines (Hyper-v, vmware … )
+    Interest: Pentest
+    Interest: Exploit
+    Interest: Reversing
+  sns:
+    twitter: jh_blank
+    linkedin: blackcon
+  url:
+    github: https://github.com/blackcon/
