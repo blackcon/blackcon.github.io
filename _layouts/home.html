@@ -11,7 +11,7 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 {% for author in site.data.authors %}
-  {% for item in author %}
+  {% for item in author.keys() %}
     <h2 id="-{{ item }}">{{ item }}</h2>
   {% endfor %}
 {% endfor %}
