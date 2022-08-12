@@ -1,5 +1,5 @@
 ---
-date: 2016-03-21 00:00:00 +0900
+date: 2020-09-21 00:00:00 +0900
 title: NAVER CLOUD Corp (Sep 2020 - current)
 categories: [Career]
 tags: []
