@@ -12,9 +12,10 @@ layout: page
 
 {% for author in site.data.authors %}
   {% for item in author %}
-    <p>{{ item }}</p>
+    <h2 id="-{{ item }}">{{ item }}</h2>
   {% endfor %}
 {% endfor %}
+
 <h2 id="-major">💻 Major</h2>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Penetration tester</code> (All about systems)</li>
