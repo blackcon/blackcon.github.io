@@ -1,6 +1,6 @@
 ---
 title: Projects
-icon: fa-solid fa-industry-windows
+icon: fas fa-industry-windows
 order: 4
 ---
 
