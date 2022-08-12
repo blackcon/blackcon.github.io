@@ -1,6 +1,6 @@
 ---
 title: github push 권한 오류시 해결 방법
-categories: [Blogging, github]
+categories: [programming, github]
 tags: [github, PersonalAccessToken]
 ---
 
