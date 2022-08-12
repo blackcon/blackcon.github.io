@@ -21,9 +21,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Hello, Stranger                          # the main title
+title: blackcon                          # the main title
 
-tagline: All about the hacking   # it will display as the sub-title
+tagline: Security Researcher
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
