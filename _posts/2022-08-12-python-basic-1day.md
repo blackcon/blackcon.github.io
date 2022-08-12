@@ -1,6 +1,6 @@
 ---
 title: Python basic day1
-categories: [Python, programming]
+categories: [programming, Python]
 tags: [python, basic, programming]
 ---
 # ToDo
