@@ -36,9 +36,11 @@ tags: [research, EEG, BCI, hacking]
 
 ## 2-4) [뉴로나우](http://neurosky.kr/product/detail.html?product_no=10&cate_no=1&display_group=2)
 제품 구입 후, 약 이틀만에 장비가 도착했는데 외형은 일반 헤드셋과 유사하다.
+
 ![neuronow](/posts/neuronow1.jpeg)
 
 아래 이미지는 제품 본체의 모습인데, 분해하기 전에 찍은 사진이 없어서 해당 사진을 업로드한다. 앞으로 편한 테스트를 위해 더 분해되지 않을까 싶다.
+
 ![neuronow2](/posts/neuronow2.jpeg)
 
 위의 이미지에서 헤드셋을 Y자로 봤을때 각 기능을 간단히 보자면 이러하다.
