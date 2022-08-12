@@ -3,8 +3,6 @@ title: About
 icon: fas fa-info-circle
 order: 2
 ---
-
-# About me
 ## Major
   - `Penetration tester` (All about systems)
   - `Security Researcher` (virtualmachine, eeg)
