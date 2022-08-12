@@ -1,7 +1,7 @@
 ---
 title: Projects
 icon: fas fa-industry
-order: 3
+order: 5
 ---
 
 ### Side Projects

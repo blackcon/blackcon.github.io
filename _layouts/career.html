@@ -1,6 +1,6 @@
 ---
 layout: page
-# The Archives of posts.
+# The Archives of careers.
 ---
 
 {% include lang.html %}
@@ -15,7 +15,7 @@ layout: page
 
 <div id="archives" class="pl-xl-3">
 
-{% for post in site.posts %}
+{% for post in site.careers %}
   {% capture cur_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
   {% if cur_year != last_year %}
