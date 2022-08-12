@@ -3,7 +3,7 @@ date: 2016-03-21 00:00:00 +0900
 title: NAVER BUSINESS PLATFORM (Mar 2016 - Sep 2020)
 categories: [Career]
 tags: []
-summary: Carry out the mission to be hired as a full-time employee.
+summary: Carry out the mission to be hired as a full-time employee. I work on pentest, research, develops ..
 ---
 
 # Security Analyst
