@@ -11,7 +11,6 @@ layout: page
 
 {% assign posts = "" | split: "" %}
 
-<p>{{ pinned.size }}</p>
 <!-- Get pinned posts -->
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
 {% assign pinned_num = pinned.size | minus: offset %}
@@ -23,7 +22,8 @@ layout: page
 {% else %}
   {% assign pinned_num = 0 %}
 {% endif %}
-
+<p>111, {{ posts }}</p>
+<p>---------------</p>
 <!-- Get default posts -->
 {% assign default_beg = offset | minus: pinned.size %}
 
