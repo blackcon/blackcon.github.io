@@ -26,16 +26,15 @@ layout: page
 {% endif }
 
 <!-- Contact -->
-{% if site.data.authors.author.sns.size > 0 }}
 <h2 id="-contact">🔗 Contact</h2>
-  {% for item in site.data.authors.author.sns %}
-    <li>{{ item }}</li>
-  {% endfor %}
+<li>E-mail: 📨 <a href="mailto://{{ site.data.authors.author.bio.email }}">{{ site.data.authors.author.bio.email }}</a></li>
+{% if site.data.authors.author.sns.size > 0 }}
+11
 {% endif }
 
 <!-- 
 <ul>
-  <li>E-mail: 📨 <a href="mailto://131ackcon@gmail.com">131ackcon@gmail.com</a></li>
-  <li>SNS:  <a href="https://www.linkedin.com/in/blackcon/">Linkedin</a> / <a href="https://twitter.com/jh_blank">Twitter</a></li>
+  
+  <a href="https://www.linkedin.com/in/blackcon/">Linkedin</a> / <a href="https://twitter.com/jh_blank">Twitter</a></li>
   <li>Blog: <a href="https://blackcon.tistory.com/">Tistory</a></li>
 </ul> -->
