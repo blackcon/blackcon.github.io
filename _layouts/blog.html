@@ -22,7 +22,9 @@ layout: page
 {% else %}
   {% assign pinned_num = 0 %}
 {% endif %}
-
+<p>---------</p>
+<p> {{ default }}</p>
+<p>--------------</p>
 <!-- Get default posts -->
 {% assign default_beg = offset | minus: pinned.size %}
 
