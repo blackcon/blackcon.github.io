@@ -32,7 +32,8 @@ layout: page
 
 {% assign default_num = paginator.posts | size | minus: pinned_num  %}
 {% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
+{{ default_num }}
+{{ paginator.posts.size }}
 {% if default_num > 0 %}
   {% for i in (default_beg..default_end) %}
     {% assign posts = posts | push: default[i] %}
