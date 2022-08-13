@@ -42,9 +42,9 @@ layout: page
 {% endif %}
 
 <div id="post-list">
+<p>{{ site.posts }}</p>
 
 {% for post in posts %}
-  <p>{{ post }}</p>
   {% if post.categories contains 'Career' %}
   {% else %}
     <div class="post-preview">
