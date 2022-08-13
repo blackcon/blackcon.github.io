@@ -11,12 +11,12 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 
-<h2 id="-major">💻 Major</h2>
+<h2 id="-major">💻 Major, {{ site.data.authors.author.Majors.size }}</h2>
 {% for item in site.data.authors.author.Majors %}
-  <li>{{ item }}</li>
+  <li>{{ item.Major }}</li>
 {% endfor %}
 <!-- <ul>
-  <li><code class="language-plaintext highlighter-rouge">Penetration tester</code> (All about systems)</li>
+  <li></li>
   <li><code class="language-plaintext highlighter-rouge">Security Researcher</code> (virtualmachine, eeg)</li>
   <li><code class="language-plaintext highlighter-rouge">Developer</code> (Python, Typescript..)</li>
 </ul> -->
