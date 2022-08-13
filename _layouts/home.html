@@ -10,16 +10,16 @@ layout: page
 
 {% assign posts = "" | split: "" %}
 
-{% for item in site.data.authors.author %}
-  <p> >> {{ item.key }} </p>
-{% endfor %}
 
 <h2 id="-major">💻 Major</h2>
-<ul>
+{% for item in site.data.authors.author.Majors %}
+  <li>{{ item }}</li>
+{% endfor %}
+<!-- <ul>
   <li><code class="language-plaintext highlighter-rouge">Penetration tester</code> (All about systems)</li>
   <li><code class="language-plaintext highlighter-rouge">Security Researcher</code> (virtualmachine, eeg)</li>
   <li><code class="language-plaintext highlighter-rouge">Developer</code> (Python, Typescript..)</li>
-</ul>
+</ul> -->
 
 <h2 id="-interests">🤩 Interests</h2>
 <ul>
