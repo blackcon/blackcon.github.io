@@ -1,6 +1,6 @@
 ---
 layout: blog
 title: Blog
-icon: fas fa-archive
+icon: fas fa-coffee
 order: 3
 ---
