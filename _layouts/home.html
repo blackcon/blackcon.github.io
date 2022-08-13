@@ -10,7 +10,7 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 <!-- Major -->
-{% if site.data.authors.author.Majors.size > 0 }}
+{% if site.data.authors.author.Majors.size > 0 %}
   <h2 id="-major">💻 Major</h2>
   {% for item in site.data.authors.author.Majors %}
   <li>{{ item.Major }}</li>
@@ -18,7 +18,7 @@ layout: page
 {% endif %}
 
 <!-- Interests -->
-{% if site.data.authors.author.Interests.size > 0 }}
+{% if site.data.authors.author.Interests.size > 0 %}
   <h2 id="-interests">🤩 Interests</h2>
   {% for item in site.data.authors.author.Interests %}
   <li>{{ item.Interest }}</li>
@@ -28,13 +28,11 @@ layout: page
 <!-- Contact -->
 <h2 id="-contact">🔗 Contact</h2>
 <li>E-mail: 📨 <a href="mailto://{{ site.data.authors.author.bio.email }}">{{ site.data.authors.author.bio.email }}</a></li>
-{% if site.data.authors.author.sns.size > 0 %}
-11
-{% endif %}
-
+<li>SNS: <a href="https://www.linkedin.com/in/{{ site.data.authors.author.sns.linkedin }}/">Linkedin</a> / <a href="https://twitter.com/{{ site.data.authors.author.sns.twitter }}">Twitter</a></li></li>
+<li>Blog: <a href="{{ site.data.authors.author.url.tistory }}">Tistory</a></li>
 <!-- 
 <ul>
   
-  <a href="https://www.linkedin.com/in/blackcon/">Linkedin</a> / <a href="https://twitter.com/jh_blank">Twitter</a></li>
-  <li>Blog: <a href="https://blackcon.tistory.com/">Tistory</a></li>
+  
+ 
 </ul> -->
