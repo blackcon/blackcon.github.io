@@ -11,15 +11,15 @@ layout: page
 {% assign posts = "" | split: "" %}
 
 {% for item in site.data.authors %}
-{%for item2 in item %}
-  <p> {{item2}}: {{ item[item2] }} </p>
-{% endfor %}
-      <h2 id="-Bio">😎 Bio</h2>
-      <ul>
-        <li>Name: {{ item.bio.name }}</li>
-        <li>Loation: {{ item.bio.location }}</li>
-        <li>E-mail: 📨 <a href="mailto://{{ author.bio.email }}">/{{ item.bio.email }}</a></li>
-      </ul>
+  {%for item2 in item %}
+    <p> {{item2}}: {{ item[item2] }} </p>
+    <h2 id="- {{ item2 }}">{{ item2 }}, {{ item2.name }}</h2>
+    <!-- <ul>
+      <li>Name: {{ item2.name }}</li>
+      <li>Loation: {{ item2.location }}</li>
+      <li>E-mail: 📨 <a href="mailto://{{ author.bio.email }}">/{{ item2.email }}</a></li>
+    </ul> -->
+  {% endfor %}
 {% endfor %}
 
 <h2 id="-major">💻 Major</h2>
