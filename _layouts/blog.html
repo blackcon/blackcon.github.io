@@ -37,12 +37,11 @@ layout: page
 
 {% if default_num > 0 %}
   {% for i in (default_beg..default_end) %}
-    {% assign posts = posts | push: default[i] %}
+    {% assign posts = site.posts | push: default[i] %}
   {% endfor %}
 {% endif %}
 
 <div id="post-list">
-<p>{{ site.posts }}</p>
 
 {% for post in posts %}
   {% if post.categories contains 'Career' %}
