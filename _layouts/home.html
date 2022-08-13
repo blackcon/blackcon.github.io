@@ -10,17 +10,8 @@ layout: page
 
 {% assign posts = "" | split: "" %}
 
-{% for item in site.data.authors %}
-  {%for item2 in item %}
-    <h2 id="- {{ item2 }}">{{ item2 }}</h2>
-    <p>>>> {{ item[item2] }}</p>
-    <p>=====================</p>
-    <!-- <ul>
-      <li>Name: {{ item2.name }}</li>
-      <li>Loation: {{ item2.location }}</li>
-      <li>E-mail: 📨 <a href="mailto://{{ author.bio.email }}">/{{ item2.email }}</a></li>
-    </ul> -->
-  {% endfor %}
+{% for item in site.data.authors.author %}
+  <p> >> {{ item }} </p>
 {% endfor %}
 
 <h2 id="-major">💻 Major</h2>
