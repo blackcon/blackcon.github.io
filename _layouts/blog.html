@@ -22,8 +22,7 @@ layout: page
 {% else %}
   {% assign pinned_num = 0 %}
 {% endif %}
-<p>111, {{ posts }}</p>
-<p>---------------</p>
+
 <!-- Get default posts -->
 {% assign default_beg = offset | minus: pinned.size %}
 
@@ -41,7 +40,7 @@ layout: page
 {% endif %}
 
 <div id="post-list">
-{% for post in site.posts %}
+{% for post in posts %}
   {% if post.categories contains 'Career' %}
   {% else %}
     <div class="post-preview">
