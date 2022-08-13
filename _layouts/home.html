@@ -13,9 +13,7 @@ layout: page
 {% for item in site.data.authors %}
   {%for item2 in item %}
     <h2 id="- {{ item2 }}">{{ item2 }}</h2>
-    {% for item3 in item2 %}
-      <p>>>>, {{ item3 }}</p>
-    {% endfor %}
+    <p>>>> {{ item[item2] }}</p>
     <p>=====================</p>
     <!-- <ul>
       <li>Name: {{ item2.name }}</li>
