@@ -36,7 +36,7 @@ layout: page
 {% if default_num > 0 %}
   {% for i in (default_beg..default_end) %}
     {% assign posts = posts | push: default[i] %}
-    <p>{{  default[i].title }}</p>
+    <p>{{  default[i] }}</p>
     <p>---------------------</p>
   {% endfor %}
 {% endif %}
