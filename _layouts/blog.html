@@ -43,10 +43,10 @@ layout: page
 
 <div id="post-list">
 
+<p>>>>, {{ site.posts | where: "pin", "true"}}</p>
 {% for post in site.posts %}
   {% if post.categories contains 'Career' %}
   {% else %}
-    <p>>>>, {{ post | where: "pin", "true"}}</p>
     <div class="post-preview">
       <h1>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
