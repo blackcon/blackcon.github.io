@@ -5,14 +5,13 @@ layout: page
 
 {% include lang.html %}
 
-{% assign pinned = site.posts.blog | where: "pin", "true" %}
+{% assign pinned = site.posts | where: "pin", "true" %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
 {% assign posts = "" | split: "" %}
 
-
+<p>{{ default }}</p>
 <!-- Get pinned posts -->
-<p>111 {{ pinned }}</p>
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
 {% assign pinned_num = pinned.size | minus: offset %}
 
