@@ -7,31 +7,35 @@ layout: page
 
 {% assign pinned = site.posts | where: "pin", "true" %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
-
 {% assign posts = "" | split: "" %}
 
+<!-- Major -->
+{% if site.data.authors.author.Majors.size > 0 }}
+  <h2 id="-major">💻 Major</h2>
+  {% for item in site.data.authors.author.Majors %}
+    <li>{{ item.Major }}</li>
+  {% endfor %}
+{% endif }
 
-<h2 id="-major">💻 Major, {{ site.data.authors.author.Majors.size }}</h2>
-{% for item in site.data.authors.author.Majors %}
-  <li>{{ item.Major }}</li>
-{% endfor %}
-<!-- <ul>
-  <li></li>
-  <li><code class="language-plaintext highlighter-rouge">Security Researcher</code> (virtualmachine, eeg)</li>
-  <li><code class="language-plaintext highlighter-rouge">Developer</code> (Python, Typescript..)</li>
-</ul> -->
+<!-- Interests -->
+{% if site.data.authors.author.Interests.size > 0 }}
+  <h2 id="-interests">🤩 Interests</h2>
+  {% for item in site.data.authors.author.Interests %}
+    <li>{{ item.Interest }}</li>
+  {% endfor %}
+{% endif }
 
-<h2 id="-interests">🤩 Interests</h2>
-<ul>
-  <li>Virtual machines (Hyper-v, vmware … )</li>
-  <li>Pentest</li>
-  <li>Exploit</li>
-  <li>Resersing</li>
-</ul>
-
+<!-- Contact -->
+{% if site.data.authors.author.sns.size > 0 }}
 <h2 id="-contact">🔗 Contact</h2>
+  {% for item in site.data.authors.author.sns %}
+    <li>{{ item }}</li>
+  {% endfor %}
+{% endif }
+
+<!-- 
 <ul>
   <li>E-mail: 📨 <a href="mailto://131ackcon@gmail.com">131ackcon@gmail.com</a></li>
   <li>SNS:  <a href="https://www.linkedin.com/in/blackcon/">Linkedin</a> / <a href="https://twitter.com/jh_blank">Twitter</a></li>
   <li>Blog: <a href="https://blackcon.tistory.com/">Tistory</a></li>
-</ul>
+</ul> -->
