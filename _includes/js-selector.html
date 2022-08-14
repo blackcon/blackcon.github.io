@@ -97,8 +97,6 @@
   {% endif %}
 
   <!-- GA -->
-  <p>ga, {{ site.google_analytics.id }}</p>
-  <p>{{ ad, site.google_adsense.cline }}</p>
   {% if site.google_analytics.id != empty and site.google_analytics.id %}
     {% include google-analytics.html %}
   {% endif %}
