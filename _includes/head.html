@@ -73,11 +73,8 @@
   {% endif %}
 
   <!-- GA -->
-  <p>env,jekyll.environment</p>
   {% if site.google_analytics.id != empty and site.google_analytics.id %}
-  <p>ga, {{ site.google_analytics.id }}</p>
-  <p>{{ ad, site.google_adsense.client }}</p>
-  {% include google-analytics.html %}
+    {% include google-analytics.html %}
   {% endif %}
   <!-- {% if jekyll.environment == 'production'
       and site.google_analytics.id != empty and site.google_analytics.id %}
