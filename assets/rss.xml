@@ -17,7 +17,7 @@ permalink: /rss.xml
         <ttl>100</ttl>
     </channel>
 
-    {% for post in site.posts limit: 5 %}
+    {% for post in site.posts %}
   {% assign post_absolute_url = post.url | absolute_url %}
   <entry>
     <title>{{ post.title }}</title>
@@ -39,7 +39,8 @@ permalink: /rss.xml
   {% endif %}
     <description>
       {% include no-linenos.html content=post.content %}
-      {{ content  | strip_html | truncate: 400 }}
+      <!-- {{ content  | strip_html | truncate: 400 }} -->
+      {{ content  | strip_html }}
     </description>
 
   </entry>
