@@ -39,7 +39,6 @@ permalink: /rss.xml
   {% endif %}
     <description>
       {% include no-linenos.html content=post.content %}
-      <!-- {{ content  | strip_html | truncate: 400 }} -->
       {{ content  | strip_html }}
     </description>
 
