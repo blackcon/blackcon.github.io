@@ -1,6 +1,6 @@
 ---
 date: 2013-03-18 19:09:00 +0900
-title: Hacking the Bluetooth headset.
+title: 블루투스 이어폰 해킹하기
 categories: [Research, bluetooth]
 tags: [research, bluetooth, hacking]
 ---
@@ -46,6 +46,7 @@ tags: [research, bluetooth, hacking]
    - 저전력을 이용한 근거리 무선통신(기본 10m이고 옵션이 가해지면 100m까지 통신)
 
 2) 블루투스 프로토콜 구조
+
     ![bluetooth-protocol-struct](/posts/bluetooth-structures.jpeg)
 
     - HCI(Host Controller Inerfae) :: 하드웨어 접근제어  
