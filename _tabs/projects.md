@@ -15,5 +15,5 @@ order: 1
    
 - Contribute
    |이름|역할|설명|
-   |----|-------|----|
+   |---|---|---|
    |[DeFi Hacks Analysis - Root Cause](https://web3sec.notion.site/web3sec/Web3-security-ddaa8bf9a985494dbaf70d698345b899)|한국어 번역|DeFi에서 발생한 보안 사례를 정리하고, 각 사례별로 취약점을 정리한 사이트이다.
