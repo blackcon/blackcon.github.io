@@ -14,6 +14,7 @@ order: 1
    |[blackcon/bluetooth-hack](https://github.com/blackcon/bluetooth-hack)|![python](https://img.shields.io/badge/-python-000000?logo=python&style=flat)|Hacking the bluetooth earset and control smartphone using bluetooth|[![GitHub stars](https://img.shields.io/github/stars/blackcon/bluetooth-hack?style=social&label=Star&maxAge=2592000)](https://GitHub.com/blackcon/bluetooth-hack/stargazers/)
    
 - Contribute
+
    |이름|역할|설명|
    |---|---|---|
    |[DeFi Hacks Analysis - Root Cause](https://web3sec.notion.site/web3sec/Web3-security-ddaa8bf9a985494dbaf70d698345b899)|한국어 번역|DeFi에서 발생한 보안 사례를 정리하고, 각 사례별로 취약점을 정리한 사이트이다.
