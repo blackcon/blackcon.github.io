@@ -15,112 +15,118 @@ date: 2023-02-10 00:20:00 +0900
   - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-2](https://github.com/movebit/ctfmovement-2).
   - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
   - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
-  - Source Code
-    ```move
-    module ctfmovement::hello_move {
-        // use std::hash;
-        // use std::vector;
-        // use sui::event;
-        use std::signer;
-        use std::vector;
+- Source Code
+  ```move
+  module ctfmovement::hello_move {
+      // use std::hash;
+      // use std::vector;
+      // use sui::event;
+      use std::signer;
+      use std::vector;
 
-        use aptos_std::aptos_hash;
-        use aptos_framework::event::{Self, EventHandle};
-        use aptos_framework::account;
+      use aptos_std::aptos_hash;
+      use aptos_framework::event::{Self, EventHandle};
+      use aptos_framework::account;
 
-        const Initialize_balance : u8 = 10;
+      const Initialize_balance : u8 = 10;
 
-        struct Challenge has key, store {
-            balance: u8,
-            q1: bool,
-            q2: bool,
-            q3: bool,
-            flag_event_handle: EventHandle<Flag>
-        }
+      struct Challenge has key, store {
+          balance: u8,
+          q1: bool,
+          q2: bool,
+          q3: bool,
+          flag_event_handle: EventHandle<Flag>
+      }
 
-        struct Flag has store, drop {
-            user: address,
-            flag: bool
-        }
+      struct Flag has store, drop {
+          user: address,
+          flag: bool
+      }
 
-        public fun init_challenge(account: &signer) {
-            let addr = signer::address_of(account);
-            let handle =  account::new_event_handle<Flag>(account);
-            assert!(!exists<Challenge>(addr), 0);
-            move_to(account, Challenge {
-                balance: Initialize_balance,
-                q1: false,
-                q2: false,
-                q3: false,
-                flag_event_handle: handle
-            })
-        }
+      public fun init_challenge(account: &signer) {
+          let addr = signer::address_of(account);
+          let handle =  account::new_event_handle<Flag>(account);
+          assert!(!exists<Challenge>(addr), 0);
+          move_to(account, Challenge {
+              balance: Initialize_balance,
+              q1: false,
+              q2: false,
+              q3: false,
+              flag_event_handle: handle
+          })
+      }
 
-        entry public fun hash(account: &signer, guess: vector<u8>) acquires Challenge{
-            let borrow_guess = &mut guess;
-            assert!(vector::length(borrow_guess) == 4, 0);
-            vector::push_back(borrow_guess, 109);
-            vector::push_back(borrow_guess, 111);
-            vector::push_back(borrow_guess, 118);
-            vector::push_back(borrow_guess, 101);
+      entry public fun hash(account: &signer, guess: vector<u8>) acquires Challenge{
+          let borrow_guess = &mut guess;     // 인자로 전달받은 guess를 borrow_guess로 전달한다.
+          assert!(vector::length(borrow_guess) == 4, 0);  // guess의 길이는 4글자라는 것을 알 수 있다.
+          vector::push_back(borrow_guess, 109); // borrow_guess 백터 뒤에 push_back을 하여 109를 입력한다. (ascii: 'm')
+          vector::push_back(borrow_guess, 111); // borrow_guess 백터 뒤에 push_back을 하여 111를 입력한다. (ascii: 'o')
+          vector::push_back(borrow_guess, 118); // borrow_guess 백터 뒤에 push_back을 하여 118를 입력한다. (ascii: 'v')
+          vector::push_back(borrow_guess, 101); // borrow_guess 백터 뒤에 push_back을 하여 101를 입력한다. (ascii: 'e')
 
-            if (aptos_hash::keccak256(guess) == x"d9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79") {
-                let res = borrow_global_mut<Challenge>(signer::address_of(account));
-                if (!res.q1) {
-                    res.q1 = true;
-                }
-            }
-        }
+          // guess는 [?,?,?,?,m,o,v,e] 로 추정되며, 
+          // hash값이 'd9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79'인 값을 찾아야 한다.
+          if (aptos_hash::keccak256(guess) == x"d9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79") {
+              let res = borrow_global_mut<Challenge>(signer::address_of(account));
+              if (!res.q1) {
+                  res.q1 = true;
+              }
+          }
+      }
 
-        public entry fun discrete_log(account: &signer, guess: u128) acquires Challenge {
-            if (pow(10549609011087404693, guess, 18446744073709551616) == 18164541542389285005) {
-                let res = borrow_global_mut<Challenge>(signer::address_of(account));
-                if (!res.q2) {
-                    res.q2 = true;
-                }
-            }
-        }
+      public entry fun discrete_log(account: &signer, guess: u128) acquires Challenge {
+          if (pow(10549609011087404693, guess, 18446744073709551616) == 18164541542389285005) {
+              let res = borrow_global_mut<Challenge>(signer::address_of(account));
+              if (!res.q2) {
+                  res.q2 = true;
+              }
+          }
+      }
 
-        public entry fun add(account: &signer, choice: u8, number: u8) acquires Challenge {
-            let res = borrow_global_mut<Challenge>(signer::address_of(account));
-            assert!(number <= 5, 0);
-            if (choice == 1) {
-                res.balance = res.balance + number;
-            } else if (choice == 2) {
-                res.balance = res.balance * number;
-            } else if (choice == 3) {
-                res.balance = res.balance << number;
-            };
+      public entry fun add(account: &signer, choice: u8, number: u8) acquires Challenge {
+          let res = borrow_global_mut<Challenge>(signer::address_of(account));
+          assert!(number <= 5, 0);
+          if (choice == 1) {
+              res.balance = res.balance + number;
+          } else if (choice == 2) {
+              res.balance = res.balance * number;
+          } else if (choice == 3) {
+              res.balance = res.balance << number;
+          };
 
-            if (!res.q3 && res.balance < Initialize_balance) {
-                res.q3 = true;
-            }
-        }
+          if (!res.q3 && res.balance < Initialize_balance) {
+              res.q3 = true;
+          }
+      }
 
-        public entry fun get_flag(account: &signer) acquires Challenge {
-            let addr = signer::address_of(account);
-            let res = borrow_global_mut<Challenge>(addr);
-            if (res.q1 && res.q2 && res.q3) {
-                event::emit_event(&mut res.flag_event_handle, Flag {
-                    user: signer::address_of(account),
-                    flag: true
-                })
-            }
-        }
+      public entry fun get_flag(account: &signer) acquires Challenge {
+          let addr = signer::address_of(account);
+          let res = borrow_global_mut<Challenge>(addr);
+          if (res.q1 && res.q2 && res.q3) {
+              event::emit_event(&mut res.flag_event_handle, Flag {
+                  user: signer::address_of(account),
+                  flag: true
+              })
+          }
+      }
 
-        public fun pow(g: u128, x: u128, p: u128): u128 {
-            let ans = 1;
-            g = g % p;
-            while (x != 0) {
-                if ((x & 1) == 1) {
-                    ans = ((ans % p) * (g % p)) % p;
-                };
-                x = x >> 1;
-                g = (g * g) % p;
-            };
-            ans
-        }
-    }
-    ```
+      public fun pow(g: u128, x: u128, p: u128): u128 {
+          let ans = 1;
+          g = g % p;
+          while (x != 0) {
+              if ((x & 1) == 1) {
+                  ans = ((ans % p) * (g % p)) % p;
+              };
+              x = x >> 1;
+              g = (g * g) % p;
+          };
+          ans
+      }
+  }
+  ```
 - 풀이
-  - 푸는중..
+  - 이번에는 `checkin`문제와 달리 get_flag를 하기 위해서 `res.q1`, `res.q2`, `res.q3` 모두 true여야 한다.
+  - 각 변수의 value를 true로 만들기 위해서는 다른 함수들의 문제들을 풀어야 할 듯 하다.
+  - Step1) res.q1을 true로 바꾸기 (`hash`함수에 주석을 달아 두었다.)
+    ```python
+    ```
