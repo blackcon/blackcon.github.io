@@ -10,8 +10,7 @@ date: 2023-02-09 23:54:00 +0900
 [문제 난이도](https://ctfmovement.movebit.xyz/challenges)는 꽤 다양하게 나온듯 해서, move languae와 aptos가 초심인 나에게는 적절하고 재밌는 문제들이었다.
 ![2022_ctf_movement_challenges](/posts/2022_ctf_movement_challenges.png)
 
-# 2. Writeups
-## 1) checkin
+# 2. Writeups: `checkin`
 - 문제 내용
   - This is a simple challenge, follow the steps below to complete the challenge. The goal is calling the `get_flag()` function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-1](https://github.com/movebit/ctfmovement-1).
   - Deployment Contract: [0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f::checkin](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f/module/checkin)
