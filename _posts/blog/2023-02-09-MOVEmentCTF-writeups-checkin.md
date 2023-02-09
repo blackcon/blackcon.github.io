@@ -15,38 +15,38 @@ date: 2023-02-09 23:54:00 +0900
   - This is a simple challenge, follow the steps below to complete the challenge. The goal is calling the `get_flag()` function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-1](https://github.com/movebit/ctfmovement-1).
   - Deployment Contract: [0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f::checkin](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f/module/checkin)
   - Deployment Hash: [0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f)
-  - Source code
-    ```move
-    module ctfmovement::checkin {
-        use std::signer;
-        use aptos_framework::account;
-        use aptos_framework::event;
+- Source code
+  ```move
+  module ctfmovement::checkin {
+      use std::signer;
+      use aptos_framework::account;
+      use aptos_framework::event;
 
-        struct FlagHolder has key {
-            event_set: event::EventHandle<Flag>,
-        }
+      struct FlagHolder has key {
+          event_set: event::EventHandle<Flag>,
+      }
 
-        struct Flag has drop, store {
-            user: address,
-            flag: bool
-        }
+      struct Flag has drop, store {
+          user: address,
+          flag: bool
+      }
 
-        public entry fun get_flag(account: signer) acquires FlagHolder {
-            let account_addr = signer::address_of(&account);
-            if (!exists<FlagHolder>(account_addr)) {
-                move_to(&account, FlagHolder {
-                    event_set: account::new_event_handle<Flag>(&account),
-                });
-            };
+      public entry fun get_flag(account: signer) acquires FlagHolder {
+          let account_addr = signer::address_of(&account);
+          if (!exists<FlagHolder>(account_addr)) {
+              move_to(&account, FlagHolder {
+                  event_set: account::new_event_handle<Flag>(&account),
+              });
+          };
 
-            let flag_holder = borrow_global_mut<FlagHolder>(account_addr);
-            event::emit_event(&mut flag_holder.event_set, Flag {
-                user: account_addr,
-                flag: true
-            });
-        }
-    }
-    ```
+          let flag_holder = borrow_global_mut<FlagHolder>(account_addr);
+          event::emit_event(&mut flag_holder.event_set, Flag {
+              user: account_addr,
+              flag: true
+          });
+      }
+  }
+  ```
 - 풀이
   - Step1) aptos에서 사용할 Account를 생성한다.
     ```bash
