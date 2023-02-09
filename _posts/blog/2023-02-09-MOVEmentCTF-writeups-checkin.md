@@ -1,5 +1,5 @@
 ---
-title: 2022 MOVEment CTF Writeups
+title: 2022 MOVEment CTF Writeups (checkin)
 categories: [web3, move]
 tags: [web3, ctf, move, aptos]
 date: 2023-02-09 23:54:00 +0900
