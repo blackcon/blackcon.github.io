@@ -8,6 +8,7 @@ date: 2023-02-09 23:54:00 +0900
 2022년 12월에 [movebit](https://twitter.com/MoveBit_)이 주체하는 [CTF Movement](https://ctfmovement.movebit.xyz/)가 열렸었다. 
 물론 나는 뒤늦게 이런 CTF가 열린것을 확인하였고, devnet에 문제 파일이 그대로 보존되고 있어서 때늦은 풀이를 해보고 있다.
 [문제 난이도](https://ctfmovement.movebit.xyz/challenges)는 꽤 다양하게 나온듯 해서, move languae와 aptos가 초심인 나에게는 적절하고 재밌는 문제들이었다.
+![2022_ctf_movement_challenges](/posts/2022_ctf_movement_challenges.png)
 
 # 2. Writeups
 ## 1) checkin
@@ -57,3 +58,11 @@ date: 2023-02-09 23:54:00 +0900
   - Step4) transaction_hash 를 문제 사이트에 입력을 하면 아래와 같이 정답(flag)를 알려준다.
     ![2022_ctf_movement_checkin_1](/posts/2022_ctf_movement_checkin_1.png)
     ![2022_ctf_movement_checkin_2](/posts/2022_ctf_movement_checkin_2.png)
+
+## 2) Hello move
+- 문제 내용
+  - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: https://github.com/movebit/ctfmovement-2.
+  - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
+  - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
+- 풀이
+  - 푸는중..
