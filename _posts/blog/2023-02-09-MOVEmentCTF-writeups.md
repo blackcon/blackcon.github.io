@@ -2,7 +2,7 @@
 title: 2022 MOVEment CTF Writeups
 categories: [web3, move]
 tags: [web3, ctf, move, aptos]
-date: 2022-08-17 23:41:00 +0900
+date: 2023-02-09 23:54:00 +0900
 ---
 # 1. Info
 2022년 12월에 [movebit](https://twitter.com/MoveBit_)이 주체하는 [CTF Movement](https://ctfmovement.movebit.xyz/)가 열렸었다. 
