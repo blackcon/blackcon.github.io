@@ -54,3 +54,6 @@ date: 2022-08-17 23:41:00 +0900
       }
     }
     ```
+  - Step4) transaction_hash 를 문제 사이트에 입력을 하면 아래와 같이 정답(flag)를 알려준다.
+    ![2022_ctf_movement_checkin_1](/posts/2022_ctf_movement_checkin_1.png)
+    ![2022_ctf_movement_checkin_2](/posts/2022_ctf_movement_checkin_2.png)
