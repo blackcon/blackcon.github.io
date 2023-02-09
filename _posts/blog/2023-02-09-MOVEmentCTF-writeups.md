@@ -13,7 +13,7 @@ date: 2023-02-09 23:54:00 +0900
 # 2. Writeups
 ## 1) checkin
 - 문제 내용
-  - This is a simple challenge, follow the steps below to complete the challenge. The goal is calling the `get_flag()` function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: https://github.com/movebit/ctfmovement-1.
+  - This is a simple challenge, follow the steps below to complete the challenge. The goal is calling the `get_flag()` function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-1](https://github.com/movebit/ctfmovement-1).
   - Deployment Contract: [0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f::checkin](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f/module/checkin)
   - Deployment Hash: [0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f)
 - 풀이
@@ -61,7 +61,7 @@ date: 2023-02-09 23:54:00 +0900
 
 ## 2) Hello move
 - 문제 내용
-  - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: https://github.com/movebit/ctfmovement-2.
+  - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-2](https://github.com/movebit/ctfmovement-2).
   - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
   - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
 - 풀이
