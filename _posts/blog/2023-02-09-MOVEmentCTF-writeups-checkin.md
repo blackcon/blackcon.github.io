@@ -91,10 +91,5 @@ date: 2023-02-09 23:54:00 +0900
     ![2022_ctf_movement_checkin_1](/posts/2022_ctf_movement_checkin_1.png)
     ![2022_ctf_movement_checkin_2](/posts/2022_ctf_movement_checkin_2.png)
 
-## 2) Hello move
-- 문제 내용
-  - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-2](https://github.com/movebit/ctfmovement-2).
-  - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
-  - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
-- 풀이
-  - 푸는중..
+# 3. To be continue
+- Next time...
