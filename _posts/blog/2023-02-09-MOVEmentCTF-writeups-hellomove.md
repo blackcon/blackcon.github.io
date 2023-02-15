@@ -85,7 +85,7 @@ date: 2023-02-10 00:20:00 +0900
 
       public entry fun add(account: &signer, choice: u8, number: u8) acquires Challenge {
           let res = borrow_global_mut<Challenge>(signer::address_of(account));
-          assert!(number <= 5, 0);
+          assert!(number <= 5, 0);  // number는 5 이하의 숫자입니다.
           if (choice == 1) {
               res.balance = res.balance + number;
           } else if (choice == 2) {
@@ -94,7 +94,9 @@ date: 2023-02-10 00:20:00 +0900
               res.balance = res.balance << number;
           };
 
-          if (!res.q3 && res.balance < Initialize_balance) {
+          if (!res.q3 && res.balance < Initialize_balance) { // Initialize_balance값은 10이며,
+                                                             // res.balance가 Initialize_balance 보다 작아야한다.
+                                                             // 위 choice 조건문 중에서 2번을 택하면 해결된다.
               res.q3 = true;
           }
       }
@@ -129,4 +131,38 @@ date: 2023-02-10 00:20:00 +0900
   - 각 변수의 value를 true로 만들기 위해서는 다른 함수들의 문제들을 풀어야 할 듯 하다.
   - Step1) res.q1을 true로 바꾸기 (`hash`함수에 주석을 달아 두었다.)
     ```python
+    import sha3
+
+    for i in range(256):
+        for j in range(256):
+            for k in range(256):
+                for l in range(256):
+                    guess = bytes([i,j,k,l,109,111,118,101])
+                    if sha3.keccak_256(guess).hexdigest() == "d9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79":
+                        print( guess )
+                        exit()
+    # answer: goodmove
     ```
+  - Step2) res.q2를 true로 바꾸기
+  - Step3) res.q3를 true로 바꾸기 (`add`함수에 주석을 달아 두었다.)
+    ```python
+    def solv_add( choice, number ):
+        init_bal = 10
+        bal = 10
+        if choice == 1:
+            bal = bal + number
+        elif choice == 2:
+            bal = bal * number
+        elif choice == 3:
+            bal = bal << number
+
+        if bal < init_bal:
+            print( choice, number  )
+
+    for i in [1,2,3]:
+        for number in range(0, 6):
+            solv_add(i, number)
+
+    # anser: choice = 2, number = 0
+    ```
+    
