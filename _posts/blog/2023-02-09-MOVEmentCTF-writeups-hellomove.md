@@ -16,7 +16,7 @@ date: 2023-02-10 00:20:00 +0900
   - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
   - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
 - Source Code
-  ```move
+  ```rust
   module ctfmovement::hello_move {
       // use std::hash;
       // use std::vector;
