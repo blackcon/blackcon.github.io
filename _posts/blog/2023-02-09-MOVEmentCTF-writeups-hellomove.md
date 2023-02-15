@@ -163,6 +163,6 @@ date: 2023-02-10 00:20:00 +0900
         for number in range(0, 6):
             solv_add(i, number)
 
-    # anser: choice = 2, number = 0
+    # answer: choice = 2, number = 0
     ```
     
