@@ -1,4 +1,4 @@
-url: http://streetturtle.github.io
+url: https://blackcon.github.io
 projectUrl: jekyl-cv-crafter
 
 # leave blank fields which you don't want to fill/be displayed
@@ -9,7 +9,7 @@ person:
   location: Seongnam-si, South Korea
   citizenship: South Korea
   email: 131ackcon@gmail.com
-  site: https://blackcon.tistory.com/
+  site: https://blackcon.github.io/
   # phone: 
   github: /blackcon
   linkedin: /blackcon
