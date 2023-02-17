@@ -5,9 +5,7 @@ tags: [web3, move, aptos]
 date: 2023-02-16 20:20:00 +0900
 ---
 # Intro
-![aptos-logo](https://aptos.dev/img/aptos_word.svg)<br>
-This is Aptos/Move security link archives for sharing . <br>
-You can share links through comment if you want to share another sites about the same category.<br>
+This is Aptos/Move security link archives for sharing . You can share links through comment if you want to share another sites about the same category.<br>
 
 # Official Links
 - Guide
