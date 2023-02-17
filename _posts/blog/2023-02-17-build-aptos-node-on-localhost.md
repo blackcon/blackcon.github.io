@@ -2,7 +2,7 @@
 title: Localhost에 Aptos Node 실행하기
 categories: [web3, aptos]
 tags: [web3, move, aptos]
-date: 2023-02-16 20:20:00 +0900
+date: 2023-02-17 23:17:00 +0900
 ---
 # Intro
 요즘들어 [Aptos 블록체인](https://aptoslabs.com/)을 열심히 공부해보고 있습니다. Layer1 블록체인이며 흔히들 말하는 Smart Contract는 Move라는 언어로 작성되고요. 코딩에 앞어서 테스트를 하기 위한 네트워크를 Localhost에 구성해보았고 그 절차를 정리해보았습니다.
