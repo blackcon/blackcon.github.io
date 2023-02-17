@@ -1,5 +1,5 @@
 ---
-title: 2022 MOVEment CTF Writeups (Hello Move)
+title: (작성중) 2022 MOVEment CTF Writeups (Hello Move)
 categories: [web3, move]
 tags: [web3, ctf, move, aptos]
 date: 2023-02-10 00:20:00 +0900
