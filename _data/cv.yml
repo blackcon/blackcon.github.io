@@ -130,12 +130,17 @@ sideProjects:
     type: github
     langs: C++/C
     
-    
-  - name: HVFUZZER ( 2022 )
+  - name: HVFUZZER (2022)
     description: The Fuzzer for discover vulnerability of Hyper-v on Windows 10
     link: https://github.com/blackcon/HVFUZZ
     type: github
     langs: C++/C
+    
+  - name: DeFi Hacks Analysis - Root Cause (2023)
+    description: This is a site that organizes security cases that occur in DeFi and organizes them for each case.
+    link: https://web3sec.notion.site/web3sec/a69bae6e397c4cdb80b4d120c08bc263?v=3dab7e34c83942abb6a90cd699156ab7
+    type: webpage
+    langs: KR
 
 education:
   - name: Pukyong National University
