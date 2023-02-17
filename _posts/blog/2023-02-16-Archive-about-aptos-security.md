@@ -47,7 +47,7 @@ This is Aptos/Move security link archives for sharing . You can share links thro
   - [(Paper)The move prover](https://research.facebook.com/publications/the-move-prover/)
   - [Move Prover User Guide](https://github.com/move-language/move/blob/main/language/move-prover/doc/user/prover-guide.md)
   - [Move Specific Language](https://github.com/move-language/move/blob/main/language/move-prover/doc/user/spec-lang.md)
-- Unofficiar
+- Unofficial
   - [ottersec](https://twitter.com/osec_io)
     - [Move: An Auditor's Introduction](https://osec.io/blog/tutorials/2022-09-06-move-introduction/)
     - [The Move Prover: A Practical Guide](https://osec.io/blog/tutorials/2022-09-16-move-prover/)
