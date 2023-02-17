@@ -1,5 +1,5 @@
 ---
-title: 2022 MOVEment CTF Writeups (Hello Move)
+title: Archive about Aptos/Move security
 categories: [web3, move]
 tags: [web3, move, aptos]
 date: 2023-02-16 20:20:00 +0900
