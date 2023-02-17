@@ -2,10 +2,10 @@
 title: 2022 MOVEment CTF Writeups (Hello Move)
 categories: [web3, move]
 tags: [web3, move, aptos]
-date: 2023-02-10 00:20:00 +0900
+date: 2023-02-16 20:20:00 +0900
 ---
-# vuln.aptos
-It is repository for finding vulnerability at Aptos and Move
+# Intro
+It is posting for sharing Aptos/Move security. You can share sites about same category trough comment form if you want to share.
 
 # Official Links
 - Guide
@@ -40,3 +40,4 @@ It is repository for finding vulnerability at Aptos and Move
   - [publicqi/git](https://github.com/publicqi/ctf_movement_writeup)
   - [publicqi/doc](https://publicki.top/zh-cn/posts/aptosctf/)
   - [cryptowen/ctf movement solution](https://gist.github.com/cryptowen/de38b9b1cc1915c1f3f21e652944296b)
+  - [blackcon/ctf movement solution(KR)](https://blackcon.github.io/posts/MOVEmentCTF-writeups-checkin/)
