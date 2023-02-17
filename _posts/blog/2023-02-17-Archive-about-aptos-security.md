@@ -40,4 +40,4 @@ This is Aptos/Move security link archives for sharing . You can share links thro
   - [publicqi/git](https://github.com/publicqi/ctf_movement_writeup)
   - [publicqi/doc](https://publicki.top/zh-cn/posts/aptosctf/)
   - [cryptowen/ctf movement solution](https://gist.github.com/cryptowen/de38b9b1cc1915c1f3f21e652944296b)
-  - [blackcon/ctf movement solution(KR)](https://blackcon.github.io/posts/MOVEmentCTF-writeups-checkin/)
+  - [2022 MOVEment CTF Writeups (KR)](https://blackcon.github.io/posts/MOVEmentCTF-writeups-checkin/)
