@@ -41,3 +41,15 @@ This is Aptos/Move security link archives for sharing . You can share links thro
   - [publicqi/doc](https://publicki.top/zh-cn/posts/aptosctf/)
   - [cryptowen/ctf movement solution](https://gist.github.com/cryptowen/de38b9b1cc1915c1f3f21e652944296b)
   - [2022 MOVEment CTF Writeups (KR)](https://blackcon.github.io/posts/MOVEmentCTF-writeups-checkin/)
+
+# Move Prover
+- Official
+  - [(Paper)The move prover](https://research.facebook.com/publications/the-move-prover/)
+  - [Move Prover User Guide](https://github.com/move-language/move/blob/main/language/move-prover/doc/user/prover-guide.md)
+  - [Move Specific Language](https://github.com/move-language/move/blob/main/language/move-prover/doc/user/spec-lang.md)
+- Unofficiar
+  - [ottersec](https://twitter.com/osec_io)
+    - [Move: An Auditor's Introduction](https://osec.io/blog/tutorials/2022-09-06-move-introduction/)
+    - [The Move Prover: A Practical Guide](https://osec.io/blog/tutorials/2022-09-16-move-prover/)
+  - [Movebit: Move Prover Tutorial](https://blog.movebit.xyz/post/move-prover-tutorial-part-1.html)
+  - [Starcoin: Move Prover Tutorials](https://cookbook.starcoin.org/docs/move/move-prover/mvp-tutorial/)
