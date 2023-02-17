@@ -76,7 +76,7 @@ date: 2023-02-17 23:17:00 +0900
       Account c0f351a65435de74f7eb6d27920dcb8f3e233ac8d4a016eae83b1f9151f24679 doesn't exist, creating it and funding it with 100000000 Octas
       Account c0f351a65435de74f7eb6d27920dcb8f3e233ac8d4a016eae83b1f9151f24679 funded successfully
 
-      ---
+      
       Aptos CLI is now set up for account c0f351a65435de74f7eb6d27920dcb8f3e233ac8d4a016eae83b1f9151f24679 as profile default!  Run `aptos --help` for more information about commands
       {
       "Result": "Success"
