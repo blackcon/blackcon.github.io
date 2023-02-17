@@ -1,5 +1,5 @@
 ---
-title: Archive about Aptos/Move security
+title: Archives about Aptos/Move security
 categories: [web3, aptos]
 tags: [web3, move, aptos]
 date: 2023-02-16 20:20:00 +0900
