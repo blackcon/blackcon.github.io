@@ -65,7 +65,7 @@ date: 2023-02-17 23:17:00 +0900
     ```shell
     aptos init --assume-yes --network custom --rest-url http://localhost:8080 --faucet-url http://localhost:8081
     ```
-    ```plaintext
+    ```text
     Configuring for profile default
     Configuring for network Custom
     Using command line argument for rest URL http://localhost:8080/
@@ -86,7 +86,7 @@ date: 2023-02-17 23:17:00 +0900
       ```shell
       aptos account fund-with-faucet --url http://localhost:8080 --faucet-url http://localhost:8081 --account 0xc0f351a65435de74f7eb6d27920dcb8f3e233ac8d4a016eae83b1f9151f24679
       ```
-      ```plaintext
+      ```text
       {
         "Result": "Added 100000000 Octas to account ff4fc660a1f2f36cd63ecd5e850b26f04daaee15d982b6299933001049331b88"
       }
