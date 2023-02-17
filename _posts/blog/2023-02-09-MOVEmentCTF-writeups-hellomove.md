@@ -15,7 +15,7 @@ date: 2023-02-10 00:20:00 +0900
   - This is a challenge that combines three questions, come to try it. Follow the steps below to complete the challenge. The goal is calling the get_flag() function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-2](https://github.com/movebit/ctfmovement-2).
   - Deployment Contract: [0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26::hello_move](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xc400473d4225e27a1b7a934d05bfe31a746605a59cf13928427f123238cf8f26/module/hello_move)
   - Deployment Hash: [0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0xb4270980f341a0d98eaae2885a80dc48007c9d0b25d3439fb31db484ae042083)
-- Source Code
+- Source Code (move 언어이지만 highlight 지원이 안되어 rust로 표기함)
   ```rust
   module ctfmovement::hello_move {
       // use std::hash;
@@ -129,40 +129,48 @@ date: 2023-02-10 00:20:00 +0900
 - 풀이
   - 이번에는 `checkin`문제와 달리 get_flag를 하기 위해서 `res.q1`, `res.q2`, `res.q3` 모두 true여야 한다.
   - 각 변수의 value를 true로 만들기 위해서는 다른 함수들의 문제들을 풀어야 할 듯 하다.
-  - Step1) res.q1을 true로 바꾸기 (`hash`함수에 주석을 달아 두었다.)
-    ```python
-    import sha3
+    - Step1) res.q1을 true로 바꾸기 (`hash`함수에 주석을 달아 두었다.)
+      ```python
+      import sha3
 
-    for i in range(256):
-        for j in range(256):
-            for k in range(256):
-                for l in range(256):
-                    guess = bytes([i,j,k,l,109,111,118,101])
-                    if sha3.keccak_256(guess).hexdigest() == "d9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79":
-                        print( guess )
-                        exit()
-    # answer: goodmove
-    ```
-  - Step2) res.q2를 true로 바꾸기
-  - Step3) res.q3를 true로 바꾸기 (`add`함수에 주석을 달아 두었다.)
-    ```python
-    def solv_add( choice, number ):
-        init_bal = 10
-        bal = 10
-        if choice == 1:
-            bal = bal + number
-        elif choice == 2:
-            bal = bal * number
-        elif choice == 3:
-            bal = bal << number
+      for i in range(256):
+          for j in range(256):
+              for k in range(256):
+                  for l in range(256):
+                      guess = bytes([i,j,k,l,109,111,118,101])
+                      if sha3.keccak_256(guess).hexdigest() == "d9ad5396ce1ed307e8fb2a90de7fd01d888c02950ef6852fbc2191d2baf58e79":
+                          print( guess )
+                          exit()
+      # answer: goodmove
+      ```
+    - Step2) res.q2를 true로 바꾸기
+      ```python
+      from sympy.ntheory import discrete_log
+      result = discrete_log(18446744073709551616, 18164541542389285005, 10549609011087404693)  
+      print(result)
+      answer: result = 3123592912467026955
+      ```
+    - Step3) res.q3를 true로 바꾸기 (`add`함수에 주석을 달아 두었다.)
+      ```python
+      def solv_add( choice, number ):
+          init_bal = 10
+          bal = 10
+          if choice == 1:
+              bal = bal + number
+          elif choice == 2:
+              bal = bal * number
+          elif choice == 3:
+              bal = bal << number
 
-        if bal < init_bal:
-            print( choice, number  )
+          if bal < init_bal:
+              print( choice, number  )
 
-    for i in [1,2,3]:
-        for number in range(0, 6):
-            solv_add(i, number)
+      for i in [1,2,3]:
+          for number in range(0, 6):
+              solv_add(i, number)
 
-    # answer: choice = 2, number = 0
-    ```
-    
+      # answer: choice = 2, number = 0
+      ```
+  - 실제 모듈로 값을 전달하기
+    > 앞어서 res.q1 ~ res.q3를 true로 셋팅할 수 있는 값을 찾아냈다. 이 값들을 문제의 module로 호출해야하는데, 이에 앞어 할 일이 하나 있다. 위 문제코드를 보면 `init_challenge`라는 함수가 있는데 이 함수를 호출하여 challnger를 활성화 시켜주어야 한다. 하지만 `init_challenge`는 `entry` 키워드가 없는 함수이기에 `aptos move run` 명령어로 직접적으로 호출을 할 수 없다.
+       
