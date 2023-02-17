@@ -5,7 +5,7 @@ tags: [web3, move, aptos]
 date: 2023-02-16 20:20:00 +0900
 ---
 # Intro
-It is posting for sharing Aptos/Move security. You can share sites about same category through comment form if you want to share.
+This is Aptos/Move security link archives for sharing . You can share links through comment if you want to share another sites about the same category.
 
 # Official Links
 - Guide
