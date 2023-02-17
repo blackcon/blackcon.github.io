@@ -7,7 +7,7 @@ date: 2023-02-17 23:17:00 +0900
 # Intro
 요즘들어 [Aptos 블록체인](https://aptoslabs.com/)을 열심히 공부해보고 있습니다. Layer1 블록체인이며 흔히들 말하는 Smart Contract는 Move라는 언어로 작성되고요. 코딩하기에 앞서서 테스트를 하기 위한 네트워크를 Localhost에 구성해보았고 그 절차를 정리해보았습니다.
 
-# How to build network on localhost? ([참고](https://aptos.dev/nodes/local-testnet/run-a-local-testnet/#attaching-a-faucet-to-your-testnet))
+# How to build network on localhost? ([참고](https://aptos.dev/nodes/local-testnet/run-a-local-testnet/))
 1. [aptos-core](https://github.com/aptos-labs/aptos-core)의 repository를 clone합니다.
    ```bash
    git clone https://github.com/aptos-labs/aptos-core.git
