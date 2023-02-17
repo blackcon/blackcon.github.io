@@ -15,8 +15,8 @@ date: 2023-02-09 23:54:00 +0900
   - This is a simple challenge, follow the steps below to complete the challenge. The goal is calling the `get_flag()` function to trigger a Flag event, and submit the transaction hash to get the flag. You can reach the contract code here: [movebit/ctfmovement-1](https://github.com/movebit/ctfmovement-1).
   - Deployment Contract: [0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f::checkin](https://fullnode.devnet.aptoslabs.com/v1/accounts/0xdec0b6cf75d38b9da4922cc983810ef436560bbe55e85f2b80d657ff834b3c9f/module/checkin)
   - Deployment Hash: [0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f](https://fullnode.devnet.aptoslabs.com/v1/transactions/by_hash/0x7f8d39b633c291e498fa490be34db086082e5b52b7050d1988df904f168cfc0f)
-- Source code
-  ```move
+- Source code (move 언어이지만 highlight 지원이 안되어 rust로 표기함)
+  ```rust
   module ctfmovement::checkin {
       use std::signer;
       use aptos_framework::account;
