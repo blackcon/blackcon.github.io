@@ -5,7 +5,7 @@ tags: [web3, move, aptos]
 date: 2023-02-26 18:05:00 +0900
 ---
 # Intro
-![podman-logo](https://podman.io/images/podman.svg<br>
+![podman-logo](https://podman.io/images/podman.svg)<br>
 최근들어 docker를 사용한 작업이 많아진 가운데 회사에서 licence의 문제로 docker desktop을 지우라는 명(?)을 전달받았습니다.
 이에따라 docker를 삭제해야 했고, docker 관련 테스팅을 하기 위해선 개인 PC에서 깔짝깔짝 테스트를 해야하는 번거로움이 있었는데요.
 그러던 중 [podman](https://podman.io/)이라는 tool을 알게되었고 관련하여 기본적인 셋팅 및 간단한 명령어를 소개하고자 합니다! 
