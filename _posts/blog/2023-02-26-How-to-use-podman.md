@@ -1,7 +1,7 @@
 ---
 title: docker를 대신해줄 podman
-categories: [web3, aptos]
-tags: [web3, move, aptos]
+categories: [podman, manual]
+tags: [podman, docker, manual]
 date: 2023-02-26 18:05:00 +0900
 ---
 # Intro
