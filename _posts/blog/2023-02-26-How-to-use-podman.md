@@ -1,5 +1,5 @@
 ---
-title: docker를 대신해줄 podman
+title: [Podman] Docker를 대신해줄 귀여운 명령어
 categories: [podman, manual]
 tags: [podman, docker, manual]
 date: 2023-02-26 18:05:00 +0900
