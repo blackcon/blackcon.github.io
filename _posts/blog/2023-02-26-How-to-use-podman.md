@@ -133,14 +133,16 @@ podman의 전체 명령어를 알고싶다면 `podman help`를 입력하여 옵�
     ```
 - `podman ps`
   - 이 명령어도 docker와 같이 현재 실행중인 image들을 보여주는 명령어입니다.
-  - 
+  - 명령어
     ```bash
     ➜ podman ps
     
     CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
     ```
 - `podman help`
-  ```
+  ```bash
+  ➜ podman help
+  
   Manage pods, containers and images
 
   Usage:
