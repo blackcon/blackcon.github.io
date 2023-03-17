@@ -30,18 +30,19 @@ date: 2023-03-16 23:05:00 +0900
     Password:
     ```
 3. 맥북 덮어보기 (테스트!)
+
 # Share
 저는 위 명령어를 평소에 사용하지 않다보니 외워지지도 않습니다. 
 그래서 저는 간단한 `shell script`를 작성하여 컴퓨터에 저장을 해두었구요.
 상황에 따라서 `on` 또는 `off` 옵션을 함께 입력하여 기능을 제어할 수 있도록 했습니다.
 - shell script
-  ```bash
-  #!/bin/bash
+   ```bash
+   #!/bin/bash
 
-  if [ $# -ne 1  ]; then
+   if [ $# -ne 1  ]; then
       echo "Usage: $0 on|off"
       exit -1
-  else
+   else
       if [ $1 == "on" ]; then
           sudo pmset -c disablesleep 1;
       elif [ $1 == "off"  ];then
@@ -49,8 +50,8 @@ date: 2023-03-16 23:05:00 +0900
       else
           echo "Invalid option"
       fi
-  fi
-  ```
+   fi
+   ```
 - 사용법
   - 덮개를 덮어도 잠들지 않게 하기
       ```bash
