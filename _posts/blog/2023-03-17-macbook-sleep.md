@@ -53,10 +53,10 @@ date: 2023-03-16 23:05:00 +0900
   ```
 - 사용법
   - 덮개를 덮어도 잠들지 않게 하기
-   ```bash
-   ./sleep_mac.sh on
-   ```
+      ```bash
+      ./sleep_mac.sh on
+      ```
   - 덮개를 덮어도 잠들게 하기
-   ```bash
-   ./sleep_mac.sh off
-   ```
+      ```bash
+      ./sleep_mac.sh off
+      ```
