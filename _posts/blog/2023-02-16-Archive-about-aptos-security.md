@@ -53,4 +53,4 @@ This is Aptos/Move security link archives for sharing . You can share links thro
     - [The Move Prover: A Practical Guide](https://osec.io/blog/tutorials/2022-09-16-move-prover/)
   - [Movebit: Move Prover Tutorial](https://blog.movebit.xyz/post/move-prover-tutorial-part-1.html)
   - [Starcoin: Move Prover Tutorials](https://cookbook.starcoin.org/docs/move/move-prover/mvp-tutorial/)
-  - [The Move Prover: Quality Assurance of Formal Verification](https://www.certik.com/resources/blog/1NygvVeqIwhbUk1U1q3vJF-the-move-prover-quality-assurance-of-formal-verification?utm_source=Twitter&utm_medium=Blog&utm_id=MoveProver)
+  - [CERTIK: The Move Prover: Quality Assurance of Formal Verification](https://www.certik.com/resources/blog/1NygvVeqIwhbUk1U1q3vJF-the-move-prover-quality-assurance-of-formal-verification?utm_source=Twitter&utm_medium=Blog&utm_id=MoveProver)
