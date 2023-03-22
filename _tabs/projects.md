@@ -1,7 +1,7 @@
 ---
 title: Projects
 icon: fas fa fa-terminal
-order: 1
+order: 2
 ---
 
 ### Side Projects
