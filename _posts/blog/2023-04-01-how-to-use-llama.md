@@ -109,4 +109,4 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 - [Introducing LLaMA: A foundational, 65-billion-parameter large language model](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
 - [[GITHUB]LLaMA Model Card](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md)
 - [[GITHUB]LLaMA](https://github.com/facebookresearch/llama)
-- [[GITHUB]LLaMA.cpp]((https://github.com/ggerganov/llama.cpp))
+- [[GITHUB]LLaMA.cpp](https://github.com/ggerganov/llama.cpp)
