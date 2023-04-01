@@ -70,7 +70,7 @@ c++ -I. -I./examples -O3 -DNDEBUG -std=c++11 -fPIC -Wall -Wextra -Wpedantic -Wca
 
 ====  Run ./main -h for help.  ====
 ```
-### 3. Model weight 다운로드 받기
+### 3) Model weight 다운로드 받기
 LLaMA 프로젝트는 소스코드만 공개하고 `model`은 공개하지 않았는데요. 해당 [구글 Form](https://forms.gle/jk851eBVbX1m5TAv5)에 신청을 하면 모델 데이터를 받을 수 있다고 하네요. 또는 누군가가 이 [PR](https://github.com/facebookresearch/llama/pull/73/files)을 통해서 토렌트 주소를 공개를 해뒀다고 하는데 참고(?) 하세요.
 
 **참고**: 모델 데이터가 없는 상태에서 예제 코드를 실행해보았습니다. 아래와 같이 `error: failed to load model` 라며 모델 데이터 로딩에 실패를 하게 되네요.
@@ -86,7 +86,7 @@ main: error: failed to load model './models/7B/ggml-model-q4_0.bin'
 total 848
 -rw-r--r--  1 user  staff   422K  3 31 17:43 ggml-vocab.bin
 ```
-### 4. Model format 변환하기
+### 4) Model format 변환하기
 
 ```bash
 # install Python dependencies
@@ -101,7 +101,7 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 # run the inference
 ./main -m ./models/7B/ggml-model-q4_0.bin -n 128
 ```
-### 5. 예제 실행하기
+### 5) 예제 실행하기
 해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다.
 ![chatllama-chat13B.png](/posts/chatllama-chat13B-2.png)
 # Reference
