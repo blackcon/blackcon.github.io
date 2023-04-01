@@ -21,7 +21,7 @@ _**참고**: 인공지능을 전혀 공부하지 않은 사람이 작성하는 �
 # LLaMA.cpp
 ![llama.cpp](https://user-images.githubusercontent.com/1991296/227761327-6d83e30e-2200-41a6-bfbb-f575231c54f4.png)
 ## 소개
-python으로 작성된 LLaMA가 공개된 후 C/C++ 을 베이스로 실행할 수 있는 [프로젝트](https://github.com/ggerganov/llama.cpp#using-gpt4all)가 공개되었습니다. 하여 이 글에서는 `LLaMA.cpp`를 베이스로 사용하는 방법을 적어보도록 하겠습니다. 이유는... 인공지능 환경 셋팅이 낯선 저에게는 기본 LLaMA 보다, `LLaMA.cpp` 의 옵션이 더 간결하고 쉬웠으며 에제도 다양하게 있어서입니다 :) <br>
+python으로 작성된 LLaMA가 공개된 후 C/C++ 을 베이스로 실행할 수 있는 [프로젝트](https://github.com/ggerganov/llama.cpp)가 공개되었습니다. 하여 이 글에서는 `LLaMA.cpp`를 베이스로 사용하는 방법을 적어보도록 하겠습니다. 이유는... 인공지능 환경 셋팅이 낯선 저에게는 기본 LLaMA 보다, `LLaMA.cpp` 의 옵션이 더 간결하고 쉬웠으며 에제도 다양하게 있어서입니다 :) <br>
 
 그럼 아래의 순서대로 `LLaMA.cpp`를 셋팅해보고 다양한 예제들을 실행해보도록 하겠습니다.
 ```
@@ -107,5 +107,6 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 # Reference
 - [[AI타임스] 메타, 생성AI 전쟁 합류...대규모 언어 모델 'LLaMA' 공개](https://www.aitimes.com/news/articleView.html?idxno=149681)
 - [Introducing LLaMA: A foundational, 65-billion-parameter large language model](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
-- [LLaMA Model Card](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md)
-- [github-llama](https://github.com/facebookresearch/llama)
+- [[GITHUB]LLaMA Model Card](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md)
+- [[GITHUB]LLaMA](https://github.com/facebookresearch/llama)
+- [[GITHUB]LLaMA.cpp]((https://github.com/ggerganov/llama.cpp))
