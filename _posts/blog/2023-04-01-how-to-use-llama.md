@@ -11,7 +11,7 @@ _**참고**: 인공지능을 전혀 공부하지 않은 사람이 작성하는 �
 &nbsp; [Meta](https://www.meta.com/)에서는 대규모 언어 모델인 [LLaMA(Large Language Model Meta AI)](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)를 공개했다. 보통의 인공지능 모델들은 빵빵(?)한 서버 환경이 뒷 받침 되어야 하는데, LLaMA의 경우는 일반 사용자의 PC에서도 수행이 가능할 정도로 개발이 잘 되어 있습니다. <br>
 제가 본 기사 중 일부의 내용으로 보아하니 다른 AI와 견주어도 뒤지지 않을 만큼의 성능을 지닌 AI로 보여집니다! 셋팅을 하면서 어떤게 또 가능할지, 관련된 포스팅들을 틈틈히 써볼 수 있도록 할게요. 보다 자세한 내용은 [관련 기사](https://www.aitimes.com/news/articleView.html?idxno=149681)를 참고길 바랍니다.
 
-## 기사 중 일부 발췌([AI타임스](https://www.aitimes.com/news/articleView.html?idxno=149681)
+## 기사 중 일부 발췌([AI타임스](https://www.aitimes.com/news/articleView.html?idxno=149681))
 > 기본형인 66B(매개변수 650억개)를 비롯해 ▲7B(70억개) ▲13B(130억개) ▲33B(330억개) 등 용도에 맞춰 리소스를 줄일 수 있도록 다양한 버전을 출시할 계획이다.
 > 
 > 오픈AI의 'GPT-3.0'와 'GPT-3.5(챗GPT)'는 매개변수가 1750억개, 구글의 'PaLM'은 5400억개에 달한다. 
