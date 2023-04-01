@@ -70,7 +70,7 @@ c++ -I. -I./examples -O3 -DNDEBUG -std=c++11 -fPIC -Wall -Wextra -Wpedantic -Wca
 ====  Run ./main -h for help.  ====
 ```
 ### 3. Model weight 다운로드 받기
-LLaMA 프로젝트는 소스코드만 공개하고 `model`은 공개하지 않았는데요. 해당 [구글 Form](https://forms.gle/jk851eBVbX1m5TAv5)에 신청을 하면 모델 데이터를 받을 수 있다고 하네요. ~또는 누군가가 이 [PR](https://github.com/facebookresearch/llama/pull/73/files)을 통해서 토렌트 주소를 공개를 해뒀다고 하는데... 참고(?) 하세요.~
+LLaMA 프로젝트는 소스코드만 공개하고 `model`은 공개하지 않았는데요. 해당 [구글 Form](https://forms.gle/jk851eBVbX1m5TAv5)에 신청을 하면 모델 데이터를 받을 수 있다고 하네요. 또는 누군가가 이 [PR](https://github.com/facebookresearch/llama/pull/73/files)을 통해서 토렌트 주소를 공개를 해뒀다고 하는데 참고(?) 하세요.
 
 **참고**: 모델 데이터가 없는 상태에서 예제 코드를 실행해보았습니다. 아래와 같이 `error: failed to load model` 라며 모델 데이터 로딩에 실패를 하게 되네요.
 ```bash
