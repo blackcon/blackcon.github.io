@@ -102,7 +102,7 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 ```
 ### 5. 예제 실행하기
 해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다.
-![chatllama-chat13B.png](./img/posts/chatllama-chat13B.png)
+![chatllama-chat13B.png](./posts/chatllama-chat13B.png)
 # Reference
 - [[AI타임스] 메타, 생성AI 전쟁 합류...대규모 언어 모델 'LLaMA' 공개](https://www.aitimes.com/news/articleView.html?idxno=149681)
 - [Introducing LLaMA: A foundational, 65-billion-parameter large language model](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
