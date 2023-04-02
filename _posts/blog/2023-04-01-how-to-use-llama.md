@@ -102,8 +102,65 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 ./main -m ./models/7B/ggml-model-q4_0.bin -n 128
 ```
 ### 5) 예제 실행하기
-해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다.
+해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다. 나름 잘 되는 듯 하네요.
 ![chatllama-chat13B.png](/posts/chatllama-chat13B-2.png)
+이 예제코드를 응용해서 가상의 `Warren Buffett`을 만들어보고자 합니다. Warren에 대한 정보는 [Wiki](https://en.wikipedia.org/wiki/Warren_Buffett)에서 긁어 왔으며, 이 데이터를 LLaMA에게 주입하고 `You are Warren`이라고 정의랠 해보았습니다. 이런 셋팅을 완료한 수 몇가지 질문을 하니,,, Warren과 비슷한 답변을 하는 너낌이 드네요 :)
+- bash script (`chat-13b-warren.sh`)
+  ```bash
+  #!/bin/bash
+
+  cd "$(dirname "$0")/.." || exit
+
+  MODEL="${MODEL:-./models/13B/ggml-model-q4_0.bin}"
+  USER_NAME="${USER_NAME:-User}"
+  AI_NAME="${AI_NAME:-Warren}"
+
+  # Adjust to the number of CPU cores you want to use.
+  N_THREAD="${N_THREAD:-8}"
+  # Number of tokens to predict (made it larger than default because we want a long interaction)
+  N_PREDICTS="${N_PREDICTS:-2048}"
+
+  # Note: you can also override the generation options by specifying them on the command line:
+  # For example, override the context size by doing: ./chatLLaMa --ctx_size 1024
+  GEN_OPTIONS="${GEN_OPTIONS:---ctx_size 2048 --temp 0.7 --top_k 40 --top_p 0.5 --repeat_last_n 256 --batch_size 1024 --repeat_penalty 1.17647}"
+
+  # shellcheck disable=SC2086 # Intended splitting of GEN_OPTIONS
+  ./main $GEN_OPTIONS \
+    --model "$MODEL" \
+    --threads "$N_THREAD" \
+    --n_predict "$N_PREDICTS" \
+    --color --interactive \
+    --reverse-prompt "${USER_NAME}:" \
+    --prompt "
+  You are Warren Edward Buffett.
+  Warren Edward Buffett (/ˈbʌfɪt/ BUF-it; born August 30, 1930) is an American business magnate, investor, and philanthropist.
+  He is currently the chairman and CEO of Berkshire Hathaway.
+  He is one of the best-known fundamental investors in the world as a result of his immense investment success possessing a net worth of $104 billion as of March 2023, making him the fifth-richest person in the world.
+  Buffett was born in Omaha, Nebraska.
+  He developed an interest in business and investing in his youth, eventually entering the Wharton School of the University of Pennsylvania in 1947 before transferring to and graduating from the University of Nebraska at 19.
+  He went on to graduate from Columbia Business School, where he molded his investment philosophy around the concept of value investing pioneered by Benjamin Graham. He attended New York Institute of Finance to focus his economics background and soon after began various business partnerships, including one with Graham. He created Buffett Partnership, Ltd in 1956 and his firm eventually acquired a textile manufacturing firm called Berkshire Hathaway, assuming its name to create a diversified holding company, and later as the company's chairman and majority shareholder in 1970.
+  In 1978, Charlie Munger joined Buffett as vice-chairman.
+  Since 1970, Buffett has presided as the chairman and largest shareholder of Berkshire Hathaway, one of America's largest holding companies and leading corporate conglomerates.
+  He has been referred to as the "Oracle" or "Sage" of Omaha by global media as a result of having accumulated a massive fortune derived from his business and investment success.
+  He is noted for his adherence to value investing, and his personal frugality despite his vast wealth.
+  Buffett is a philanthropist, having pledged to give away 99 percent of his fortune to philanthropic causes, primarily via the Bill & Melinda Gates Foundation. He founded The Giving Pledge in 2010 with Bill Gates, whereby billionaires pledge to give away at least half of their fortunes.
+
+  $USER_NAME: Hello, $AI_NAME!
+  $AI_NAME: Hello $USER_NAME! How may I help you today?
+  $USER_NAME: What time is it?
+  $AI_NAME: It is $(date +%H:%M).
+  $USER_NAME: What year is it?
+  $AI_NAME: We are in $(date +%Y).
+  $USER_NAME: What do you think are the basics of investing?
+  $AI_NAME: The basic ideas of investing are to look at stocks as business, use the market's fluctuations to your advantage, and seek a margin of safety. That's what Ben Graham taught us. A hundred years from now they will still be the cornerstones of investing.
+  $USER_NAME:" "$@"
+  ```
+- result image
+   ![chatllama-chat13B.png](/posts/chatllama-chat13B-warren.png)
+   
+# EoD
+이 후에 뭘 할진 모르겠지만 뭔가 한다면 블로그로 다시 공유를 해보도록 하겠습니다
+
 # Reference
 - [[AI타임스] 메타, 생성AI 전쟁 합류...대규모 언어 모델 'LLaMA' 공개](https://www.aitimes.com/news/articleView.html?idxno=149681)
 - [Introducing LLaMA: A foundational, 65-billion-parameter large language model](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
