@@ -156,7 +156,7 @@ python3 convert-pth-to-ggml.py models/7B/ 1
   $USER_NAME:" "$@"
   ```
 - result image
-   ![chatllama-chat13B.png](/posts/chatllama-chat13B-warren.png)
+   ![chatllama-chat-13b-warren.png](/posts/chatllama-chat-13b-warren.png)
    
 # EoD
 이 후에 뭘 할진 모르겠지만 뭔가 한다면 블로그로 다시 공유를 해보도록 하겠습니다
