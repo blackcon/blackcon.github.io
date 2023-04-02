@@ -104,7 +104,7 @@ python3 convert-pth-to-ggml.py models/7B/ 1
 ### 5) 예제 실행하기
 해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다. 나름 잘 되는 듯 하네요.
 ![chatllama-chat13B.png](/posts/chatllama-chat13B-2.png)
-이 예제코드를 응용해서 가상의 `Warren Buffett`을 만들어보고자 합니다. Warren에 대한 정보는 [Wiki](https://en.wikipedia.org/wiki/Warren_Buffett)에서 긁어 왔으며, 이 데이터를 LLaMA에게 주입하고 `You are Warren`이라고 정의랠 해보았습니다. 이런 셋팅을 완료한 수 몇가지 질문을 하니,,, Warren과 비슷한 답변을 하는 너낌이 드네요 :)
+이 예제코드를 응용해서 가상의 `Warren Buffett`을 만들어보고자 합니다. Warren에 대한 정보는 [Wiki](https://en.wikipedia.org/wiki/Warren_Buffett)에서 긁어 왔으며, 이 데이터를 LLaMA에게 주입하고 `You are Warren`이라고 정의를 해주었습니다. 이런 셋팅을 완료한 후 몇가지 질문을 하니 Warren과 비슷한 답변을 하는 너낌이 드네요 :)
 - bash script (`chat-13b-warren.sh`)
   ```bash
   #!/bin/bash
