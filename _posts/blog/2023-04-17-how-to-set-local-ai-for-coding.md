@@ -180,7 +180,8 @@ date: 2023-04-17 23:08:00 +0900
   ![turpopilot-gen-mainfunc](/posts/turpopilot-gen-mainfunc.png)
 - turbopilot이 개발한 코드 실행해보기 (조금 수정이 필요함..)
   ![turbopilot-codgen-run-result](/posts/turbopilot-codgen-run-result.png)
-# 세 줄 요약
+  
+# 5. 세 줄 요약
 - 폐쇄망 및 로컬 환경에 코딩 도우미가 생겨서 좋았습니다.
 - PC 혹은 기타 하드웨어 사양이 좋다면 다양한 언어셋을 학습시켜보는 것도 좋은 방법일 듯 합니다.
 - 역시나 개인 로컬 머신에서 AI로 코드 생성하기에는 다소 느린감이 있네요 :)
