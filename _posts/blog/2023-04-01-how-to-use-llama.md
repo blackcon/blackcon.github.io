@@ -123,20 +123,26 @@ total 848
   done
   ```
 ### 4) Model format 변환하기
-
-```bash
-# install Python dependencies
-python3 -m pip install torch numpy sentencepiece
-
-# convert the 7B model to ggml FP16 format
-python3 convert-pth-to-ggml.py models/7B/ 1
-
-# quantize the model to 4-bits (using method 2 = q4_0)
-./quantize ./models/7B/ggml-model-f16.bin ./models/7B/ggml-model-q4_0.bin 2
-
-# run the inference
-./main -m ./models/7B/ggml-model-q4_0.bin -n 128
-```
+- 필요한 모듈 설치
+  ```bash
+  # install Python dependencies
+  python3 -m pip install -r requirements.txt
+  ```
+- ggml FP16 방식으로 변환
+  ```bash
+  # convert the 7B model to ggml FP16 format
+  python3 convert.py models/7B/
+  ```
+- 4bit 양자화 모델로 변환
+  ```bash
+  # quantize the model to 4-bits (using method 2 = q4_0)
+  ./quantize ./models/7B/ggml-model-f16.bin ./models/7B/ggml-model-q4_0.bin 2
+  ```
+- 변환된 모듈로 LLaMAcpp 실행하기
+  ```bash
+  # run the inference
+  ./main -m ./models/7B/ggml-model-q4_0.bin -n 128
+  ```
 ### 5) 예제 실행하기
 해당 소스코드에서 제공하는 예제는 다양하게 있는데요. 이 중에서도 챗봇을 한 번 실행토록 해보겠습니다. 나름 잘 되는 듯 하네요.
 ![chatllama-chat13B.png](/posts/chatllama-chat13B-2.png)
