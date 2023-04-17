@@ -5,8 +5,8 @@ tags: [AI, llamacpp, turbopilot]
 date: 2023-04-17 23:08:00 +0900
 ---
 # 1. Turbopilot 프로젝트 소개
-들어가기에 앞서, [이 전 포스트](https://blackcon.github.io/posts/how-to-use-llama/)에서 [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)라는 인공지능을 소개하고 [LLaMA.cpp](https://github.com/ggerganov/llama.cpp) 프로젝트 셋팅 및 사용까지 해보았습니다. <br>
-이 프로젝트를 기반으로 탄생하고 있는 수많은 프로젝트와 Model들이 있는데요. 여러가지 나온 것 중에 개발자에게 유익한 프로젝트가 있어서 소개하고자 합니다.<br>
+들어가기에 앞서, [이 전 포스트](https://blackcon.github.io/posts/how-to-use-llama/)에서 [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)라는 인공지능을 소개하고 [LLaMA.cpp](https://github.com/ggerganov/llama.cpp) 프로젝트 셋팅 및 사용까지 해보았습니다. 이 프로젝트를 기반으로 탄생하고 있는 수많은 프로젝트와 Model들이 있는데요. 여러가지 나온 것 중에 개발자에게 유익한 프로젝트가 있어서 소개하고자 합니다.<br>
+![turpopilot-gen-crawlfunc](/posts/turpopilot-gen-crawlfunc.png)
 프로젝트는 [turbopilot](https://github.com/ravenscroftj/turbopilot)라는 명으로 며칠 전에 공개가 되었으며, github의 [copilot](https://github.com/features/copilot)을 로컬환경에서 사용해볼 수 있는 프로젝트로 보여집니다.
 또한 이 turbopilot은 GPU가 없어도 되며 4GB의 메모리 공간만 있다면 사용해볼 수 있다고 하니, 외부 API에 코드를 전송하면 안되는 상황(ex. 사내망 등)의 개인 PC에서도 활용성이 있어보이네요 :)
 
@@ -26,7 +26,7 @@ date: 2023-04-17 23:08:00 +0900
 ## 2) Step-by-Step 환경 셋팅하기
 ### 2-1) 사전 설치 ([참고](https://github.com/ravenscroftj/turbopilot/blob/main/BUILD.md))
 - MacOS
-    ```zsh
+    ```bash
     brew install cmake boost
     ```
 - Ubuntu
@@ -34,7 +34,8 @@ date: 2023-04-17 23:08:00 +0900
     sudo apt update
     sudo apt install libboost-dev cmake build-essential
     ```
-2-2) 프로젝트 셋팅하기
+
+### 2-2) 프로젝트 셋팅하기
 - 프로젝트 clone
     ```bash
     git clone https://github.com/ravenscroftj/turbopilot.git
@@ -50,9 +51,10 @@ date: 2023-04-17 23:08:00 +0900
     cd turbopilot/
     git clone https://github.com/ravenscroftj/ggml.git ./ggml
     ```
-2-3) 소스코드 컴파일 하기
+
+### 2-3) 소스코드 컴파일 하기
 - CMake 하기
-    ```zsh
+    ```bash
     (base) ➜  turbopilot git:(main) mkdir ggml/build
     (base) ➜  turbopilot git:(main) cd ggml/build
     (base) ➜  build git:(master) cmake ..
@@ -84,7 +86,7 @@ date: 2023-04-17 23:08:00 +0900
     -- Build files have been written to: /Users/user/turbopilot/ggml/build
     ```
 - make 하기
-    ```zsh
+    ```bash
     (base) ➜  build git:(master) make codegen-serve
     [ 14%] Building C object src/CMakeFiles/ggml.dir/ggml.c.o
     [ 28%] Linking C static library libggml.a
@@ -106,11 +108,11 @@ date: 2023-04-17 23:08:00 +0900
     [100%] Linking CXX executable ../../bin/codegen-serve
     [100%] Built target codegen-serve
     ```
-2-4) 실행하기 (중간 테스트 과정)
+
+###  2-4) 실행하기 (중간 테스트 과정)
 - model 셋팅
   - 앞서서 [Google Drive](https://drive.google.com/drive/folders/1wFy1Y0pqoK23ZeMWWCp8evxWOJQVdaGh)를 통해서 원하는 모듈을 다운로드 받았을 건데, 이 파일을 `models` 디렉터리에 추가해둡니다.
-  - 그 후, 아래의 명령어로 `codegen-serve`를 실행!
-    ```zsh
+    ```bash
     (base) ➜  build git:(master) cd ../..
 
     (base) ➜  turbopilot git:(main) ✗ ls
@@ -118,7 +120,9 @@ date: 2023-04-17 23:08:00 +0900
 
     (base) ➜  turbopilot git:(main) ✗ ls models
     codegen-6B-multi-ggml-4bit-quant.bin readme.txt
-
+    ```
+  - 그 후, 아래의 명령어로 `codegen-serve`를 실행!
+    ```bash
     (base) ➜  turbopilot git:(main) ✗ ggml/build/bin/codegen-serve -m ./models/codegen-6B-multi-ggml-4bit-quant.bin
     main: seed = 1681736141
     gptj_model_load: loading model from './models/codegen-6B-multi-ggml-4bit-quant.bin' - please wait ...
@@ -148,13 +152,13 @@ date: 2023-04-17 23:08:00 +0900
 코드를 생성해줄 BackEnd 단은 모두 셋팅이 완료도었으며, 이제 이를 `vscode`의 플러그인과 연동하려 합니다. 연동할 플러그인은 [vscode-fauxpilot](https://github.com/Venthe/vscode-fauxpilot.git)이지만, turbopilot 개발자의 PR은 아직 반영되지 않아서 [release link](https://github.com/ravenscroftj/vscode-fauxpilot/releases/tag/v1.1.5-ravenscroftj)에서 별도 다운로드해야 하네요.
 
 ## 2) Step-by-step Ekfkgkrl
-2-1) vscode에 연동 할 [visx](https://github.com/ravenscroftj/vscode-fauxpilot/releases/download/v1.1.5-ravenscroftj/fauxpilot-1.1.5-ravenscroft.vsix) 파일 다운로드
+### 2-1) vscode에 연동 할 [visx](https://github.com/ravenscroftj/vscode-fauxpilot/releases/download/v1.1.5-ravenscroftj/fauxpilot-1.1.5-ravenscroft.vsix) 파일 다운로드
 
-2-2) vscode에서 `vsix` 파일로 플러그인 설치하기
+### 2-2) vscode에서 `vsix` 파일로 플러그인 설치하기
 - 명령어 팔레트(Ctrl+shift+P 또는 cmd+shift+p)를 열어 `install from vsix`입력하기
 - 파일 선택창에서 다운로드 받은 `fauxpilot-1.1.5-ravenscroft.vsix` 파일 선택하기
 
-2-3) vscode 사용자 설정(json)에 아래 내용 추가
+### 2-3) vscode 사용자 설정(json)에 아래 내용 추가
 - 명령어 팔레트(Ctrl+shift+P 또는 cmd+shift+p)를 열어 `open user settings(json)` 입력하기
 - 열려진 json 셋팅 파일 내부에 아래 코드 추가하기
     ```json
@@ -165,7 +169,8 @@ date: 2023-04-17 23:08:00 +0900
         "fauxpilot.server": "http://localhost:18080/v1/engines",
     }
     ```
-2-4) 플러그인 실행하기
+
+### 2-4) 플러그인 실행하기
 - 명령어 팔레트(Ctrl+shift+P 또는 cmd+shift+p)를 열어 `Enable Fauxpilot` 입력 후 `Enter`
 
 # 4. 대망의 결과보기
@@ -173,6 +178,8 @@ date: 2023-04-17 23:08:00 +0900
   ![turpopilot-gen-crawlfunc](/posts/turpopilot-gen-crawlfunc.png)
 - 위에서 생성한 함수 호출하기
   ![turpopilot-gen-mainfunc](/posts/turpopilot-gen-mainfunc.png)
+- turbopilot이 개발한 코드 실행해보기 (조금 수정이 필요함..)
+  ![turbopilot-codgen-run-result](/posts/turbopilot-codgen-run-result.png)
 # 세 줄 요약
 - 폐쇄망 및 로컬 환경에 코딩 도우미가 생겨서 좋았습니다.
 - PC 혹은 기타 하드웨어 사양이 좋다면 다양한 언어셋을 학습시켜보는 것도 좋은 방법일 듯 합니다.
