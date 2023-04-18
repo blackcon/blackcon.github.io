@@ -24,3 +24,4 @@ summary: Carry out the mission to be hired as a full-time employee. I work on pe
 
 ## 4. Others:
 - Support for penetration testing to customer service
+- 2nd Prize at [WWT CTF](https://www.wwt.com/event/63f924e482dafc009bf9f82c) (2023)
