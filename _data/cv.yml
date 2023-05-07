@@ -14,6 +14,47 @@ person:
   github: /blackcon
   linkedin: /blackcon
 
+technicalSkills:
+  list:
+    - tr: "Penetration Test (System, Web, Android, Smart Contract)"
+    - tr: "Reverse Engineering (Windows, Linux, Android)"
+    - tr: "Exploit (windows, Linux, Smart Contract)"
+    - tr: "Virtualization"
+    
+  pentest:
+   - name: Web Service 
+     level: 90
+   - name: Linux/Windows Service
+     level: 90
+   - name: Android Service
+     level: 80
+   - name: Rebuilding Network Packets
+     level: 80
+   - name: Smart Contract on EVM
+     level: 60
+     
+  analysis:
+   - name: User Application (Windows,Linux / x64,x86)
+     level: 90
+   - name: Kernel Application (Windows,Linux / x64,x86)
+     level: 70
+   - name: Android Application (SDK, NDK)
+     level: 85
+   - name: Smart Contract (Solidity, Rust, Move)
+     level: 70
+   - name: Application on other platforms (ARM, MIPS)
+     level: 65
+     
+  language:
+   - name: Python
+     level: 90
+   - name: C/C++
+     level: 70
+   - name: Java Script
+     level: 60
+   - name: Solidity
+     level: 60
+
 career:
  - position: Security Analyst
    company: NAVER CLOUD Corp
@@ -66,7 +107,7 @@ career:
    dates: Dec 2015 - Feb 2016
    summary: Carry out the mission to be hired as a full-time employee.
 
- - position: Security Research as a student
+ - position: Security Research as a student (Top 30)
    company: Best Of Best 3rd (KITRI)
    location: South Korea
    dates: Jul 2014 - Feb 2015
@@ -77,47 +118,37 @@ career:
     - tr: Remote command execute of POS
     - tr: Leak Credit Info
     - tr:  Packet reply to pay with any credit card ...
-
-technicalSkills:
-  list:
-    - tr: "Penetration Test (System, Web, Android, Smart Contract)"
-    - tr: "Reverse Engineering (Windows, Linux, Android)"
-    - tr: "Exploit (windows, Linux, Smart Contract)"
-    - tr: "Virtualization"
     
-  pentest:
-   - name: Web Service 
-     level: 90
-   - name: Linux/Windows Service
-     level: 90
-   - name: Android Service
-     level: 80
-   - name: Rebuilding Network Packets
-     level: 80
-   - name: Smart Contract on EVM
-     level: 60
-     
-  analysis:
-   - name: User Application (Windows,Linux / x64,x86)
-     level: 90
-   - name: Kernel Application (Windows,Linux / x64,x86)
-     level: 70
-   - name: Android Application (SDK, NDK)
-     level: 85
-   - name: Smart Contract (Solidity, Rust, Move)
-     level: 70
-   - name: Application on other platforms (ARM, MIPS)
-     level: 65
-     
-  language:
-   - name: Python
-     level: 90
-   - name: C/C++
-     level: 70
-   - name: Java Script
-     level: 60
-   - name: Solidity
-     level: 60
+ - position: Student
+   company: CERT-IS (College club)
+   location: South Korea
+   dates: Mar 2010 - Aug 2016
+   list:
+    - tr: [2015][CTF] 2015 14회 HUST Hacking Festival 3위
+    - tr: [2015][CTF] 2015 JFF CTF Season 3, 6th (Team: AsssassiNOPs)
+    - tr: [2014][CTF] 2014 Christmas-CTF 4th (Team : AsssassiNOPs(witheout couple))
+    - tr: [2014][CTF] 2014 홀리쉴드 CTF 4th (Team : CERT-IS)
+    - tr: [2014][Report] 카드 결제프로토콜 취약점 KISA에 보고
+    - tr: [2014][Report] POS기 데이터베이스 원격 접근 취약점 KISA보고
+    - tr: [2015][Presentation] Inc0gnito 2015 Hacking Conference 발표
+    - tr: [2015][Presentation] 국방부 주관 화아트햇콘테스트 2015 강연
+    - tr: [2015][Presentation] BOB 4기 컨퍼런스 발표
+    - tr: [2015][Presentation] 안드로이드 역공학 세미나(시원포럼)
+    - tr: [2014][Presentation] SUA 영남권 공개세미나 발표 (Title: bluetooth hacking)
+    - tr: [2014][Presentation] KUCIS 영남권 세미나 발표 (Title: Session hijacking with kakaotalk)
+    - tr: [2015][Project] 해킹 역추적 프로그램 개발 프로젝트
+    - tr: [2015][Project] 공공와이파이 해킹 탐지툴 제작 (Prize: 교내 삼성 SW 경진대회 장려상, 창업동아리 ITEM)
+    - tr: [2014][Project] 카카오톡 프로토콜 분석 및 패킷 리빌딩 프로젝트 (Mission: 공개 WIFI사용자 대상으로 카카오톡 단체방 초대 성공)
+    - tr: [2015][Research] 부채널공격(Side Channel Attack) 연구 및 구현
+    - tr: [2015][Research] GPU 기반 키로거 연구  및 제작
+    - tr: [2013][Research]  블루투스를 이용한 스마트폰 제어
+    - tr: [2013][Research] 블루투스 이어셋 해킹 (Mission: 음성 송수신 가능)
+    - tr: [2015][Role] CERT-IS 동아리 회장
+    - tr: [2014][Role] CERT-IS 동아리 부회장
+    - tr: [2014][Sub-role] 경남권 지방 보안 동아리 SeOne 포럼 개설 및 운영
+    - tr: [2013][Sub-role] 부산전자공고 정보보안 동아리 멘토
+    - tr: [2014][WORK] 교내 정보번산원 CERT활동
+    - tr: [2013][Edu] KUCIS 정보보호실습 교육 수료
 
 sideProjects:   
   - name: DeFi Hacks Analysis - Root Cause (2023)
