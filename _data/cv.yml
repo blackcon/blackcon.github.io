@@ -3,40 +3,40 @@ projectUrl: jekyl-cv-crafter
 
 # leave blank fields which you don't want to fill/be displayed
 person:
-  name: Jihwan Yoon
-  depiction: image.png
-  profession: Security Researcher, Penetration tester
+  name: 윤지환
+  depiction: profile.png
+  profession: Penetration tester, Security Analysis
   location: Seongnam-si, South Korea
   citizenship: South Korea
   email: 131ackcon@gmail.com
-  site: https://blackcon.github.io/
-  # phone: 
+  site: https://blackcon.tistory.com/
+  phone: +82 010-2172-8008
   github: /blackcon
   linkedin: /blackcon
 
 technicalSkills:
   list:
-    - tr: "Penetration Test (System, Web, Android, Smart Contract)"
+    - tr: "모의해킹 (System, Web, Android, Smart Contract)"
     - tr: "Reverse Engineering (Windows, Linux, Android)"
-    - tr: "Exploit (windows, Linux, Smart Contract)"
+    - tr: "Exploit (Windows, Linux, Smart Contract)"
     - tr: "Virtualization"
     
   pentest:
    - name: Web Service 
      level: 90
-   - name: Linux/Windows Service
+   - name: PC 서비스 (Linux, Windows)
      level: 90
-   - name: Android Service
+   - name: 모바일 서비스 (Android)
      level: 80
-   - name: Rebuilding Network Packets
+   - name: 네트워크 패킷 리빌딩
      level: 80
    - name: Smart Contract on EVM
      level: 60
      
   analysis:
-   - name: User Application (Windows,Linux / x64,x86)
+   - name: User level Application (Windows,Linux / x64,x86)
      level: 90
-   - name: Kernel Application (Windows,Linux / x64,x86)
+   - name: Kernel level Application (Windows,Linux / x64,x86)
      level: 70
    - name: Android Application (SDK, NDK)
      level: 85
@@ -60,7 +60,7 @@ career:
    company: NAVER CLOUD Corp
    location: South Korea
    dates: September 2020 - current
-   summary: 한글 테스트
+   summary: NCP 클라우드에 있는 상품들을 1달간 Category별로 
    pentests:
     - pentest: Web Service
     - pentest: Mobile Service (Android, Webapp)
