@@ -101,39 +101,8 @@
       </div>
       
        <div class="col-xs-9">
-<!--         <div class="row">
-          <div class="col-xs-4">
-            <h4 class="techSkillHeader"><i class="fa fa-terminal"></i> Penetratoin Test</h4>
-            {% for item in site.data.cv.technicalSkills.pentest %} {{item.name}}
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                aria-valuemax="100" style="width: {{item.level}}%"></div>
-            </div>
-            {% endfor %}
-          </div>
-
-          <div class="col-xs-4">
-            <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Analysis </h4>
-            {% for item in site.data.cv.technicalSkills.analysis %} {{item.name}}
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                aria-valuemax="100" style="width: {{item.level}}%"></div>
-            </div>
-            {% endfor %}
-          </div>
-
-          <div class="col-xs-4">
-            <h4 class="techSkillHeader"><i class="fa fa-code"></i> Languages </h4>
-            {% for item in site.data.cv.technicalSkills.language %} {{item.name}}
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                aria-valuemax="100" style="width: {{item.level}}%"></div>
-            </div>
-            {% endfor %}
-          </div>
-        </div> -->
         <div>
-          <h4><i class="fa fa-male"></i> 주요 역량:</h4>
+          <h4><i class="fa fa-male"></i> 주요 역량</h4>
           <ul>
             {% for item in site.data.cv.technicalSkills.list %}
             <li>{{item.tr}}</li>
@@ -141,7 +110,7 @@
           </ul>
         </div>
         <div>
-          <h4>🧑‍💻 모의해킹 가능한 대상:</h4>
+          <h4>🧑‍💻 모의해킹 가능한 대상</h4>
           <ul>
             {% for item in site.data.cv.technicalSkills.pentest %}
             <li>{{item.name}}</li>
@@ -149,7 +118,7 @@
           </ul>
         </div>
         <div>
-          <h4>🧐 분석 가능한 플랫폼:</h4>
+          <h4>🧐 분석 가능한 플랫폼</h4>
           <ul>
             {% for item in site.data.cv.technicalSkills.analysis %}
             <li>{{item.name}}</li>
@@ -157,7 +126,7 @@
           </ul>
         </div>
         <div>
-          <h4>⛏️ 활용가능한 프로그래밍 언어:</h4>
+          <h4>⛏️ 활용가능한 프로그래밍 언어</h4>
           <ul>
             {% for item in site.data.cv.technicalSkills.language %}
             <li>{{item.name}}</li>
@@ -177,12 +146,13 @@
         <div class="jd">
           <div class="row">
             <div class="col-xs-6">
-              <h4><b>{{ item.position }}</b></h4>
+              <h4><b>{{ item.position }}</b></h4><br />
+              <p>{{ item.company }} ({{ item.cdate }} </p>
             </div>
-            <div class="col-xs-6 pull-right">
+<!--             <div class="col-xs-6 pull-right">
               <h5 class="pull-right">{{ item.dates }}<br />
                 {{item.company}} <i>({{item.location}})</i></h5>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-xs-12">
