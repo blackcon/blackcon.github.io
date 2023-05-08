@@ -144,7 +144,7 @@
 
     <div class="row  section section-border">
       <div class="col-xs-3">
-        <h2>Career</h2>
+        <h2>Work Experience</h2>
       </div>
 
       <div class="col-xs-9">
@@ -176,6 +176,12 @@
               {% if item.pentests.size > 0 %}
               <b>1. Penteration Test:</b>
               {% endif %}
+              <ul>
+                {% for itemm in item.works %}
+                <li>{{itemm.work}}</li>
+                <li>{{itemm.role}}</li>
+                {% endfor %}
+              </ul>
               <ul>
                 {% for itemm in item.pentests %}
                 <li>{{itemm.pentest}}</li>
