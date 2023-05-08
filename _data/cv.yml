@@ -60,7 +60,14 @@ career:
    company: NAVER CLOUD Corp
    location: South Korea
    dates: September 2020 - current
-   summary: NCP 클라우드에 있는 상품들을 1달간 Category별로 
+   summary: NCP 클라우드에 있는 상품들을 1달간 Category별로
+   works:
+    - work: TEST1
+      role: PM
+    - work: TEST2
+      role: Mentor
+    - work: TEST3
+      role: QA
    pentests:
     - pentest: Web Service
     - pentest: Mobile Service (Android, Webapp)
