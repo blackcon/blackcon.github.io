@@ -140,6 +140,30 @@
             {% endfor %}
           </ul>
         </div>
+        <div>
+          <h4> 1. 모의해킹 가능한 대상:</h4>
+          <ul>
+            {% for item in site.data.cv.technicalSkills.pentest %}
+            <li>{{item.name}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h4> 2. 분석 가능한 플랫폼:</h4>
+          <ul>
+            {% for item in site.data.cv.technicalSkills.analysis %}
+            <li>{{item.name}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h4> 3. 활용가능한 프로그래밍 언어:</h4>
+          <ul>
+            {% for item in site.data.cv.technicalSkills.language %}
+            <li>{{item.name}}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
 
