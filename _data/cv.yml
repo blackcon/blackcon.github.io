@@ -3,40 +3,40 @@ projectUrl: jekyl-cv-crafter
 
 # leave blank fields which you don't want to fill/be displayed
 person:
-  name: 윤지환
-  depiction: profile.png
-  profession: Penetration tester, Security Analysis
+  name: Jihwan Yoon
+  depiction: image.png
+  profession: Security Researcher, Penetration tester
   location: Seongnam-si, South Korea
   citizenship: South Korea
   email: 131ackcon@gmail.com
-  site: https://blackcon.tistory.com/
-  phone: +82 010-2172-8008
+  site: https://blackcon.github.io/
+  # phone: 
   github: /blackcon
   linkedin: /blackcon
 
 technicalSkills:
   list:
-    - tr: "모의해킹 (System, Web, Android, Smart Contract)"
+    - tr: "Penetration Test (System, Web, Android, Smart Contract)"
     - tr: "Reverse Engineering (Windows, Linux, Android)"
-    - tr: "Exploit (Windows, Linux, Smart Contract)"
+    - tr: "Exploit (windows, Linux, Smart Contract)"
     - tr: "Virtualization"
     
   pentest:
    - name: Web Service 
      level: 90
-   - name: PC 서비스 (Linux, Windows)
+   - name: Linux/Windows Service
      level: 90
-   - name: 모바일 서비스 (Android)
+   - name: Android Service
      level: 80
-   - name: 네트워크 패킷 리빌딩
+   - name: Rebuilding Network Packets
      level: 80
    - name: Smart Contract on EVM
      level: 60
      
   analysis:
-   - name: User level Application (Windows,Linux / x64,x86)
+   - name: User Application (Windows,Linux / x64,x86)
      level: 90
-   - name: Kernel level Application (Windows,Linux / x64,x86)
+   - name: Kernel Application (Windows,Linux / x64,x86)
      level: 70
    - name: Android Application (SDK, NDK)
      level: 85
@@ -60,12 +60,13 @@ career:
    company: NAVER CLOUD Corp
    location: South Korea
    dates: September 2020 - current
-   summary: NCP 클라우드에 있는 상품들을 1달간 Category별로
+   #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
    pentests:
-    - pentest: PM 혹은 수행자로써 자사 서비스를 대상으로 모의해킹을 수행하였습니다.
-    - pentest: 발견된 취약점은 재현 순서 및 대응방안과 함께 BTS로 전달하였으며, 수정이될 떄까지 이행점검 및 f/up을 진행하였습니다.
-    - pentest: 필요 역량> Web Service, Mobile Service (Android, Webapp), Application Service (PC), Cloud Platform
-    - pentest: 
+    - pentest: Web Service
+    - pentest: Mobile Service (Android, Webapp)
+    - pentest: Application Service (PC)
+    - pentest: Cloud Platform
+    - pentest: Robotics of the Naver 1784
    researches:
     - research: Discover vulnerabilities on Hypervisor (2020)
     - research: Vulnerability research that can occur on machine learning platforms (2021)
@@ -124,6 +125,7 @@ career:
    dates: Mar 2010 - Aug 2016
    list:
     - tr: 2015_CTF 2015 14회 HUST Hacking Festival 3위
+    - tr: 2015_CTF 2015 JFF CTF Season3, 6위 (Team: AssasiNOPs)
 
 sideProjects:   
   - name: DeFi Hacks Analysis - Root Cause (2023)
