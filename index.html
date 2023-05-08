@@ -177,12 +177,6 @@
               <b>1. Penteration Test:</b>
               {% endif %}
               <ul>
-                {% for itemm in item.works %}
-                <li>{{itemm.work}}</li>
-                <li>{{itemm.role}}</li>
-                {% endfor %}
-              </ul>
-              <ul>
                 {% for itemm in item.pentests %}
                 <li>{{itemm.pentest}}</li>
                 {% endfor %}
