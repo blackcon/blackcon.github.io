@@ -61,19 +61,11 @@ career:
    location: South Korea
    dates: September 2020 - current
    summary: NCP 클라우드에 있는 상품들을 1달간 Category별로
-   works:
-    - work: TEST1
-      role: PM
-    - work: TEST2
-      role: Mentor
-    - work: TEST3
-      role: QA
    pentests:
-    - pentest: Web Service
-    - pentest: Mobile Service (Android, Webapp)
-    - pentest: Application Service (PC)
-    - pentest: Cloud Platform
-    - pentest: Robotics of the Naver 1784
+    - pentest: PM 혹은 수행자로써 자사 서비스를 대상으로 모의해킹을 수행하였습니다.
+    - pentest: 발견된 취약점은 재현 순서 및 대응방안과 함께 BTS로 전달하였으며, 수정이될 떄까지 이행점검 및 f/up을 진행하였습니다.
+    - pentest: 필요 역량> Web Service, Mobile Service (Android, Webapp), Application Service (PC), Cloud Platform
+    - pentest: 
    researches:
     - research: Discover vulnerabilities on Hypervisor (2020)
     - research: Vulnerability research that can occur on machine learning platforms (2021)
