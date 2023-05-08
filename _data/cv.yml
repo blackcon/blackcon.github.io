@@ -4,22 +4,22 @@ projectUrl: jekyl-cv-crafter
 # leave blank fields which you don't want to fill/be displayed
 person:
   name: Jihwan Yoon
-  depiction: image.png
-  profession: Security Researcher, Penetration tester
+  depiction: profile.png
+  profession: Penetration tester
   location: Seongnam-si, South Korea
   citizenship: South Korea
   email: 131ackcon@gmail.com
   site: https://blackcon.github.io/
-  # phone: 
+  phone: +82 010-2172-8008
   github: /blackcon
   linkedin: /blackcon
 
 technicalSkills:
   list:
-    - tr: "Penetration Test (System, Web, Android, Smart Contract)"
+    - tr: "모의해킹 (System, Web, Android, Smart Contract)"
     - tr: "Reverse Engineering (Windows, Linux, Android)"
     - tr: "Exploit (windows, Linux, Smart Contract)"
-    - tr: "Virtualization"
+    - tr: "Source Code Auditing (Python, Solidity, Move, Rust, ...)"
     
   pentest:
    - name: Web Service 
@@ -30,7 +30,7 @@ technicalSkills:
      level: 80
    - name: Rebuilding Network Packets
      level: 80
-   - name: Smart Contract on EVM
+   - name: Blockchain
      level: 60
      
   analysis:
@@ -59,22 +59,21 @@ career:
  - position: Security Analyst
    company: NAVER CLOUD Corp
    location: South Korea
-   dates: September 2020 - current
-   #summary: Physically the smallest of the Turtles and the least mature. Mikey is easily distracted and enthusiastic about... well, pretty much everything. He's also extremely creative. He has a thousand ideas, and every now and then, one of them will be brilliant. This combination of creativity and lack of focus gives him a kind of flow that the other Turtles cannot match. He's a social mutant and more than the others, pines to be part of the real world.
+   dates: September 2020 - 현재
+   summary: 다양한자사 서비스(클라우드 상품, PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다.
    pentests:
-    - pentest: Web Service
-    - pentest: Mobile Service (Android, Webapp)
-    - pentest: Application Service (PC)
-    - pentest: Cloud Platform
-    - pentest: Robotics of the Naver 1784
+    - pentest: 클라우드 상품으로 출시된 서비스를 대상으로 모의해킹 진행
+    - pentest: 자사에서 운영중인 다양한 Web Service 대상으로 모의해킹 진행
+    - pentest: 자사에서 운영중인 다양한 Mobile Service (Android, Webapp) 대상으로 모의해킹 진행
+    - pentest: 사내 임직원 PC에 기본으로 설치되는 Application 대상으로 모의해킹 진행
+    - pentest: 로보틱스로 이루어진 자사 건물 모의해킹
    researches:
-    - research: Discover vulnerabilities on Hypervisor (2020)
-    - research: Vulnerability research that can occur on machine learning platforms (2021)
+    - research: Hypervisor를 대상으로 모의해킹을 진행하는 방법론 연구 (2020)
+    - research: AI 플랫폼에서 발생가능한 취약점 사레 연구 (2021)
    develops:
-    - develop: Web Security Checker for Cloud Service (crawler, web scan module .. ) (2018 ~)
-    - develop: Hyper-v FUZZER (2022)
+    - develop: 보안진단 자동화 서비스 개발 및 운영(crawler, web scan module .. ) (2018 ~)
    others:
-    - other: Support for penetration testing to customer service
+    - other: 클라우드 고객사의 서비스를 대상으로 모의해킹을 진행하고 f/up 진행
 
  - position: Security Analyst
    company: NAVER BUSINESS PLATFORM
