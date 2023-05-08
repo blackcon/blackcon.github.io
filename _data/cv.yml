@@ -42,7 +42,10 @@ technicalSkills:
    - name: Solidity
 
 career:
- - position: Security Analyst (NAVER CLOUD Corp, March 2016 ~ Present)
+ - position: Security Analyst
+   company: NAVER CLOUD Corp
+   location: Korea
+   dates: March 2016 ~ Present
    summary: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다.
    pentests:
     - pentest: 클라우드 상품으로 출시된 서비스를 대상으로 모의해킹 진행
@@ -67,10 +70,16 @@ career:
     - other: 논문 - Appratus and method for degermining types of Uniform Resource Locator (2019)
     - other: 논문 - SQL 인젝션 취약점 진단 방법, 장치 및 컴퓨터 프로그램 (2020)
 
- - position: Security Analyst Inter (NAVER BUSINESS PLATFORM, Dec 2015 - Feb 2016)
+ - position: Security Analyst Intern
+   company: NAVER BUSINESS PLATFORM
+   location: Korea
+   dates: Dec 2015 - Feb 2016
    summary: 정규직 채용을 위해 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
 
- - position: Security Research as a student (KITRI BOB 3기, Jul 2014 - Feb 2015)
+ - position: Security Research as a student
+   company: KITRI BOB 3기
+   location: Korea
+   dates: Jul 2014 - Feb 2015
    summary: 130명 중 Top 30에 들었으며, 이 기간동안 프로젝트 매니저 및 수행원으로써 "Investigating POS(VAN) Vulnerability"에 대한 프로젝트를 수행했습니다.
    list:
     - tr: POS기에서 SQL Injection, Remote Code Execution 취약점 발견 및 KISA에 report 제공
