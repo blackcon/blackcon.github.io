@@ -56,10 +56,7 @@ technicalSkills:
      level: 60
 
 career:
- - position: Security Analyst
-   company: NAVER CLOUD Corp
-   location: South Korea
-   dates: March 2016 - 현재
+ - position: Security Analyst (NAVER CLOUD Corp, March 2016 ~ Present)
    summary: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다.
    pentests:
     - pentest: 클라우드 상품으로 출시된 서비스를 대상으로 모의해킹 진행
@@ -84,26 +81,20 @@ career:
     - other: 논문 - Appratus and method for degermining types of Uniform Resource Locator (2019)
     - other: 논문 - SQL 인젝션 취약점 진단 방법, 장치 및 컴퓨터 프로그램 (2020)
 
- - position: Security Analyst (인턴)
-   company: NAVER BUSINESS PLATFORM
-   location: South Korea
-   dates: Dec 2015 - Feb 2016
+ - position: Security Analyst Inter (NAVER BUSINESS PLATFORM, Dec 2015 - Feb 2016)
    summary: 정규직 채용을 위해 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
 
- - position: Security Research as a student (Top 30)
-   company: Best Of Best 3rd (KITRI)
-   location: South Korea
-   dates: Jul 2014 - Feb 2015
-   summary: 저는 프로젝트 매니저 및 수행원으로써 "Investigating POS(VAN) Vulnerability"에 대한 프로젝트를 수행했습니다.
+ - position: Security Research as a student (KITRI BOB 3기, Jul 2014 - Feb 2015)
+   summary: 130명 중 Top 30에 들었으며, 이 기간동안 프로젝트 매니저 및 수행원으로써 "Investigating POS(VAN) Vulnerability"에 대한 프로젝트를 수행했습니다.
    list:
     - tr: POS기에서 SQL Injection, Remote Code Execution 취약점 발견 및 KISA에 report 제공
     - tr: 원격지에서 POS기에 연결된 DB에 연결하여 로그에 기록된 정보(이름, 카드정보 등)를 탈취할 수 있는 취약점 발견 및 KISA에 report 제공
     - tr: VAN에서 사용하는 프로토콜을 분석하여 임의의 사용자 Credit Card로 결제할 수 있는 취약점 발견 및 KISA에 report 제공
     
- - position: Student
-   company: CERT-IS (University club)
-   location: South Korea
-   dates: Mar 2010 - Aug 2016
+ - position: Student (CERT-IS (University club),  Mar 2010 - Aug 2016)
+   company:  
+   location:
+   dates:
    list:
     - tr: 2015_CTF 2015 14회 HUST Hacking Festival 3위
     - tr: 2015_CTF 2015 JFF CTF Season3, 6위
