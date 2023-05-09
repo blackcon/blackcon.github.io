@@ -49,6 +49,8 @@ career:
    summary: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다.
    pentests:
     - pentest: 클라우드 상품으로 출시된 서비스를 대상으로 모의해킹 진행
+      list:
+       - tr: blah
     - pentest: 자사에서 운영중인 다양한 Web Service 대상으로 모의해킹 진행
     - pentest: 자사에서 운영중인 다양한 Mobile Service (Android, Webapp) 대상으로 모의해킹 진행
     - pentest: 사내 임직원 PC에 기본으로 설치되는 Application 대상으로 모의해킹 진행
@@ -62,13 +64,12 @@ career:
     - research: Hypervisor를 대상으로 모의해킹을 진행하는 방법론 연구 (2020)
     - research: AI 플랫폼에서 발생가능한 취약점 사레 연구 (2021)
    develops:
-    - develop: 보안진단 자동화 서비스 개발 및 운영(crawler, web scan module .. ) (2018 ~)
+    - develop: 보안진단 자동화 서비스 개발 및 운영(crawler, web scan module .. ) (2018 ~) <a href="https://www.ncloud.com/product/security/webSecurityChecker">🔗 link</a>
    others:
-    - other: 0day - 네트워크 장비인 CITRIX Netscaler 의 0-day 취약점 발견 및 제보 (2018) <a href="https://support.citrix.com/article/CTX232199/cve20185314-authentication-bypass-vulnerability-in-citrix-netscaler-application-delivery-controller-adc-and-netscaler-gateway">🔗 link</a>
-    - other: 논문 - 웹 사이트에서 수집한 URL을 처리하는 방법, 장치 및 컴퓨터 프로그램 (2019)
-    - other: 논문 - 웹 페이지의 URL을 수집하는 방법, 장치 및 컴퓨터 프로그램 (2019)
-    - other: 논문 - Appratus and method for degermining types of Uniform Resource Locator (2019)
-    - other: 논문 - SQL 인젝션 취약점 진단 방법, 장치 및 컴퓨터 프로그램 (2020)
+    - other: 0day - 네트워크 장비인 CITRIX Netscaler 의 Command Injection 취약점(0-day) 발견 및 제보 (2018) <a href="https://support.citrix.com/article/CTX232199/cve20185314-authentication-bypass-vulnerability-in-citrix-netscaler-application-delivery-controller-adc-and-netscaler-gateway">🔗 link</a>
+    - other: 특허 - 웹사이트에서 수집된 URL을 처리하는 방법, 장치 및 컴퓨터 프로그램 (2019)
+    - other: 특허 - 웹 페이지에서 URL을 수집하는 방법, 장치 및 컴퓨터 프로그램 (2019)
+    - other: 특허 - SQL 주입 취약점 진단 방법, 장치 및 컴퓨터 프로그램 (2020)
 
  - position: Security Analyst Intern
    company: NAVER BUSINESS PLATFORM
