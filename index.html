@@ -170,6 +170,9 @@
               <ul>
                 {% for itemm in item.pentests %}
                 <li>{{itemm.pentest}}</li>
+                  {% for itemm_cont in itemm.list %}
+                  <li>{{itemm_cont.tr}}</li>
+                  {% endfor %}
                 {% endfor %}
               </ul>
 
