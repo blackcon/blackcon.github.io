@@ -46,28 +46,33 @@ career:
    company: NAVER CLOUD Corp
    location: Korea
    dates: March 2016 ~ Present
-   #summary: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다. 또한 Compliance(CSAP, 전자금융법, MTCS인증 등)를 위해 외부 업체를 통해 보안점검을 받아야 할 떄는 PM이 되어 외부 업체와 커뮤니케이션을 하며 Compliance 이행에 차질이 없도록 하였습니다.
    pentests:
-    - pentest: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회 등의 취약점을 발견하였습니다. 
-    - pentest: 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행점검을 하며 취약점이 조치되는데에 기여하였습니다. 
-    - pentest: 또한 Compliance(CSAP, 전자금융법, MTCS인증 등)를 위해 외부 업체를 통해 보안점검을 받아야 할 떄는 PM이 되어 외부 업체와 커뮤니케이션을 하며 Compliance 이행에 차질이 없도록 하였습니다.
+    - pentest: 다양한 자사 서비스(클라우드 상품, 서버 및 PC 에이전트, 회사 건물 등)를 대상으로 모의해킹을 진행하고 명령어 실행, 웹쉘 업로드, 인증 우회, 타사용자 정보 탈취 등의 취약점 발견
+    - pentest: 발견된 취약점은 재현순서와 대응방안과 함께 개발팀으로 전달하여 조치될 때까지 이행 점검을 하며 취약점이 조치될 수 있도록 함
+    - pentest: 또한 Compliance(CSAP, 전자금융법, MTCS인증 등)를 위해 외부 업체를 통해 보안점검을 받아야 할 떄는 PM이 되어 외부 업체와 커뮤니케이션을 하며 Compliance 이행에 차질이 없도록 진행
     - pentest: 진행한 프로젝트
       list:
-       - tr: 클라우드 상품으로 출시된 서비스를 대상으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 자사에서 운영중인 다양한 Web Service 대상(네이버 클라우드, 블로그, 밴드, 쇼핑, 네이버페이 ...) 으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
+       - tr: 클라우드 상품(Server, AI, Storage, Media, ...) 으로 출시된 서비스를 대상으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
+       - tr: 자사에서 운영중인 다양한 Web Service 대상(네이버쇼핑, 블로그, 밴드, 쇼핑, 네이버페이 ...) 으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
        - tr: 자사에서 운영중인 다양한 Mobile Service (스노우, 네이버페이, Vlive, 밴드, Works Mobile ...) 대상으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
        - tr: 사내 임직원 PC에 기본으로 설치되는 Application 대상(각종 보안 프로그램)으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
        - tr: 로보틱스로 이루어진 자사 건물(NAVER 1784, Robot, 건물 연동 App ...) 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
        - tr: 클라우드 고객사의 서비스를 대상으로 모의해킹을 진행 및 취약점 조치를 위한 대응방안 제시
    researches:
-    - research: Android SDK를 대상으로 한 Hooking 기법 연구 및 POC 작성 (2016)
-    - research: 서버 보안사고 예방 및 탐지를 위한 리서치 진행 (2017)
-    - research: Windows Anti Exploit 기법 리서치 (2017)
-    - research: Linux 환경에서 Ransomware 탐지하는 방법론 연구 (2018)
-    - research: Hypervisor를 대상으로 모의해킹을 진행하는 방법론 연구 (2020)
-    - research: AI 플랫폼에서 발생가능한 취약점 사레 연구 (2021)
+    - research: 최신 트렌드와 자사 서비스가 계속 변함에 따라 취약점 탐지를 해야하는 필요성이 있음
+    - research: 이에 따라 필요한 기술을 찾아보고 연구함으로써 팀/개인 역량 강화에 기여함
+      list:
+       - tr: Android SDK를 대상으로 한 Hooking 기법 연구 및 POC 작성 (2016)
+       - tr: 서버 보안사고 예방 및 탐지를 위한 리서치 진행 (2017)
+       - tr: Windows Anti Exploit 기법 리서치 (2017)
+       - tr: Linux 환경에서 Ransomware 탐지하는 방법론 연구 (2018)
+       - tr: Hypervisor를 대상으로 모의해킹을 진행하는 방법론 연구 (2020)
+       - tr: AI 플랫폼에서 발생가능한 취약점 사레 연구 (2021)
    develops:
-    - develop: 보안진단 자동화 서비스 개발 및 운영(crawler, web scan module .. ) (2018 ~) <a href="https://www.ncloud.com/product/security/webSecurityChecker">🔗 link</a>
+    - develop: 클라우드 서비스를 사용하는 고객의 웹 서버를 자동으로 진단할 수 있는 서비스를 개발하고 운영함  <a href="https://www.ncloud.com/product/security/webSecurityChecker">🔗 link</a>
+    - develop: 서비스 초기 기획시 아키텍쳐 구조를 구성
+    - develop: python과 puppeteer를 이용하여 고객 사이트의 URL을 수집할 수 있는 Crawler 개발
+    - develop: 웹 취약점 중 SQL injection, LFI, RFI, Insecure SSL, URL redirection 을 탐지할 수 있는 모듈 개발
    others:
     - other: 0day - 네트워크 장비인 CITRIX Netscaler 의 Command Injection 취약점(0-day) 발견 및 제보 (2018) <a href="https://support.citrix.com/article/CTX232199/cve20185314-authentication-bypass-vulnerability-in-citrix-netscaler-application-delivery-controller-adc-and-netscaler-gateway">🔗 link</a>
     - other: 특허 - 웹사이트에서 수집된 URL을 처리하는 방법, 장치 및 컴퓨터 프로그램 (2019)
