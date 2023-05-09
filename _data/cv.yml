@@ -7,7 +7,7 @@ person:
   depiction: profile.png
   profession: Penetration tester
   location: Seongnam-si, South Korea
-  citizenship: South Korea
+  citizenship: 
   email: 131ackcon@gmail.com
   site: https://blackcon.github.io/
   phone: +82 010-2172-8008
@@ -84,6 +84,16 @@ career:
    location: Korea
    dates: Dec 2015 - Feb 2016
    summary: 정규직 채용을 위해 Band서비스 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
+   
+ - position: Project Member
+   company: STEALIEN
+   location: Korea
+   dates: Dec 2014 - Oct 2015
+   pentests:
+    - pentest: 금융 모바일 애플리케이션에 적용되어 있는 보안 솔루션을 assembly코드, smali코드로 디컴파일하여 코드분석하고, 분석한 코드를 토대로 앱변조 탐지 솔루션을 우회하여 APK파일 리패키징 및 실행 성공
+    - pentest: Windows7에서 사용하는 User Application의 취약점을 도출하고 Exploit 코드 작성
+   develops:
+    - develop: App suite의 초기 모델 개발에 참여 
    
 extra:
  - position: Security Research as a student
