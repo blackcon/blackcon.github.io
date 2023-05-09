@@ -90,7 +90,7 @@ extra:
    company: KITRI BOB 3기
    location: Korea
    dates: Jul 2014 - Feb 2015
-   summary: 130명 중 Top 30에 들었으며, 이 기간동안 PM 및 수행원으로써 "Investigating POS(VAN) Vulnerability" 프로젝트를 수행했습니다.
+   summary: 130명 중 Top 30에 들었으며, 이 기간동안 PM 및 수행원으로써 "Investigating POS(VAN) Vulnerability" 프로젝트 수행
    list:
     - tr: 국내 점유율이 높은 다수의 POS기에서 SQL Injection, Remote Code Execution 취약점 발견 (KISA에 report 제공)
     - tr: 국내 점유율이 높은 다수의 POS기에 연결된 DB에 연결하여 로그에 기록된 정보(이름, 카드정보 등)를 탈취할 수 있는 취약점 발견 (KISA에 report 제공)
