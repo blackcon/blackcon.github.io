@@ -112,12 +112,12 @@ extra:
    location: Korea
    dates: Mar 2010 - Aug 2016
    list: 
-    - tr: 2015_Project 공공와이파이 해킹 탐지툴 제작 (Prize-교내 삼성 SW 경진대회 장려상, 창업동아리 ITEM)
-    - tr: 2014_Project 카카오톡 프로토콜 분석 및 패킷 리빌딩 프로젝트 (Mission-공개 WIFI사용자 대상으로 카카오톡 단체방 초대 성공)
+    - tr: 2015_Project 공공와이파이 해킹 탐지툴 제작 (수상 - 교내 삼성 SW 경진대회 장려상, 창업동아리 ITEM)
+    - tr: 2014_Project 카카오톡 프로토콜 분석 및 패킷 리빌딩 프로젝트 (미션 - 공개 WIFI사용자 대상으로 카카오톡 단체방 초대 성공)
     - tr: 2015_Research 부채널공격(Side Channel Attack) 연구 및 구현
     - tr: 2015_Research GPU 기반 키로거 연구 및 제작
     - tr: 2013_Research 블루투스를 이용한 스마트폰 제어
-    - tr: 2013_Research 블루투스 이어셋 해킹 (Mission-음성 송수신 가능)
+    - tr: 2013_Research 블루투스 이어셋 해킹 (미션 - 음성 송수신 가능)
     - tr: 2015_Role CERT-IS 동아리 회장
     - tr: 2014_Role CERT-IS 동아리 부회장
     - tr: 2014_Sub-role 경남권 지방 보안 동아리 SeOne 포럼 개설 및 운영
@@ -127,19 +127,20 @@ extra:
     
 Awards:
  - list:
-    - tr: 2015 14회 HUST Hacking Festival 3위
-    - tr: 2015 JFF CTF Season 3, 6th (Team-AsssassiNOPs)
-    - tr: 2014 Christmas-CTF 4th (Team-AsssassiNOPs(witheout couple))
-    - tr: 2014 홀리쉴드 CTF 4th (Team-CERT-IS)
+    - tr: 2023 WWT CTF 2위 (팀명 - FlowBitTheory)
+    - tr: 2015 14회 HUST Hacking Festival 3위 (팀명 - CERT-IS)
+    - tr: 2015 JFF CTF Season 3, 6th (팀명 - AsssassiNOPs)
+    - tr: 2014 Christmas-CTF 4th (팀명 - AsssassiNOPs)
+    - tr: 2014 홀리쉴드 CTF 4th (팀명 - CERT-IS)
 
 Presentations:
  - list:
-    - tr: Inc0gnito 2015 Hacking Conference 발표 (Subject: POS 및 VAN에서 발생가능한 취약점)
-    - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (Subject: GPU Keylogger)
-    - tr: KITRI BOB 4기 컨퍼런스 발표 (Subject: GPU Keylogger)
-    - tr: 경남 대학동아리 시원포럼 컨퍼런스 발표 (Subject: 안드로이드 역공학)
-    - tr: SUA 영남권 공개세미나 발표 (Subject: bluetooth hacking)
-    - tr: KUCIS 영남권 세미나 발표 (Subject: Session hijacking with kakaotalk)
+    - tr: Inc0gnito 2015 Hacking Conference 발표 (주제 - POS 및 VAN에서 발생가능한 취약점)
+    - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (주제 - GPU Keylogger)
+    - tr: KITRI BOB 4기 컨퍼런스 발표 (주제 - GPU Keylogger)
+    - tr: 경남 대학동아리 시원포럼 컨퍼런스 발표 (주제 - 안드로이드 역공학)
+    - tr: SUA 영남권 공개세미나 발표 (주제 - bluetooth hacking)
+    - tr: KUCIS 영남권 세미나 발표 (주제 - Session hijacking with kakaotalk)
     
 sideProjects:   
   - name: DeFi Hacks Analysis - Root Cause (2023)
