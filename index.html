@@ -296,7 +296,21 @@
       <div class="col-xs-9">
           <ul>
             {% for item in site.data.cv.Awards.list %}
-            <li>{{item.list}}</li>
+            <li>{{item.tr}}</li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+    
+
+    <div class="row  section section-border">
+      <div class="col-xs-3">
+        <h2>Presentations</h2>
+      </div>
+      <div class="col-xs-9">
+          <ul>
+            {% for item in site.data.cv.Presentations.list %}
+            <li>{{item.tr}}</li>
             {% endfor %}
           </ul>
       </div>
