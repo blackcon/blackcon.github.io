@@ -126,7 +126,7 @@ extra:
     - tr: 2014_WORK 교내 정보번산원 CERT활동
     - tr: 2013_Edu KUCIS 정보보호실습 교육 수료
     
-Awards:
+awards:
  - list:
     - tr: 2023 WWT CTF 2위 (팀명 - FlowBitTheory)
     - tr: 2015 14회 HUST Hacking Festival 3위 (팀명 - CERT-IS)
@@ -134,7 +134,7 @@ Awards:
     - tr: 2014 Christmas-CTF 4th (팀명 - AsssassiNOPs)
     - tr: 2014 홀리쉴드 CTF 4th (팀명 - CERT-IS)
 
-Presentations:
+presentations:
  - list:
     - tr: Inc0gnito 2015 Hacking Conference 발표 (주제 - POS 및 VAN에서 발생가능한 취약점)
     - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (주제 - GPU Keylogger) <a href="https://github.com/blackcon/gpu-keylogger/blob/master/gpu-based-keylogger.pdf">🔗 link</a>
