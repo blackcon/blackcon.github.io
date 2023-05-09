@@ -138,11 +138,82 @@
 
     <div class="row  section section-border">
       <div class="col-xs-3">
-        <h2>Career</h2>
+        <h2>Experience</h2>
       </div>
-
       <div class="col-xs-9">
         {% for item in site.data.cv.career %}
+        <div class="jd">
+          <div class="row">
+            <div class="col-xs-6">
+              <h4><b>{{ item.position }}</b></h4>
+              <h5><p>{{ item.company }} <i>({{ item.dates }})</i> </p></h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <br />
+              <p>{{ item.summary }}</p>
+            </div>
+          </div>
+          <ul>
+            {% for itemm in item.list %}
+            <li>{{itemm.tr}}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="row">
+            <div class="col-xs-12">
+
+              {% if item.pentests.size > 0 %}
+              <b>1. Penteration Test:</b>
+              {% endif %}
+              <ul>
+                {% for itemm in item.pentests %}
+                <li>{{itemm.pentest}}</li>
+                {% endfor %}
+              </ul>
+
+              {% if item.researches.size > 0 %}
+              <b>2. Researches:</b>
+              {% endif %}
+              <ul>
+                {% for itemm in item.researches %}
+                <li>{{itemm.research}}</li>
+                {% endfor %}
+              </ul>
+
+              {% if item.develops.size > 0 %}
+              <b>3. Develops:</b>
+              {% endif %}
+              <ul>
+                {% for itemm in item.develops %}
+                <li>{{itemm.develop}}</li>
+                {% endfor %}
+              </ul>
+
+              {% if item.others.size > 0 %}
+              <b>4. Others:</b>
+              {% endif %}
+              <ul>
+                {% for itemm in item.others %}
+                <li>{{itemm.other}}</li>
+                {% endfor %}
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="row  section section-border">
+      <div class="col-xs-3">
+        <h2>Extra Experience</h2>
+      </div>
+      
+      <div class="col-xs-9">
+        {% for item in site.data.cv.extra %}
         <div class="jd">
           <div class="row">
             <div class="col-xs-6">
