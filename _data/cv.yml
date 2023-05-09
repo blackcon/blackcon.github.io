@@ -59,12 +59,14 @@ career:
        - tr: <i>참고 - 프로젝트 진행 인원은 1~3명 등 다양하게 진행</i>
     - pentest: <b>[진행한 프로젝트]</b>
       list:
-       - tr: 클라우드 상품(Server, AI, Storage, Media, ...) 으로 출시된 서비스를 대상으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 자사에서 운영중인 다양한 Web Service 대상(네이버쇼핑, 블로그, 밴드, 쇼핑, 네이버페이 ...) 으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 자사에서 운영중인 다양한 Mobile Service (스노우, 네이버페이, Vlive, 밴드, Works Mobile ...) 대상으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 사내 임직원 PC에 기본으로 설치되는 Application 대상(각종 보안 프로그램)으로 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 로보틱스로 이루어진 자사 건물(NAVER 1784, Robot, 건물 연동 App ...) 모의해킹 진행 및 취약점 조치를 위한 대응방안 제시
-       - tr: 클라우드 고객사의 서비스를 대상으로 모의해킹을 진행 및 취약점 조치를 위한 대응방안 제시
+       - tr: 클라우드 상품(Server, AI, Storage, Media, ...) 으로 출시된 서비스를 대상으로 모의해킹 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 자사에서 운영중인 다양한 Web Service 대상(네이버쇼핑, 블로그, 밴드, 쇼핑, 네이버페이 ...) 으로 모의해킹 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 자사에서 운영중인 다양한 Mobile Service (스노우, 네이버페이, Vlive, 밴드, Works Mobile ...) 대상으로 모의해킹 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 사내 임직원 PC에 기본으로 설치되는 Application 대상(각종 보안 프로그램)으로 모의해킹 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 사내 인프라에 연동되어 있는 장비를 대상으로 모의해킹을 진행하였으며, 일부 장비에서 0-day 취약점 발견 및 CVE 등록  <a href="https://support.citrix.com/article/CTX232199/cve20185314-authentication-bypass-vulnerability-in-citrix-netscaler-application-delivery-controller-adc-and-netscaler-gateway">🔗 link</a>
+       - tr: 사내 개발자 사용도구(jenkins, storage, oss 등)를 대상으로 모의해킹을 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 로보틱스로 이루어진 자사 건물(NAVER 1784, Robot, 건물 연동 App ...) 모의해킹 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
+       - tr: 클라우드 서비스 고객사가 운영중인 서비스를 대상으로 모의해킹을 진행했으며 개발팀에게 취약점 조치를 위한 대응방안 제시
    researches:
     - research: <b>[업무 설명]</b>
       list:
