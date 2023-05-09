@@ -169,9 +169,9 @@
               {% endif %}
               <ul>
                 {% for itemm in item.pentests %}
-                <li>{{itemm.pentest}}</li>
+                <ol>{{itemm.pentest}}</ol>
                   {% for itemm_cont in itemm.list %}
-                  <li>{{itemm_cont.tr}}</li>
+                  <li stype="list-style-type:disc;list-style-position:inside">{{itemm_cont.tr}}</li>
                   {% endfor %}
                 {% endfor %}
               </ul>
