@@ -90,10 +90,10 @@ career:
    location: Korea
    dates: Dec 2014 - Oct 2015
    pentests:
-    - pentest: 금융 모바일 애플리케이션에 적용되어 있는 보안 솔루션을 assembly코드, smali코드로 디컴파일하여 코드분석하고, 분석한 코드를 토대로 앱변조 탐지 솔루션을 우회하여 APK파일 리패키징 및 실행 성공
-    - pentest: Windows7에서 사용하는 User Application의 취약점을 도출하고 Exploit 코드 작성
+    - pentest: 금융 모바일 애플리케이션에 적용되어 있는 보안 솔루션을 assembly코드/smali코드로 디컴파일하여 코드를 분석하고, 분석한 코드를 토대로 앱변조 탐지 솔루션을 우회하여 APK파일 리패키징 및 실행 성공
+    - pentest: Windows7에서 사용하는 User Application에서 SEH Overflow 취약점을 도출하고 Exploit 코드 작성
    develops:
-    - develop: App suite의 초기 모델 개발에 참여 
+    - develop: 해당 회사의 보안솔루션 제품인 App suite의 초기 모델 개발에 참여
    
 extra:
  - position: Security Research as a student
@@ -124,7 +124,23 @@ extra:
     - tr: 2013_Sub-role 부산전자공고 정보보안 동아리 멘토
     - tr: 2014_WORK 교내 정보번산원 CERT활동
     - tr: 2013_Edu KUCIS 정보보호실습 교육 수료
+    
+Awards:
+ - list:
+    - tr: 2015 14회 HUST Hacking Festival 3위
+    - tr: 2015 JFF CTF Season 3, 6th (Team: AsssassiNOPs)
+    - tr: 2014 Christmas-CTF 4th (Team: AsssassiNOPs(witheout couple))
+    - tr: 2014 홀리쉴드 CTF 4th (Team: CERT-IS)
 
+Presentations:
+ - list:
+    - tr: Inc0gnito 2015 Hacking Conference 발표 (Subject: POS 및 VAN에서 발생가능한 취약점)
+    - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (Subject: GPU Keylogger)
+    - tr: KITRI BOB 4기 컨퍼런스 발표 (Subject: GPU Keylogger)
+    - tr: 경남 대학동아리 시원포럼 컨퍼런스 발표 (Subject: 안드로이드 역공학)
+    - tr: SUA 영남권 공개세미나 발표 (Subject: bluetooth hacking)
+    - tr: KUCIS 영남권 세미나 발표 (Subject: Session hijacking with kakaotalk)
+    
 sideProjects:   
   - name: DeFi Hacks Analysis - Root Cause (2023)
     description: DeFi에서 발생하는 해킹 사례를 정리해둔 사이트입니다. DeFi 보안에 관심이 있어서 사이트 담당자에게 요청하여 한글 번역을 진행하였으며 <u>DeFi Hacking 사례에 대해서 파악할 수 있었던 프로젝트</u>였습니다.
