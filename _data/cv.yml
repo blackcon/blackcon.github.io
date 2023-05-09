@@ -18,7 +18,7 @@ technicalSkills:
   list:
     - tr: "모의해킹 (System, Web, Android, Smart Contract)"
     - tr: "Reverse Engineering (Windows, Linux, Android)"
-    - tr: "Exploit (windows, Linux, Smart Contract)"
+    - tr: "Exploit (Windows, Linux, Smart Contract)"
     - tr: "Source Code Auditing (Python, Solidity, Move, Rust, ...)"
     
   pentest:
@@ -137,11 +137,11 @@ Awards:
 Presentations:
  - list:
     - tr: Inc0gnito 2015 Hacking Conference 발표 (주제 - POS 및 VAN에서 발생가능한 취약점)
-    - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (주제 - GPU Keylogger)
-    - tr: KITRI BOB 4기 컨퍼런스 발표 (주제 - GPU Keylogger)
+    - tr: 국방부 주관 화아트햇콘테스트 2015 강연 (주제 - GPU Keylogger) <a href="https://github.com/blackcon/gpu-keylogger/blob/master/gpu-based-keylogger.pdf">🔗 link</a>
+    - tr: KITRI BOB 4기 컨퍼런스 발표 (주제 - GPU Keylogger) <a href="https://github.com/blackcon/gpu-keylogger/blob/master/gpu-based-keylogger.pdf">🔗 link</a>
     - tr: 경남 대학동아리 시원포럼 컨퍼런스 발표 (주제 - 안드로이드 역공학)
-    - tr: SUA 영남권 공개세미나 발표 (주제 - bluetooth hacking)
-    - tr: KUCIS 영남권 세미나 발표 (주제 - Session hijacking with kakaotalk)
+    - tr: SUA 영남권 공개세미나 발표 (주제 - bluetooth hacking) <a href="https://t1.daumcdn.net/cfile/tistory/270E3E4954167F7A1D">🔗 link</a>
+    - tr: KUCIS 영남권 세미나 발표 (주제 - Session hijacking with kakaotalk) <a href="https://t1.daumcdn.net/cfile/tistory/25453A395457669B37">🔗 link</a>
     
 sideProjects:   
   - name: DeFi Hacks Analysis - Root Cause (2023)
