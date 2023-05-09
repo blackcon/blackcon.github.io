@@ -73,8 +73,11 @@
             <a href="{{ site.data.cv.person.site }}">{{ site.data.cv.person.site }}</a>
           </li>
           {% endif%}
-          {% if site.data.cv.person.phone %}
+<!--           {% if site.data.cv.person.phone %}
           <li><i class="fa fa-phone"></i> {{site.data.cv.person.phone}}</li>
+          {% endif%} -->
+          {% if site.data.cv.person.birth %}
+          <li><i class="fa fa-birthday-cake"></i> {{site.data.cv.person.birth}}</li>
           {% endif%}
           {% if site.data.cv.person.github %}
           <li><i class="fa fa-github"></i>
