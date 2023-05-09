@@ -125,7 +125,7 @@ extra:
     - tr: 대한민국 VAN(카드사와 상점의 통신을 연결하는 부가가치통신망)사에서 사용하는 앱의 smali 코드를 분석하여 결제 프로토콜을 python으로 재구현함
     - tr: 결제 프로토콜 분석을 하며, 임의 사용자의 Credit Card로 결제 승인/취소할 수 있는 취약점 발견 (KISA에 report 제공)
     
- - position: Student
+ - position: Club Leader
    company: CERT-IS (University club)
    location: Korea
    dates: Mar 2010 - Aug 2016
