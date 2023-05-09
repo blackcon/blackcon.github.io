@@ -43,7 +43,7 @@ technicalSkills:
 
 career:
  - position: Security Analyst
-   company: NAVER CLOUD Corp
+   company: <a href="https://www.navercloudcorp.com/">NAVER CLOUD Corp</a>
    location: Korea
    dates: March 2016 ~ Present
    pentests:
@@ -81,7 +81,7 @@ career:
        - tr: Hypervisor를 대상으로 모의해킹을 진행하는 방법론 연구 (2020)
        - tr: AI 플랫폼에서 발생가능한 취약점 사레 연구 (2021)
    develops:
-    - develop:  <b>[업무 설명]</b>
+    - develop: <b>[업무 설명]</b>
       list:
        - tr: 클라우드 서비스를 사용하는 고객의 웹 서버를 자동으로 진단할 수 있는 서비스를 개발하고 운영함  <a href="https://www.ncloud.com/product/security/webSecurityChecker">🔗 link</a>
     - develop: <b>[역할]</b>
@@ -96,13 +96,13 @@ career:
     - other: 특허 - SQL 주입 취약점 진단 방법, 장치 및 컴퓨터 프로그램 (2020)
 
  - position: Security Analyst Intern
-   company: NAVER BUSINESS PLATFORM
+   company: <a href="https://www.navercloudcorp.com/">NAVER BUSINESS PLATFORM</a>
    location: Korea
    dates: Dec 2015 - Feb 2016
    summary: 정규직 채용을 위해 Band서비스 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
    
  - position: Project Member
-   company: STEALIEN
+   company: <a href="https://www.stealien.com/main">STEALIEN</a>
    location: Korea
    dates: Dec 2014 - Oct 2015
    pentests:
