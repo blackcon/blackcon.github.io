@@ -64,7 +64,7 @@ career:
    develops:
     - develop: 보안진단 자동화 서비스 개발 및 운영(crawler, web scan module .. ) (2018 ~)
    others:
-    - other: 0day - 네트워크 장비인 CITRIX Netscaler 의 0-day 취약점 발견 및 제보 (2018)
+    - other: 0day - 네트워크 장비인 CITRIX Netscaler 의 0-day 취약점 발견 및 제보 (2018) <a href="https://support.citrix.com/article/CTX232199/cve20185314-authentication-bypass-vulnerability-in-citrix-netscaler-application-delivery-controller-adc-and-netscaler-gateway">🔗 link</a>
     - other: 논문 - 웹 사이트에서 수집한 URL을 처리하는 방법, 장치 및 컴퓨터 프로그램 (2019)
     - other: 논문 - 웹 페이지의 URL을 수집하는 방법, 장치 및 컴퓨터 프로그램 (2019)
     - other: 논문 - Appratus and method for degermining types of Uniform Resource Locator (2019)
@@ -74,18 +74,18 @@ career:
    company: NAVER BUSINESS PLATFORM
    location: Korea
    dates: Dec 2015 - Feb 2016
-   summary: 정규직 채용을 위해 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
+   summary: 정규직 채용을 위해 Band서비스 모의해킹을 비롯한 다양한 미션을 수행하였습니다.
    
 extra:
  - position: Security Research as a student
    company: KITRI BOB 3기
    location: Korea
    dates: Jul 2014 - Feb 2015
-   summary: 130명 중 Top 30에 들었으며, 이 기간동안 프로젝트 매니저 및 수행원으로써 "Investigating POS(VAN) Vulnerability"에 대한 프로젝트를 수행했습니다.
+   summary: 130명 중 Top 30에 들었으며, 이 기간동안 PM 및 수행원으로써 "Investigating POS(VAN) Vulnerability" 프로젝트를 수행했습니다.
    list:
     - tr: POS기에서 SQL Injection, Remote Code Execution 취약점 발견 및 KISA에 report 제공
     - tr: 원격지에서 POS기에 연결된 DB에 연결하여 로그에 기록된 정보(이름, 카드정보 등)를 탈취할 수 있는 취약점 발견 및 KISA에 report 제공
-    - tr: VAN에서 사용하는 프로토콜을 분석하여 임의의 사용자 Credit Card로 결제할 수 있는 취약점 발견 및 KISA에 report 제공
+    - tr: VAN(카드사와 상점의 통신을 연결하는 부가가치통신망)에서 사용하는 프로토콜을 분석하여 임의의 사용자 Credit Card로 결제할 수 있는 취약점 발견 및 KISA에 report 제공
     
  - position: Student
    company: CERT-IS (University club)
