@@ -23,16 +23,17 @@ technicalSkills:
     
   pentest:
    - name: Web Service 
-   - name: Linux/Windows Service
    - name: Android Service
-   - name: Rebuilding Network Packets
    - name: Blockchain
+   - name: Rebuilding Network Packets
+   - name: Linux/Windows Service
      
   analysis:
-   - name: User Application (Windows,Linux / x64,x86)
-   - name: Kernel Application (Windows,Linux / x64,x86)
    - name: Android Application (SDK, NDK)
    - name: Smart Contract (Solidity, Rust, Move)
+   - name: Web Service (Web 통신, Network 통신)
+   - name: User Application (Windows,Linux / x64,x86)
+   - name: Kernel Application (Windows,Linux / x64,x86)
    - name: Application on other platforms (ARM, MIPS)
      
   language:
