@@ -40,6 +40,20 @@
       s.parentNode.insertBefore(wf, s);
     })();
   </script>
+  <!--
+  The GA snippet
+  -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Z5TJNYFPRS"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics.id }}');
+  });
+  </script>
 </head>
 
 <body>
