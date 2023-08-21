@@ -1,5 +1,5 @@
 ---
-title: Heap Overflow 취약점 이해: 예시와 방지 방법
+title: Heap Overflow 취약점 이해 - 예시와 방지 방법
 categories: [Hacking, Theory]
 tags: [Hacking, System hacking]
 date: 2023-08-20 23:08:00 +0900
