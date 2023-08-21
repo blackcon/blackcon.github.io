@@ -24,7 +24,7 @@ int main() {
     printf("할당할 메모리 크기를 입력하세요: ");
     scanf("%d", &size);
 
-    int *data = (int *)malloc(size * sizeof(int));
+    int *data = (int *)malloc((size-2) * sizeof(int));
 
     printf("값을 입력하세요: ");
     for (int i = 0; i < size; i++) {
