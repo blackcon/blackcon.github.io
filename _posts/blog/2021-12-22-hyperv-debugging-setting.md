@@ -1,5 +1,5 @@
 ---
-title:Hyper-V 분석하기 위한 환경설정 하는 방법
+title: Hyper-V 분석하기 위한 환경설정 하는 방법
 categories: [Hacking, Reversing]
 tags: [Hacking, Reversing]
 date: 2021-12-22 18:05:00 +0900
