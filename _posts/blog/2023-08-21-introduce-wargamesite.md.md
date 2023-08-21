@@ -1,6 +1,6 @@
 ---
 title: CTF 연습을 통한 보안 전문가로의 발전 | 추천 온라인 플랫폼
-categories: [Hacking, Theory]
+categories: [Hacking, CTF]
 tags: [Hacking, System hacking]
 date: 2023-8-21 22:00:1 +0900
 ---
