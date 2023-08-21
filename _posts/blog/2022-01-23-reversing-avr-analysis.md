@@ -43,7 +43,12 @@ date: 2022-01-23 23:08:00 +0900
     ```bash
     user@bk-mac:~/ctf $ avr-gdb ./atme.elf 
 
-    GNU gdb (GDB) 10.1 Copyright (C) 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html> This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. Type "show copying" and "show warranty" for details. This GDB was configured as "--host=x86_64-apple-darwin20.6.0 --target=avr". Type "show configuration" for configuration details. For bug reporting instructions, please see: <https://www.gnu.org/software/gdb/bugs/>. Find the GDB manual and other documentation resources online at: <http://www.gnu.org/software/gdb/documentation/>. For help, type "help". Type "apropos word" to search for commands related to "word"...
+    GNU gdb (GDB) 10.1 Copyright (C) 2020 Free Software Foundation, Inc. 
+    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html> 
+    This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. Type "show copying" and "show warranty" for details. This GDB was configured as "--host=x86_64-apple-darwin20.6.0 --target=avr". Type "show configuration" for configuration details. 
+    For bug reporting instructions, please see: <https://www.gnu.org/software/gdb/bugs/>. 
+    Find the GDB manual and other documentation resources online at: <http://www.gnu.org/software/gdb/documentation/>. 
+    For help, type "help". Type "apropos word" to search for commands related to "word"...
     ```
     
 -  qemu에 실행되어 있는 ELF 파일에 원격 연결
