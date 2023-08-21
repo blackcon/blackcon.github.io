@@ -4,8 +4,6 @@ categories: [Hacking, Theory]
 tags: [Hacking, System hacking]
 date: 2023-08-20 23:08:00 +0900
 ---
-# 제목: Command Injection 취약점 이해와 예시
-
 ## 소개
 
 웹 애플리케이션 보안에서 Command Injection은 중요한 취약점으로, 사용자 입력을 통해 악의적인 명령어가 실행되는 상황을 의미합니다. 이 글에서는 Command Injection의 개념과 함께 실제 예시를 통해 어떻게 발생하는지 알아보겠습니다.
@@ -18,8 +16,8 @@ Command Injection은 웹 애플리케이션에서 사용자 입력을 검증 없
 
 웹 애플리케이션에서 사용자의 입력을 명령어로 실행하는 경우, 적절한 검증 없이 입력값을 사용하면 취약점이 발생할 수 있습니다.
 
-사용자 입력: `; ls /`
-실행되는 명령어: `ping example.com; ls /`
+- 사용자 입력: `; ls /`
+- 실행되는 명령어: `ping example.com; ls /`
 
 위의 예시에서, 사용자 입력이 실행되는 명령어에 포함되어 `ping example.com` 명령어와 함께 `ls /` 명령어가 실행됩니다.
 
