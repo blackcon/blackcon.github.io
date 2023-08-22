@@ -1,6 +1,6 @@
 ---
 title: Red Teaming in Cyber Security | Evaluating Resilience Against Realistic Threats
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-21 23:18:48 +0900
 ---
