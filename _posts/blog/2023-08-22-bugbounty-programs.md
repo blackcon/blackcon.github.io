@@ -1,6 +1,6 @@
 ---
 title: Top Bug Bounty Programs| Uncover Vulnerabilities and Get Rewarded
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-22 08:42:39 +0900
 ---

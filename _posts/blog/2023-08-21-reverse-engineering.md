@@ -1,6 +1,6 @@
 ---
 title: Reverse Engineering in Software Development | Techniques, Implications, and Best Practices
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-21 23:9:6 +0900
 ---

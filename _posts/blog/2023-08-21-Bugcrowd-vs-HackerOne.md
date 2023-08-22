@@ -1,6 +1,6 @@
 ---
 title: Bugcrowd vs HackerOne| A Comprehensive Comparison
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-21 20:50:53 +0900
 ---

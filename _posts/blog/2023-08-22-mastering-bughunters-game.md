@@ -1,6 +1,6 @@
 ---
 title: Mastering Bug Hunter's Game| A Comprehensive Guide to Bughunter
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-22 04:16:53 +0900
 ---

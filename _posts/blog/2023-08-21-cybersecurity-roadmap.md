@@ -1,6 +1,6 @@
 ---
 title: Cyber Security Career Roadmaps| A Comprehensive Guide
-categories: [Essey, English]
+categories: [Essay, English]
 tags: [Hacking, Security]
 date: 2023-8-21 23:30:5 +0900
 ---

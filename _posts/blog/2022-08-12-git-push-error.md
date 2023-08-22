@@ -1,5 +1,5 @@
 ---
-title: github push 권한 오류시 해결 방법
+title: GitHub Push 실패? 권한 에러 해결하는 방법
 categories: [Tools, github]
 tags: [github, PersonalAccessToken]
 ---
