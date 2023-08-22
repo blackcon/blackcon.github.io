@@ -20,6 +20,7 @@ The Importance of 0-Day Vulnerabilities and CVEs
 Understanding Bug Hunter Bounties
 -------------------------------
 **Summary**
+
 | Key Terms | Definition |
 |--|--|
 | 0-day vulnerability | A software flaw that has not yet been publicly disclosed or patched. |
