@@ -13,18 +13,20 @@ Welcome to the fascinating world of bug hunting! As technology advances and syst
 
 The Importance of 0-Day Vulnerabilities and CVEs
 ---------------------------------------------------
-**0-day vulnerability**: A 0-day vulnerability, or simply "0-day," refers to a software flaw that has not yet been publicly disclosed or patched. These undiscovered weaknesses are particularly dangerous because attackers can exploit them before developers have a chance to fix them. As such, the responsible disclosure of 0-days is crucial for minimizing potential damage and protecting user data.
-**CVE (Common Vulnerabilities and Exposures)**: The CVE database is a publicly accessible repository that assigns unique identifiers to documented cybersecurity vulnerabilities. This system helps developers, researchers, and security professionals track, manage, and prioritize the fixation of vulnerabilities in software. By reporting 0-day vulnerabilities through CVE, bug hunters contribute to a safer digital environment for everyone.
-
-
-Understanding Bug Hunter Bounties
--------------------------------
 **Summary**
 
 | Key Terms | Definition |
 |--|--|
 | 0-day vulnerability | A software flaw that has not yet been publicly disclosed or patched. |
 | CVE (Common Vulnerabilities and Exposures) | A publicly accessible repository that assigns unique identifiers to documented cybersecurity vulnerabilities. | 
+
+**0-day vulnerability**: A 0-day vulnerability, or simply "0-day," refers to a software flaw that has not yet been publicly disclosed or patched. These undiscovered weaknesses are particularly dangerous because attackers can exploit them before developers have a chance to fix them. As such, the responsible disclosure of 0-days is crucial for minimizing potential damage and protecting user data.
+
+**CVE (Common Vulnerabilities and Exposures)**: The CVE database is a publicly accessible repository that assigns unique identifiers to documented cybersecurity vulnerabilities. This system helps developers, researchers, and security professionals track, manage, and prioritize the fixation of vulnerabilities in software. By reporting 0-day vulnerabilities through CVE, bug hunters contribute to a safer digital environment for everyone.
+
+
+Understanding Bug Hunter Bounties
+-------------------------------
 
 **Bug bounty programs**
 
