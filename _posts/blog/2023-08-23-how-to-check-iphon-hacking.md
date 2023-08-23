@@ -1,6 +1,6 @@
 ---
-title: 아이폰 해킹 확인 방법: 쉽고 정확한 가이드
-categories: [Essay, English]
+title: 아이폰 해킹 확인 방법 | 쉽고 정확한 가이드
+categories: [Essay, Korean]
 tags: [Hacking, Security]
 date: 2023-8-23 21:49:56 +0900
 ---
