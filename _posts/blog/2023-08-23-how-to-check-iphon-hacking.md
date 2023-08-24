@@ -23,7 +23,7 @@ date: 2023-8-23 21:49:56 +0900
 6. [마무리](#6-마무리-%EF%B8%8F)
 
 # 본문
-![hacked-iphon](/post/2023-08-24-hacked-iiphone.jpeg)
+![hacked-iphon](/posts/2023-08-24-hacked-iiphone.jpeg)
 ## 1. 소개
 
 아이폰은 보안 강화와 사용자 개인 정보 보호를 중요시하는 [Apple](https://apple.com/)의 제품으로, 하이 엔드 [스마트폰 시장에서 높은 점유율](https://biz.chosun.com/it-science/ict/2023/06/12/QY6TOWCSBBB4FOREYC5E2M5SRU/)을 차지하고 있습니다. 그럼에도 불구하고, 해커들은 여전히 아이폰을 대상으로 다양한 해킹 시도를 시도하고 있습니다. 이 글은 아이폰 사용자들이 자신의 기기가 해킹당했는지 확인하고 대응하는 방법에 대해 안내합니다.
