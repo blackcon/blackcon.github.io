@@ -12,7 +12,7 @@ cdns:
 # fonts
 
 #webfonts: https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
-webfonts: https://chat.openai.com/fonts/Sohne-Regular.woff2
+webfonts: https://cdn.openai.com/common/fonts/soehne/soehne-mono-halbfett.woff2
 
 # Libraries
 
