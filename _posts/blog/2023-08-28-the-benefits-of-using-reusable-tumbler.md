@@ -4,7 +4,7 @@ categories: [Essay, English]
 tags: [WriteUsingLLaMA]
 date: 2023-8-28 20:44:26 +0900
 ---
-
+☝ _It is write with LLaMA2_
 
 Introduction
 ------------
