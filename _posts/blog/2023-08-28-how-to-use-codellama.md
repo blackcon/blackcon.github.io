@@ -1,5 +1,5 @@
 ---
-title: Meta AI의 Code Llama | 코딩 작업을 더 효율적으로 만들어주는 대화형 언어 모델
+title: Meta에서 공개한 Code Llama 알아보기 | Coding Assistant
 categories: [AI, llama]
 tags: [AI, llama, meta]
 date: 2023-08-28 09:08:00 +0900
@@ -45,12 +45,10 @@ Code Llama는 7B, 13B 및 34B 파라미터 크기의 세 가지 다양한 모델
 또한 Code Llama의 두 가지 특화된 변형도 소개되었습니다.
 
 1) **Code Llama - Python**
-
     - Code Llama의 언어 특화 변형으로, Python 코드의 100억 토큰에 더 세밀하게 조정되었습니다. 
     - Python은 코드 생성에 가장 많이 벤치마킹된 언어이며, Python과 PyTorch가 AI 커뮤니티에서 중요한 역할
 
 2) **Code Llama - Instruct**
-
     - 지시어(Instruct)를 통해 훈련된 변형으로
     - 프롬프트의 사용자가 기대하는 결과를 더 잘 이해하고 도움과 안전한 답변을 생성할 수 있도록 조정됨
 
