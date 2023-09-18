@@ -5,9 +5,9 @@ tags: [Python, Miniconda]
 date: 2023-09-18 12:50:0 +0900
 ---
 # Miniconda 란?
-- Python을 사용하는 방법은 매우 다양하다. local system에 python을 설치한 후 그냥 실행을 한다거나, `venv`를 실행한다거나, `[anaconda](https://anaconda.org/anaconda/python)`를 사용하거나.
+- Python을 사용하는 방법은 매우 다양하다. local system에 python을 설치한 후 그냥 실행을 한다거나, `venv`를 실행한다거나, [anaconda](https://anaconda.org/anaconda/python)를 사용하거나.
 - 이 중에서 `Miniconda`라는 프로그램을 사용하는 방법도 존재한다.
-- 하여 Miniconda란, `[anaconda](https://anaconda.org/anaconda/python)` 를 최소화한 프로그램으로써 작업하고자하는 프로젝트별로 python의 버전을 설정할 수 있으며, 모듈 또한 각 프로젝트 환경에 종속되어 설치할 수 있다.
+- 하여 Miniconda란, [anaconda](https://anaconda.org/anaconda/python) 를 최소화한 프로그램으로써 작업하고자하는 프로젝트별로 python의 버전을 설정할 수 있으며, 모듈 또한 각 프로젝트 환경에 종속되어 설치할 수 있다.
 - 이러한 기능으로 프로젝트별 모듈 관리하기가 편하며, 간단한 명령어를 이용하여 project switching 하기도 용이하다.
 
 # Miniconda 설치법
