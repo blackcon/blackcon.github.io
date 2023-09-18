@@ -4,14 +4,14 @@ categories: [Tools, Miniconda]
 tags: [Python, Miniconda]
 date: 2023-09-18 12:50:0 +0900
 ---
-# Miniconda 란?
+# 1. Miniconda 란?
 - Python을 사용하는 방법은 매우 다양하다. local system에 python을 설치한 후 그냥 실행을 한다거나, `venv`를 실행한다거나, [anaconda](https://anaconda.org/anaconda/python)를 사용하거나.
 - 이 중에서 `Miniconda`라는 프로그램을 사용하는 방법도 존재한다.
 - 하여 Miniconda란, [anaconda](https://anaconda.org/anaconda/python) 를 최소화한 프로그램으로써 작업하고자하는 프로젝트별로 python의 버전을 설정할 수 있으며, 모듈 또한 각 프로젝트 환경에 종속되어 설치할 수 있다.
 - 이러한 기능으로 프로젝트별 모듈 관리하기가 편하며, 간단한 명령어를 이용하여 project switching 하기도 용이하다.
 
-# Miniconda 설치법
-## 1. 설치 스크립트 다운로드
+# 2. Miniconda 설치법
+## 2.1) 설치 스크립트 다운로드
 - [다운로드 사이트](https://docs.conda.io/projects/miniconda/en/latest/)에서 설치하고자 하는 환경을 다운로드받으면 된다. Windows, MacOS, Linux 모두 지원하고 있다.
 - Mac OS M1
     ```bash
@@ -25,11 +25,13 @@ date: 2023-09-18 12:50:0 +0900
     ```bash
     wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
     ```
-## 2. 설치 스크립트에 실행권한 주기
+
+## 2.2) 설치 스크립트에 실행권한 주기
 ```bash
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ```
-## 3. 설치 스크립트 실행하기
+
+## 2.3) 설치 스크립트 실행하기
 - 스크립트 실행
     ```bash
     ./Miniconda3-latest-Linux-x86_64.sh
@@ -117,8 +119,8 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
     conda is a tool for managing and deploying applications, environments and packages.
     ```
 
-# 4. Conda 명령어 사용해보기.
-## 4.1) 신규 프로젝트 생성
+# 3. Conda 명령어 사용해보기.
+## 3.1) 신규 프로젝트 생성
 - 기본 명령기
     ```bash
     (base) ➜  ~ conda create -n {프로젝트 이름} python={파이썬 버전}
@@ -196,7 +198,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
     #
     #     $ conda deactivate
     ```
-## 4.2) 생성된 프로젝트 보기
+## 3.2) 생성된 프로젝트 보기
 - 기본 명령어
     ```bash
     (base) ➜  ~ conda env list
@@ -204,7 +206,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 - 실행 결과
     ![miniconda-env-list](/posts/2023-09-18-miniconda-env-list.png)
 
-## 4.3) 프로젝트 활성화(전환)
+## 3.3) 프로젝트 활성화(전환)
 - 기본 명령어
     ```bash
     (base) ➜  ~ conda activate conda-test
@@ -215,7 +217,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
     Python 3.11.5
     ```
 
-## 4.4) 프로젝트 비활성화
+## 3.4) 프로젝트 비활성화
 - 기본 명령어 및 실행 결과
     ```bash
     (conda-test) ➜  ~ conda deactivate
@@ -223,7 +225,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
     Python 3.10.
     ```
 
-## 4.5) 프로젝트 삭제
+## 3.5) 프로젝트 삭제
 - 프로젝트명으로 삭제하기 (option: `-n`)
     ```bash
     (base) ➜  ~ conda-env remove -n conda-test
