@@ -1,5 +1,5 @@
 ---
-title: Docker를 대신해줄 귀여운 명령어 Podman
+title: 퍼너블/리버싱을 위한 도구 설치 방법 | gdb-peda 설치 가이드
 categories: [Tools, gdb]
 tags: [gdb, peda, reversing]
 date: 2023-09-19 22:00:00 +0900
