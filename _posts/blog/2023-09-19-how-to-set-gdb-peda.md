@@ -20,7 +20,7 @@ date: 2023-09-19 22:00:00 +0900
     echo "source ~/peda/peda.py" >> ~/.gdbinit
     echo "DONE! debug your program with gdb and enjoy"
     ```
-- gdb-peda 실행은 평소와 같이 명령 프롬프트에서 `gdb`라고 실행하면 된다. 그럼 자동으로 `gdb-peda`가 load되면서 기능을 사용할 수 ㅇㅆ다.
+- gdb-peda 실행은 평소와 같이 명령 프롬프트에서 `gdb`라고 실행하면 된다. 그럼 자동으로 `gdb-peda`가 load되면서 기능을 사용할 수 있다.
 
 # 3. gdb-peda 기능 및 명령어
 - `gdb-peda` 에서는 아래와 같은 명령어를 사용할 수 있다.
