@@ -113,8 +113,8 @@ ASan은 C 및 C++ 프로그램에서 메모리 오류를 식별하고 디버그�
         ==2018==ERROR: LeakSanitizer: detected memory leaks
 
         Direct leak of 100 byte(s) in 1 object(s) allocated from:
-            #0 0x4c3b78  (/home1/irteamsu/temp/test+0x4c3b78) (BuildId: 379bf4d826c30440d02360d752a7833a948020e0)
-            #1 0x512f10  (/home1/irteamsu/temp/test+0x512f10) (BuildId: 379bf4d826c30440d02360d752a7833a948020e0)
+            #0 0x4c3b78  (/Users/user/temp/test+0x4c3b78) (BuildId: 379bf4d826c30440d02360d752a7833a948020e0)
+            #1 0x512f10  (/Users/user/temp/test+0x512f10) (BuildId: 379bf4d826c30440d02360d752a7833a948020e0)
             #2 0x7fbfb8041d84  (/lib64/libc.so.6+0x3ad84) (BuildId: 31f2a86084da882dfe4ecc1fe2a9eca8ce9416fd)
 
         SUMMARY: AddressSanitizer: 100 byte(s) leaked in 1 allocation(s). 
@@ -145,18 +145,18 @@ ASan은 C 및 C++ 프로그램에서 메모리 오류를 식별하고 디버그�
         =================================================================
         ==26375==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7f2a4480002a at pc 0x00000051301b bp 0x7fffe1c77cd0 sp 0x7fffe1c77cc0
         WRITE of size 1 at 0x7f2a4480002a thread T0
-            #0 0x51301a  (/home1/irteamsu/temp/test+0x51301a) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
+            #0 0x51301a  (/Users/user/temp/test+0x51301a) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
             #1 0x7f2a46e97d84  (/lib64/libc.so.6+0x3ad84) (BuildId: 31f2a86084da882dfe4ecc1fe2a9eca8ce9416fd)
-            #2 0x41f1ad  (/home1/irteamsu/temp/test+0x41f1ad) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
+            #2 0x41f1ad  (/Users/user/temp/test+0x41f1ad) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
 
         Address 0x7f2a4480002a is located in stack of thread T0 at offset 42 in frame
-            #0 0x512eff  (/home1/irteamsu/temp/test+0x512eff) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
+            #0 0x512eff  (/Users/user/temp/test+0x512eff) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
 
         This frame has 1 object(s):
             [32, 42) 'buf' <== Memory access at offset 42 overflows this variable
         HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
             (longjmp and C++ exceptions *are* supported)
-        SUMMARY: AddressSanitizer: stack-buffer-overflow (/home1/irteamsu/temp/test+0x51301a) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
+        SUMMARY: AddressSanitizer: stack-buffer-overflow (/Users/user/temp/test+0x51301a) (BuildId: fdb1297446db5dae328c9d5c2cd9e59eac69ce86)
         Shadow bytes around the buggy address:
         0x0fe5c88f7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
         0x0fe5c88f7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
