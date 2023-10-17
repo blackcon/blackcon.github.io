@@ -8,7 +8,7 @@ layout: default
     <div class="wrapper">
       <h1 class="page-title">{{ page.title | default: "나현 블로그" }}</h1>
       <!-- <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ paginator.total_posts | default: 0 }}개의 글</div> -->
-      <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ page.posts.size | default: 0 }}개의 글</div>
+      <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ site.total_posts | default: 0 }}개의 글</div>
     </div>
   </section>
   <main class="page-content" aria-label="Content">
@@ -20,7 +20,8 @@ layout: default
         <div class="grid-sizer"></div>
         <div class="grid-gutter-sizer"></div>
         <!-- items -->
-        {% for post in paginator.posts %}
+        <!-- {% for post in paginator.posts %} -->
+        {% for post in site.posts %}
           <li class="grid-item">
             <a href="{{ post.url | relative_url }}">
               <span class="post-meta {{ post.categories | first }}">{{ post.categories | join: '/' }}</span>
