@@ -1,13 +1,10 @@
 ---
-layout: default
----
 
 <div class="home">
-  
+
   <section class="page-heading">
     <div class="wrapper">
-      <h1 class="page-title">{{ page.title | default: "나현 블로그" }}</h1>
-      <!-- <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ paginator.total_posts | default: 0 }}개의 글</div> -->
+      <h1 class="page-title">{{ page.title | default: "재윤 블로그" }}</h1>
       <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ site.total_posts | default: 0 }}개의 글</div>
     </div>
   </section>
@@ -20,7 +17,6 @@ layout: default
         <div class="grid-sizer"></div>
         <div class="grid-gutter-sizer"></div>
         <!-- items -->
-        <!-- {% for post in paginator.posts %} -->
         {% for post in site.posts %}
           <li class="grid-item">
             <a href="{{ post.url | relative_url }}">
@@ -59,5 +55,5 @@ layout: default
       {% endif %}
     </div>
   </main>
-  
+
 </div>
