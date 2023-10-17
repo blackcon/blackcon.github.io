@@ -22,7 +22,8 @@ gem 'tzinfo', '~>1.2'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-paginate-v2"
+  #gem "jekyll-paginate-v2"
+  gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-seo-tag"
   gem "jekyll-minifier"
   gem "jekyll-feed", "~> 0.6"

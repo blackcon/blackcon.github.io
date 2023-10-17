@@ -57,7 +57,7 @@ exclude:
   - LICENSE.txt
 
 plugins:
-  - jekyll-paginate-v2
+  #- jekyll-paginate-v2
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
@@ -90,6 +90,8 @@ pagination:
   sort_reverse: true
   tag: 'published'
     
+paginate: 10
+
 # Add a default layout
 # defaults:
 #   -
