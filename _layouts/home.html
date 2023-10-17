@@ -1,61 +1,47 @@
 ---
-layout: default
+layout: page
+# The Home page layout
 ---
 
-<div class="home">
-  
-  <section class="page-heading">
-    <div class="wrapper">
-      <h1 class="page-title">{{ page.title | default: "재윤 블로그" }}</h1>
-      <div class="post-meta">{{ page.description | default: "전체 포스팅" }} &nbsp;|&nbsp; {{ paginator.total_posts | default: 0 }}개의 글</div>
-    </div>
-  </section>
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-      <ul class="post-list grid">
-      <!-- data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".grid-gutter-sizer", "percentPosition": true }'> -->
-        <!-- Sizers -->
-        <div class="grid-sizer"></div>
-        <div class="grid-gutter-sizer"></div>
-        <!-- items -->
-        {% for post in paginator.posts %}
-          <li class="grid-item">
-            <a href="{{ post.url | relative_url }}">
-              <span class="post-meta {{ post.categories | first }}">{{ post.categories | join: '/' }}</span>
-              <h2 class="post-title">
-                <strong>{{ post.title | escape }}</strong>
-              </h2>
-              <span class="post-subtitle">{{ post.subtitle | escape }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      {% if paginator.total_pages > 1 %}
-      <div class="page-load-status">
-        <div class="infinite-scroll-request center-inline">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <p class="infinite-scroll-last center-inline">마지막입니다</p>
-        <p class="infinite-scroll-error center-inline">에러가 발생했습니다</p>
-      </div>
-      <!-- <p class="center-inline"><a class="view-more-button"><u>더보기</u></a></p> -->
-      <ul class="pager">
-        {% if paginator.previous_page %}
-        <li>
-          <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-        </li>
-        {% endif %}
-        {% if paginator.next_page %}
-        <li>
-          <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
-      {% endif %}
-    </div>
-  </main>
-  
+{% include lang.html %}
+
+{% assign pinned = site.posts | where: "pin", "true" %}
+{% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
+{% assign posts = "" | split: "" %}
+
+<h1> Hello, Stranger </h1>
+
+<!-- About -->
+<div id="home-about">
+  <h2 id="-about">🧑‍💻 About</h2>
+  <li>Name: {{ site.data.authors.author.bio.name }} ( {{ site.data.authors.author.bio.nick }})</li>
+  <li>Location: {{ site.data.authors.author.bio.location }}</li>
+  <li>Careers: <a href="/career/">here</a></li>
+</div>
+<!-- Major -->
+{% if site.data.authors.author.Majors.size > 0 %}
+<div id="home-major">
+  <h2 id="-major">💻 Major</h2>
+  {% for item in site.data.authors.author.Majors %}
+  <li>{{ item.Major }}</li>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Interests -->
+{% if site.data.authors.author.Interests.size > 0 %}
+<div id="home-interests">
+  <h2 id="-interests">🤩 Interests</h2>
+  {% for item in site.data.authors.author.Interests %}
+  <li>{{ item.Interest }}</li>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- Contact -->
+<div id="home-contact">
+  <h2 id="-contact">🔗 Contact</h2>
+  <li>E-mail: 📨 <a href="mailto://{{ site.data.authors.author.bio.email }}">{{ site.data.authors.author.bio.email }}</a></li>
+  <li>SNS: <a href="https://www.linkedin.com/in/{{ site.data.authors.author.sns.linkedin }}/">Linkedin</a> / <a href="https://twitter.com/{{ site.data.authors.author.sns.twitter }}">Twitter</a></li></li>
+  <li>Blog: <a href="{{ site.data.authors.author.url.tistory }}">Tistory</a></li>
 </div>
