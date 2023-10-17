@@ -1,35 +1,20 @@
-<!-- The Footer -->
+<footer class="site-footer">
 
-<footer class="row pl-3 pr-3">
-  <div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
-    <div class="footer-left">
-      <p class="mb-0">
-        © {{ 'now' | date: "%Y" }}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-        {% if site.data.locales[lang].copyright.brief %}
-        <span data-toggle="tooltip" data-placement="top"
-          title="{{ site.data.locales[lang].copyright.verbose }}">{{ site.data.locales[lang].copyright.brief }}</span>
-        {% endif %}
-      </p>
+  <div class="wrapper">
+
+    <div class="post-subtitle">
+      <strong>{{ site.title | escape }}</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></div>-->
     </div>
-
-    <div class="footer-right">
-      <p class="mb-0">
-        {% capture _platform %}
-          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-        {% endcapture %}
-
-        {% capture _theme %}
-          <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
-        {% endcapture %}
-
-        {{ site.data.locales[lang].meta
-          | default: 'Powered by :PLATFORM with :THEME theme.'
-          | replace: ':PLATFORM', _platform | replace: ':THEME', _theme
-        }}
-
-      </p>
-    </div>
+    <div class="post-meta">{{ site.description | escape }}</div>
 
   </div>
 

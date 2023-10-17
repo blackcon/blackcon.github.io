@@ -1,10 +1,10 @@
 ---
 layout: home
-title: "책"
-description: "책으로 생각 확장하기"
-permalink: "/책"
+title: "연구"
+description: "대학원생의 연구 이야기"
+permalink: "/연구"
 pagination: 
   enabled: true
-  category: "책"
+  category: "연구"
   permalink: /:num/
 ---
