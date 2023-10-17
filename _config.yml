@@ -98,5 +98,3 @@ pagination:
 #       type: category
 #     values:
 #       layout: "category"
-paginate: 10                  # 페이징 처리 개수
-paginate_path: "/page:num/"   # URL 규칙
