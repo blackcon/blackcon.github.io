@@ -57,7 +57,7 @@ exclude:
   - LICENSE.txt
 
 plugins:
-  #- jekyll-paginate-v2
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-minifier
@@ -83,15 +83,13 @@ algolia:
 pagination:
   enabled: true
   per_page: 9
-  title: ':title'
-  permalink: '/:num/'
+    #title: ':title'
+    #permalink: '/:num/'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
   tag: 'published'
     
-paginate: 10
-
 # Add a default layout
 # defaults:
 #   -
