@@ -11,19 +11,21 @@
 # Site settings
 # accessed via {{ site.title }}, {{ site.email }}
 
-title: 재윤 블로그
+title:  블로그
 description: >- # this means to ignore newlines until "baseurl:"
   다양한 생각과 경험을 기록하고 정리하는 공간입니다.
-url: "http://blog.jaeyoon.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blackcon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-author: Jaeyoon Song
+author: bk1120
 lang: ko_KR
-email: jaeyoons@mit.edu
+email: 131@gmail.com
 
-twitter_username: song_jaeyoon
-github_username:  jyoonsong
+twitter_username: aaa
+github_username:  kkk
 
 color-scheme: black
+
+timezone: Asia/Seoul
 
 # Set encoding to UTF-8
 encoding: utf-8
