@@ -83,8 +83,8 @@ algolia:
 pagination:
   enabled: true
   per_page: 9
-    #title: ':title'
-    #permalink: '/:num/'
+  title: ':title'
+  permalink: '/:num/'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
