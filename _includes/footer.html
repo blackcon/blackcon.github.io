@@ -1,36 +1,21 @@
-<!-- The Footer -->
+<footer class="site-footer">
 
-<footer
-  aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
-  <p>
-    {{ '©' }}
-    <time>{{ 'now' | date: '%Y' }}</time>
-    <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-    {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %}
-  </p>
+  <div class="wrapper">
 
-  <p>
-    {%- capture _platform -%}
-      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-    {%- endcapture -%}
+    <div class="post-subtitle">
+      <strong>{{ site.title | escape }}</strong>
+      <div>
+        <a href="http://jaeyoon.io" target="_blank">포트폴리오 사이트</a> &nbsp; | &nbsp;
+        <a href="https://facebook.com/i.am.jyoon" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;
+        <a href="https://www.linkedin.com/in/jyoonsong/" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;
+        <a href="https://github.com/jyoonsong" target="_blank"><i class="fa fa-github"></i></a>&nbsp;
+        <a href="https://dribbble.com/JaeYoon" target="_blank"><i class="fa fa-dribbble"></i></a>&nbsp;
+        <a href="https://www.instagram.com/jaeyo_on_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+<!--      <div class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></div>-->
+    </div>
+    <div class="post-meta">{{ site.description | escape }}</div>
 
-    {%- capture _theme -%}
-      <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
-    {%- endcapture -%}
+  </div>
 
-    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
-  </p>
 </footer>
