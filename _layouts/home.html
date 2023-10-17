@@ -20,8 +20,7 @@ layout: default
         <div class="grid-sizer"></div>
         <div class="grid-gutter-sizer"></div>
         <!-- items -->
-        <!-- {% for post in paginator.posts %} -->
-        {% for post in page.posts %}
+        {% for post in paginator.posts %}
           <li class="grid-item">
             <a href="{{ post.url | relative_url }}">
               <span class="post-meta {{ post.categories | first }}">{{ post.categories | join: '/' }}</span>
