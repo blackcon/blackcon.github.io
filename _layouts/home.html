@@ -11,7 +11,8 @@ layout: default
 
         {% assign current_post_size = 0 %}
         {% for post in site.posts %}
-            {% if post.category contains page.url %}
+        {% assign current_category = "/" | append: post.category %}
+            {% if current_category contains page.url %}
                 {{ post.url }}
             {% endif %}
         {% endfor %}
