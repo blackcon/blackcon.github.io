@@ -64,7 +64,7 @@ plugins:
 
 #sass:
 #  style: compressed
-#permalink: /:year/:month/:title.html
+permalink: /:year/:month/:title.html
 
 algolia:
   application_id:      'B2K91HKW0L'
@@ -81,11 +81,11 @@ algolia:
 pagination:
   enabled: true
   per_page: 9
-  title: ':title'
-  permalink: '/:num/'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+    #title: ':title'
+    #permalink: '/:num/'
+    #limit: 0
+    #sort_field: 'date'
+    #sort_reverse: true
   tag: 'published'
     
 # Add a default layout
