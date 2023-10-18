@@ -1,91 +1,52 @@
-# Example 01::Typical Blog
-This example site shows how the pagination gem can be used on a simple blog site. 
+# jekyll-jyoon
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sverrirs/jekyll-paginate-v2/master/examples/img/01-example-screenshot-main.png" />
-</p>
+Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
-The site is generated using the jekyll built in new command `jekyll new myblog` and it uses the [default `minima` theme](https://github.com/jekyll/minima).
+To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
-After generating the pagination gem was installed using
+TODO: Delete this and the text above, and describe your gem
 
-```
-gem install jekyll-paginate-v2
-```
 
-## Structure
-The blog has only one type of posts, blog posts. No category pagination is performed. To implement the pagination for the minima theme the `_layouts/home.html` needed to be modified to call the pagination logic.
+## Installation
 
-The `_includes/header.html` was also overridden to omit listing the auto-generated pagination sites at the top of the header part.
+Add this line to your Jekyll site's `Gemfile`:
 
-## Setup configuration
-
-The gem is added to the `_config.yml` file under
-``` yml
-gems:
-  - jekyll-paginate-v2
+```ruby
+gem "jekyll-jyoon"
 ```
 
-as well as to the `Gemfile` into the main loop
-``` ruby
-group :jekyll_plugins do
-  gem "jekyll-paginate-v2"
-  gem "jekyll-feed"
-end
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: jekyll-jyoon
 ```
 
-At this point is is advisable to delete the `Gemfile.lock` file to clear out any potential issues with gem caching and dependency issues (no worries this file will be auto generated for you again).
+And then execute:
 
-## Configuring the pagination
+    $ bundle
 
-Add the pagination configuration to `_config.yml`
+Or install it yourself as:
 
-``` yml
-# Pagination Settings
-pagination:
-  enabled: true
-  per_page: 3
-  permalink: '/page/:num/'
-  title: ' - page :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-```
+    $ gem install jekyll-jyoon
 
+## Usage
 
-Due to the way the entries in the blog utilize multiple categories it is also good to explicitly state the permalink format to avoid excessive nesting of the post pages. So place the following line into the `_config.yml` file as well
+TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
-``` yml
-# Produces a cleaner folder structure when using categories
-permalink: /:year/:month/:title.html
-```
+## Contributing
 
-## Completing the setup
-Now the pagination simply needs to be enabled in the `index.html` file.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-``` yml
----
-layout: home
-pagination: 
-  enabled: true
----
-```
+## Development
 
-That is it, no further configuration is needed!
+To set up your environment to develop this theme, run `bundle install`.
 
-Try building the site yourself using `jekyll build` or `jekyll serve`.
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-## Testing backwards compatability
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-jyoon.gemspec` accordingly.
 
-In the `_config.yml` file remove or comment out the new `pagination:` configuration and paste/uncomment the following configuration instead. 
+## License
 
-``` yml
-# Old jekyll-paginate pagination logic
-paginate: 3
-paginate_path: "/legacy/page:num/"
-```
-Now run `jekyll serve` again and the gem will generate the pagination according to the old jekyll-paginate rules and behavior.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-> You must disable the new pagination configuration for the old one to work. You cannot run both configurations at the same time.
-
-Cheers :heart:
