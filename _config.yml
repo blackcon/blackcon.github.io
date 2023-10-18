@@ -11,7 +11,7 @@
 # Site settings
 # accessed via {{ site.title }}, {{ site.email }}
 
-title: hello stranger
+title: hello strangerk
 description: >- # this means to ignore newlines until "baseurl:"
   다양한 생각과 경험을 기록하고 정리하는 공간입니다.
 url: "http://blackcon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
