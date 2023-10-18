@@ -78,15 +78,16 @@ algolia:
     - ./_posts/2017-10-24-java-basics
     - ./2017/10/java-basics.html
 
-pagination:
-  enabled: true
-  per_page: 9
-  title: ':title'
-  permalink: '/:num/'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  tag: 'published'
+paginate: 10
+# pagination:
+#   enabled: true
+#   per_page: 9
+#   title: ':title'
+#   permalink: '/:num/'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+#   tag: 'published'
     
 # Add a default layout
 # defaults:
