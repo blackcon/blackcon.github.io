@@ -64,7 +64,7 @@ plugins:
 
 #sass:
 #  style: compressed
-permalink: /:year/:month/:title.html
+#permalink: /:year/:month/:title.html
 
 algolia:
   application_id:      'B2K91HKW0L'
