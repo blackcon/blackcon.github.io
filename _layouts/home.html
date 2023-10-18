@@ -38,6 +38,7 @@ layout: default
               <span class="post-subtitle">{{ post.subtitle | escape }}</span>
             </a>
           </li>
+          {% endif %}
         {% endfor %}
       </ul>
       {% if paginator.total_pages > 1 %}
