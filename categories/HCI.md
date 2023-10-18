@@ -6,5 +6,4 @@ permalink: "/연구"
 pagination: 
   enabled: true
   category: "연구"
-  permalink: /:num/
 ---
