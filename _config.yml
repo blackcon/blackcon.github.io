@@ -78,6 +78,10 @@ algolia:
     - ./_posts/2017-10-24-java-basics
     - ./2017/10/java-basics.html
 
+# Explicitly turn off the old code
+paginate: nil
+paginate_path: nil
+
 pagination:
   enabled: true
   per_page: 9
