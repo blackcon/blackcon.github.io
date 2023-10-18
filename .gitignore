@@ -1,0 +1,5 @@
+.gitignore../jyoonsong.github.io/.gitignore_site
+.sass-cache
+.jekyll-metadata
+_drafts
+_drafts/*
