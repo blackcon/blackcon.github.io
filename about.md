@@ -1,17 +1,15 @@
 ---
-layout: post
-title: Trois, the Simple, Responsive, and User-friendly Jekyll Theme
-subtitle: 지킬 테마 추천. 한국 느낌 테마. 한국적 테마. 한글 지원 테마.
-date: 2017-10-10 03:15:30
-author: jaeyoon
-categories: ["Cool", "Categories"]
-tags:
-  - "Trois"
-  - "even"
-  - "has"
-  - "tags"
-  - "Haha"
+layout: page
+title: About
 permalink: /about/
 ---
 
-Hello world
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+
+You can find the source code for the Jekyll new theme at:
+{% include icon-github.html username="jekyll" %} /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at
+{% include icon-github.html username="jekyll" %} /
+[jekyll](https://github.com/jekyll/jekyll)
