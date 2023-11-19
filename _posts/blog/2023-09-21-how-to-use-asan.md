@@ -1,7 +1,7 @@
 ---
 title: C와 C++ 코드에서 메모리 오류를 감지하는 도구 | Address Sanitizer 
 categories: [Tools, Sanitizer]
-tags: [WriteUsingLLaMA]
+tags: [AddressSanitizer, Compiler]
 date: 2023-9-21 09:50:0 +0900
 ---
 
