@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024년 11월 팀 워크샵</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            color: #0f0;
+            background-color: #000;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px #0f0;
+            background-color: rgba(0, 0, 0, 0.8); /* 배경을 약간 투명하게 설정 */
+            position: relative;
+            z-index: 1; /* 컨텐츠를 메트릭스 배경 위로 올림 */
+        }
+        h1, h2, h3 {
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0;
+        }
+        .glitch {
+            position: relative;
+            font-size: 2em;
+            font-weight: bold;
+            color: #0f0;
+            letter-spacing: 5px;
+            animation: glitch 1s linear infinite;
+        }
+        @keyframes glitch {
+            2%, 64% {
+                transform: translate(2px,0) skew(0deg);
+            }
+            4%, 60% {
+                transform: translate(-2px,0) skew(0deg);
+            }
+            62% {
+                transform: translate(0,0) skew(5deg); 
+            }
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 1px dashed #0f0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li:before {
+            content: "> ";
+            color: #0f0;
+        }
+        #countdown {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #0f0;
+            padding: 10px;
+        }
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* 메트릭스 배경을 컨텐츠 뒤로 보냄 */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+    <div class="container">
+        <header>
+            <h1 class="glitch">2024년 11월 워크샵</h1>
+            <p>Security Red Team의 단합을 위해 워크샵을 진행합니다.</p>
+        </header>
+        <div id="countdown"></div>
+        <div class="section">
+            <h2>워크샵 개요</h2>
+            <ul>
+                <li>목적: 팀원 간의 단합 및 사기 증진을 위한 Refresh</li>
+                <li>일정: 11월 06일(수) ~ 07일(목)</li>
+                <li>장소: 운악채한옥마을 가평 (경기 가평군 조종면 현등사길 55-43) [<a href="https://naver.me/5y4Og4D0" target="_blank">지도</a>]</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>행사 내용</h2>
+            <ul>
+                <li>주요 활동: 팀워크를 강화하기 위한 미니 토론 세션 또는 팀 빌딩 워크숍</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>예상 일정</h2>
+            <h3>1일차</h3>
+            <ul>
+                <li>15:00 – 입실</li>
+            </ul>
+            <h3>2일차</h3>
+            <ul>
+                <li>11:00 – 퇴실</li>
+            </ul>
+        </div>
+        
+
+        <div class="section">
+            <h2>게임 및 활동 계획</h2>
+            <ul>
+                <li>게임 1: 추억의 놀이 (무궁화 꽃이 피었습니다, 숨바꼭질)</li>
+                <li>게임 2: 팀 대항 미션 (스카벤저 헌트)</li>
+                <li>게임 3: 가을 사진 콘테스트 (단풍 배경)</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>입사자 환영식</h2>
+            <ul>
+                <li>새 팀원 소개</li>
+                <li>간단한 축하 행사</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>식사 및 휴식 시간</h2>
+            <ul>
+                <li>점심 및 저녁: 피크닉 스타일로 야외에서 식사</li>
+                <li>자유시간: 자연 속에서 산책 또는 단풍놀이</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>단합을 위한 추가 요소</h2>
+            <ul>
+                <li>팀워크를 강화하기 위한 미니 토론 세션 또는 팀 빌딩 워크숍</li>
+                <li>감사 메시지 전달</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>예상 비용 및 준비물</h2>
+            <ul>
+                <li>준비물: 간식, 물, 게임 용품</li>
+                <li>비용: 숙소(339,000 원), 교통비, 식사비 등</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 카운트다운 타이머
+        const countDownDate = new Date("Nov 6, 2024 00:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = "워크샵까지 " + days + "일 " + hours + "시간 "
+            + minutes + "분 " + seconds + "초 남았습니다!";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "워크샵이 시작되었습니다!";
+            }
+        }, 1000);
+
+        // 메트릭스 배경 효과
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const alphabet = katakana + latin + nums;
+
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 60);
+    </script>
+</body>
+</html>
