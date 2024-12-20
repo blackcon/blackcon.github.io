@@ -1,5 +1,5 @@
 ---
-title: C와 C++ 코드에서 메모리 오류를 감지하는 도구 | Address Sanitizer 
+title: ROP (Return Oriented Programming) 란?
 categories: [Hacking, Theory]
 tags: [Hacking, System Hacking]
 date: 2024-12-21 01:40:0 +0900
