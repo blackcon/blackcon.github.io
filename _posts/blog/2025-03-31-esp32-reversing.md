@@ -2,10 +2,10 @@
 title: CTF 문제로 알아보는 ESP32 리버싱
 categories: [Hacking, CTF]
 tags: [reversing, esp32, hardware]
-date: 2025-03-31 22:00:00 +0900
+date: 2025-03-31 20:00:00 +0900
 ---
 
-Codgate 2025에 나온 리버싱 문제 `physical` 바이너리를 분석해봅니다.
+Codgate 2025에 나온 리버싱 문제 `physical` 바이너리를 분석해봅니다.
 blah
 작성중...
 
