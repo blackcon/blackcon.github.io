@@ -7,6 +7,8 @@ date: 2025-03-31 20:00:00 +0900
 
 Codgate 2025에서 출제된 리버싱 문제 `physical`을 통해 ESP32 바이너리를 분석해보는 과정을 정리한 글이에요. 이번 분석에서는 flash 이미지(`flash.bin`)로부터 애플리케이션 코드(`app0`)와 크래시 상황을 담은 `coredump`를 추출하고, Ghidra와 다양한 분석 도구를 활용해 그 내용을 살펴봤어요.
 
+![codegate2025-physical](/posts/2025-03-31-esp32-reversing_0.png)
+
 [ESP32](https://namu.wiki/w/ESP32)는 MCU 기반의 SoC(System-on-Chip)로, IoT 기기에서 자주 사용되며 내부 flash에 파티션 형태로 데이터를 저장하고 실행해요. CTF 문제로 출제되었을 경우, 일반적으로 다음과 같은 흐름으로 분석이 진행됩니다:
 
 > flash 영역 분석 → app 코드 추출 → coredump 추출 → 리버싱 및 Emulation
@@ -254,9 +256,14 @@ Secure version: 0
 
 ### 📍 메모리 매핑 설정
 
+![import_binary](/posts/2025-03-31-esp32-reversing_1.png)
+
 app0.bin은 ELF 포맷이 아니기 때문에 Ghidra에 Raw Binary로 불러온 후 수동으로 메모리 매핑을 지정해줘야 해요. 
 
 #### 설정 방법
+
+![memory_mapping](/posts/2025-03-31-esp32-reversing_2.png)
+
 - Language: `Xtensa:LE:32:default`
 - Segment 매핑 예시:
 
@@ -272,9 +279,19 @@ app0.bin은 ELF 포맷이 아니기 때문에 Ghidra에 Raw Binary로 불러온 
 
 ### 🏁 Entry Point에서 main 추적하기
 
-Entry Point로 지정된 `0x4008278c`에서 분석을 시작하면 `FUN_40082794` 함수에 도달하게 돼요. 이 함수는 초기화 루틴을 담당하며, 그 안에서 `FUN_400826b0` 같은 하위 함수들을 호출합니다.
+app0.bin의 image info를 통해 Entry Point를 획득하였는데요. 그 주소인 `0x4008278c`를 보게되면 함수 끝자락 어딘가의 주소인 것을 알 수 있어요. 이게 왜 Entry point인지 파악은 못했어요. (memory mapping이 잘 못 된건가..?)
 
-`FUN_400826b0`는 IO 설정, GPIO 초기화 등을 진행하는 코드로 보이며, 전체적인 흐름을 보면 `FUN_40082794`가 사실상 main 함수 역할을 한다고 판단할 수 있어요.
+![entrypoint_0x4008278c](/posts/2025-03-31-esp32-reversing_3.png)
+
+무튼 `0x4008278c` 이 주소가 실행되는 함수는 `FUN_400826b0` 인데요. 아 함수의 xref를 쫓아가보면 `0x400827d1` 코드에 도착하게 되고, 이 코드가 있는 함수인 `FUN_40082794`가 등장하게 됩니다.
+
+![0x400827d1](/posts/2025-03-31-esp32-reversing_4.png)
+
+이 함수가 뭔지 봤더니, 프로그램의 초기화 루틴이 실행되는 찐(?) Entry point로 보여 집니다. (**wsr(in_VECBASE,PTR_LOOP_40080578)로 인터럽트 벡터 베이스를 설정**)
+
+![FUN_40082794](/posts/2025-03-31-esp32-reversing_5.png)
+
+정리를 해보면 `FUN_400826b0`는 IO 설정, GPIO 초기화 등을 진행하는 코드로 보이며, 전체적인 흐름을 보면 `FUN_40082794`가 사실상 main 함수 역할을 한다고 판단할 수 있어요.
 
 분석 흐름 요약:
 1. 코어 리셋 여부 및 초기 상태 점검
