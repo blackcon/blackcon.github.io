@@ -1,6 +1,6 @@
 ---
 title: CTF 문제로 알아보는 ESP32 리버싱
-categories: [Hacking, CTF]
+categories: [Hacking, Reversing]
 tags: [reversing, esp32, hardware]
 date: 2025-03-31 20:00:00 +0900
 ---
