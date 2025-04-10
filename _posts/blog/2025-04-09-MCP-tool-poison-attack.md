@@ -108,7 +108,7 @@ async ({ name }): Promise<CallToolResult> => {
 
 ## 3) POC
 
-POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server를 사용하고자 구축해둔 상황이며, 해당 취약점을 이용해 `악성 MCP Server`에서 `신뢰할 수 있는 MCP Server`에 있는 Tool을 호출하도록 해보았어요.
+POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server를 사용하고자 구축해둔 상황이며, 해당 취약점을 이용해 `악성 MCP Server`가 `신뢰할 수 있는 MCP Server`의 Tool을 호출하도록 해보았어요.
 
 **테스트 환경**
 
