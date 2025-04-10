@@ -9,7 +9,7 @@ date: 2025-04-10 23:00:00 +0900
 
 요즘의 뜨거운 감자로 떠오르고 있는 것은 아무래도 [MCP(Model Context Protocol)](https://github.com/modelcontextprotocol)라고 생각해요. MCP란, [Antropic](https://www.anthropic.com/)에서 공개한 JSON-RPC 프로토콜인데요. 이 프로토콜을 활용한다면 AI와 외부 시스템(IDE, browser, docs ...)를 연동할 수 있는 장점이 있어요.
 
-이번 글에서는 이 MCP에서 발생한 취약점들 중 `Tool-Poison-Attack`이라는 것을 알아보려 합니다. 이 취약점은 지난주에 [invariantlabs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)에서 공개한 blog에 소개된 취약점인데요. 이 취약점은 MCP Server에 정의된 `Tool Description`이 Prompt에 개입됨으로써, 기존의 prompt를 오염(poison)시키는 공격이에요.
+이번 글에서는 이 MCP에서 발생한 취약점 중 `Tool-Poison-Attack`이라는 것을 알아보려 합니다. 이 취약점은 지난주에 [invariantlabs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)에서 공개한 blog에 소개된 취약점인데요. 이 취약점은 MCP Server에 정의된 `Tool Description`이 Prompt에 개입됨으로써, 기존의 prompt를 오염(poison)시키는 공격이에요.
 
 조금 더 상세하게 들여다보며 풀어보도록 하겠습니다!
 
@@ -71,20 +71,20 @@ tool을 사용하기 위한 Message Flow는 아래와 같아요. 본문에서 �
 
 ## 1) **Tool Poison Attack** 이 뭐야?
 
-LLM을 한번쯤 사용해보았다면 AI에게 가스라이팅을 해보았을 거에요. 말로 AI를 현혹시켜 시스템에 어긋나는 답변을 받도록 하는데 이를 Poisoning Attack이라고 해요. 이러한 이슈가 MCP 환경에서도 동일하게 발생한다고 해요.
+LLM을 한 번쯤 사용해 보았다면 AI에게 가스라이팅을 해보았을 거예요. 말로 AI를 현혹시켜 시스템에 어긋나는 답변을 받도록 하는데 이를 [Poisoning Attack](https://www.lgcns.com/blog/cns-tech/ai-data/9616/)이라고 해요. 이러한 이슈가 MCP 환경에서도 동일하게 발생한다고 해요.
 
-MCP Server에는 Tool이 존재하고, 이 Tool의 기능을 명세해두는 Description이 있어요. 이 Description은 Tool Selection(_Mesage workflow 참고_) 절차에 의해 AI에게 전달되는데, Description 에 악의적인 prompt가 삽입되어 있다면 MCP 사용자는 Poison Attack에 노출되곤 해요. (**참고**: Model마다 결과가 다를 수 있음)
+MCP Server에는 Tool이 존재하고 Tool의 기능을 명세해 두는 Description이 있어요. 이 Description은 Tool Selection(_Message workflow 참고_) 절차에 의해 AI에게 전달되는데, Description에 악의적인 prompt가 삽입되어 있다면 MCP Client는 Poison Attack에 노출되곤 해요. (**참고**: 언어모델 및 Client마다 결과가 다를 수 있음)
 
 Victim(피해자)과 Attacker(공격자)를 굳이 분류하여 정리하면 이렇습니다.
 
 - Victim: MCP Server를 다운로드 받고 사용하는 사용자
 - Attacker: 정상적인 MCP Server로 위장한 후 배포한 공격자
 
-## 2) 어떤식으로 공격 돼? (Attack Surface)
+## 2) 어떤 식으로 공격 돼? (Attack Surface)
 
 조금 더 나아가볼게요. 앞서 `Tool Description`이라는 것을 AI에게 전달하고, AI가 어떤 Tool을 사용할지 선택한다고 했는데요.
 
-이 Description은 MCP Server 내부에 아래와 같이 정의되어 있어요. 일반 사용자는 이 문구를 Host 소프트웨어(eg.Claude Desktop)에서도 확인할 수 있어요.
+이 Description은 MCP Server 내부에 아래와 같이 정의되어 있어요. 또한 일반 사용자도 이 문구를 Host(eg.Claude Desktop)에서 확인할 수 있어요.
 
 **Host에 노출된 Tool Description**
 
@@ -146,7 +146,7 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 
 ![2025-04-10-tmcp-poison-attack2.png](/posts/2025-04-10-tmcp-poison-attack2,png)
 
-**공격 결과**
+**POC 결과**
 
 일반 사용자는 악성 MCP Server의 존재를 모른채 **AI의 미래**를 주제로 문서 작성을 요청했어요. AI는 요청에 맞게 글을 생성해주고 그 글을 Docs로 저장까지 해주게 되죠.
 
@@ -159,9 +159,9 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 ![2025-04-10-tmcp-poison-attack4.png](/posts/2025-04-10-tmcp-poison-attack4,png)
 
 
-# 3. 대응방안
+# 3. 이렇게 대응해야 해요.
 
-이 취약점은 결국 AI model을 제공하는 Provider측에서 Poison Attack에 취약하지 않게 대응을 해주면 좋은데요. 아시다시피 이런걸 A-Z로 다 막기엔 우회 기법이 너무 많죠. 그래서 거기서 대응하기 전까지는 사용자가 조심하는 수 밖에 없을 듯 해요. MCP 사용자와 MCP Server 개발자의 측면에서 어떤 대응을 해야할지 간단히 정리해보았어요.
+이 취약점은 결국 AI model을 제공하는 Provider측에서 Poison Attack에 취약하지 않게 대응을 해주면 좋은데요. 아시다시피 이런걸 A-Z로 다 막기엔 우회 기법이 너무 많죠. 그래서 거기서 대응하기 전까지는 사용자가 조심하는 수밖에 없을듯 해요. MCP 사용자와 MCP Server 개발자의 측면에서 어떤 대응을 해야할지 간단히 정리해 보았어요.
 
 ## 1) MCP 사용자 관점
 - 검증되지 않은 MCP 서버는 연결하지 마세요.
@@ -180,7 +180,7 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 
 # 4. 끝으로
 
-사실, 이 글을 작성할 때는 MCP 코드를 뜯어보며 depp dive 느낌으로 소개하고 싶었는데요. 글이 생각보다 길어져서 이번 포스팅에는 그런 깊은 내용을 넣지 못했는데요. 이번 포스팅에 담지 못 했던 디테일한 이야기들은 다음 포스팅에 담아보도록 할게요. 🙋
+사실, 이 글을 작성할 때는 MCP 코드를 뜯어보며 deep dive 느낌으로 소개하고 싶었는데요. 글이 생각보다 길어져서 이번 포스팅에는 그런 깊은 내용을 넣지 못했는데요. 이번 포스팅에 담지 못했던 디테일한 이야기들은 다음 포스팅에 담아보도록 할게요. 🙋
 
 ## Reference
 - [MCP Security Notification: Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
