@@ -7,9 +7,11 @@ date: 2025-04-10 23:00:00 +0900
 
 ![2025-04-10-mcp-architecture-thumnail](/posts/2025-04-10-mcp-architecture-thumnail.png)
 
-요즘의 뜨거운 감자로 떠오르고 있는 것은 아무래도 [MCP(Model Context Protocol)](https://github.com/modelcontextprotocol)라고 생각해요. MCP란, [Antropic](https://www.anthropic.com/)에서 공개한 JSON-RPC 프로토콜인데요. 이 프로토콜을 활용한다면 AI와 외부 시스템(IDE, browser, docs ...)를 연동할 수 있는 장점이 있어요.
+요즘의 뜨거운 감자로 떠오르고 있는 것은 아무래도 [MCP(Model Context Protocol)](https://github.com/modelcontextprotocol)라고 생각해요. 
 
-이번 글에서는 이 MCP에서 발생한 취약점 중 `Tool-Poison-Attack`이라는 것을 알아보려 합니다. 이 취약점은 지난주에 [invariantlabs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)에서 공개한 blog에 소개된 취약점인데요. 이 취약점은 MCP Server에 정의된 `Tool Description`이 Prompt에 개입됨으로써, 기존의 prompt를 오염(poison)시키는 공격이에요.
+MCP란, [Antropic](https://www.anthropic.com/)에서 공개한 JSON-RPC 프로토콜로써, MCP를 활용한다면 AI와 외부 시스템(IDE, browser, docs ...)를 연동할 수 있는 장점이 있어요.
+
+이번 글에서는 이 MCP에서 발생한 취약점 중 `Tool-Poison-Attack`이라는 것을 알아보려 합니다. 이 취약점은 지난주에 [invariantlabs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)에서 공개한 blog에 소개된 취약점인데요. MCP Server에 정의된 `Tool Description`이 Prompt에 개입됨으로써, 기존의 prompt를 오염(poison)시키는 공격이에요.
 
 조금 더 상세하게 들여다보며 풀어보도록 하겠습니다!
 
