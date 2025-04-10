@@ -122,7 +122,7 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 
 이렇게 작성된 Tool Description은 Claude Desktop에서 아래와 같이 확인을 할 수 있어요. 일반 사용자들은 이런 설명을 잘 읽어보고 MCP를 사용하면 되겠네요.
 
-![2025-04-10-mcp-poison-attack2.png](/posts/2025-04-10-mcp-poison-attack2,png)
+![2025-04-10-mcp-poison-attack2.png](/posts/2025-04-10-mcp-poison-attack2.png)
 
 **POC 결과**
 
@@ -130,11 +130,11 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 
 이 상황에서 악성 MCP Server의 Tool Description이 개입되어 아래 이미지와 같이 테스트 문자열을 찍어주게 되는데요.
 
-![2025-04-10-mcp-poison-attack3.png](/posts/2025-04-10-mcp-poison-attack3,png)
+![2025-04-10-mcp-poison-attack3.png](/posts/2025-04-10-mcp-poison-attack3.png)
 
 이는 사용자가 신경만 썼다면 Claude Desktop의 UI에서 확인을 하고, 실행되지 않게 예방은 할 수 있었을거에요. 하지만 심플하고 깔끔하게 보이기 위한 UI 덕에 아래와 같이 `펼치기` 액션을 해주어야지만 보이는 문제가 있답니다.
 
-![2025-04-10-mcp-poison-attack4.png](/posts/2025-04-10-mcp-poison-attack4,png)
+![2025-04-10-mcp-poison-attack4.png](/posts/2025-04-10-mcp-poison-attack4.png)
 
 
 # 3. 이렇게 대응해야 해요.
