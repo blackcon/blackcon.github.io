@@ -160,7 +160,7 @@ POC의 시나리오는 이렇습니다. 일반 사용자가 2개의 MCP Server�
 
 # 4. 끝으로
 
-사실, 이 글을 작성할 때는 MCP 코드를 뜯어보며 deep dive 느낌으로 소개하고 싶었는데요. 글이 생각보다 길어져서 이번 포스팅에는 그런 깊은 내용을 넣지 못했는데요. 이번 포스팅에 담지 못했던 디테일한 이야기들은 다음 포스팅에 담아보도록 할게요. 🙋
+사실, 이 글을 작성할 때는 MCP 코드를 뜯어보며 deep dive 느낌으로 소개하고 싶었는데요. 글이 생각보다 길어져서 이번 포스팅에는 그런 깊은 내용을 넣지 못했어요. 이번 포스팅에 담지 못했던 디테일한 이야기들은 다음 포스팅에 담아보도록 할게요. 🙋
 
 ## Reference
 - [MCP Security Notification: Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
