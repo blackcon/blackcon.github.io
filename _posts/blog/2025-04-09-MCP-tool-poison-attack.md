@@ -44,27 +44,27 @@ date: 2025-04-10 23:00:00 +0900
 tool을 사용하기 위한 Message Flow는 아래와 같아요. 본문에서 인용될 예정이니 참고 해주세요.
 
 ```mermaid
-    sequenceDiagram
-    participant LLM
-    participant Client
-    participant Server
+sequenceDiagram
+participant LLM
+participant Client
+participant Server
 
-    Note over Client,Server: Discovery
-    Client->>Server: tools/list
-    Server-->>Client: List of tools
+Note over Client,Server: Discovery
+Client->>Server: tools/list
+Server-->>Client: List of tools
 
-    Note over Client,LLM: Tool Selection
-    LLM->>Client: Select tool to use
+Note over Client,LLM: Tool Selection
+LLM->>Client: Select tool to use
 
-    Note over Client,Server: Invocation
-    Client->>Server: tools/call
-    Server-->>Client: Tool result
-    Client->>LLM: Process result
+Note over Client,Server: Invocation
+Client->>Server: tools/call
+Server-->>Client: Tool result
+Client->>LLM: Process result
 
-    Note over Client,Server: Updates
-    Server--)Client: tools/list_changed
-    Client->>Server: tools/list
-    Server-->>Client: Updated tools
+Note over Client,Server: Updates
+Server--)Client: tools/list_changed
+Client->>Server: tools/list
+Server-->>Client: Updated tools
 ```
 
 # 2. Tool Poison Attack (TPA)
