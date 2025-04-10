@@ -44,7 +44,7 @@ date: 2025-04-10 23:00:00 +0900
 tool을 사용하기 위한 Message Flow는 아래와 같아요. 본문에서 인용될 예정이니 참고 해주세요.
 
 ```mermaid
-sequenceDiagram
+    sequenceDiagram
     participant LLM
     participant Client
     participant Server
