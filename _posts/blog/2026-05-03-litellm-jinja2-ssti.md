@@ -88,7 +88,6 @@ async def test_prompt(
 ## 2-3. 페이로드와 검증
 
 Jinja2 SSTI 의 클래식 페이로드 한 줄로 충분했어요.
-
 ```python
 {{ lipsum.__globals__["__builtins__"]["__import__"]("os").popen("id").read() }}
 ```
@@ -200,7 +199,7 @@ CVE는 발급되지 않았고, changelog에서도 보안 영향이 명시되지 
 
 ***
 
-# 5. 우리가 얻은 교훈
+# 5. 무엇을 배웠는가?
 
 ## 5-1. 사용자 입력이 닿는 Jinja2는 `ImmutableSandboxedEnvironment` 가 기본
 
