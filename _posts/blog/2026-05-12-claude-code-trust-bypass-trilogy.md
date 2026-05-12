@@ -18,9 +18,17 @@ date: 2026-05-12 22:00:00 +0900
 Claude Code를 처음 사용할 때 다음과 같은 trust prompt를 본 적 있으신가요?
 
 ```
-Do you trust the files in this folder?
-Claude Code may read and execute files in this folder. 
-Files included in this folder may be malicious.
+ Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source project, or work from your
+ team). If not, take a moment to review what's in this folder first.
+
+ Claude Code'll be able to read, edit, and execute files here.
+
+ Security guide
+
+ ❯ 1. Yes, I trust this folder
+   2. No, exit
+
+ Enter to confirm · Esc to cancel
 ```
 
 이 prompt에서 `Yes`를 누르면 `~/.claude.json` 의 `projects` 맵에 현재 디렉토리 경로 + `hasTrustDialogAccepted: true` 가 기록됩니다. 이후 동일 디렉토리에서 Claude Code를 다시 실행하면 prompt 없이 바로 진행되고, 이 디렉토리의 `.claude/settings.json` 안에 정의된 다음 기능들이 활성화됩니다.
