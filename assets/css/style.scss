@@ -89,6 +89,12 @@ code, pre, kbd, .highlight, samp {
     Consolas, monospace;
 }
 
+/* Inline code sizes relative to its context (em, not rem) so it scales
+   inside headings instead of staying locked at the root 0.85rem. */
+code.highlighter-rouge {
+  font-size: 0.85em;
+}
+
 /* --- Sidebar identity: clean sans, no terminal motif ---------------------- */
 #sidebar {
   border-right: 1px solid var(--main-border-color);
