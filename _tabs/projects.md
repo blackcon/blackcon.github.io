@@ -1,7 +1,7 @@
 ---
 title: Projects
 icon: fas fa fa-terminal
-order: 2
+order: 3
 ---
 
 ###  Research

@@ -23,10 +23,12 @@ timezone: Asia/Seoul
 
 title: blackcon                          # the main title
 
-tagline: 🏠 Eat, Sleep, Computer
+tagline: Offensive security research
 
 description: >-                        # used by seo meta and the atom feed
-  All of the hacking.
+  Offensive security research by Jihwan Yoon (blackcon) — exploit development,
+  reversing, and vulnerability research on AI systems, hypervisors, and the
+  things people trust.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://blackcon.github.io'
@@ -79,7 +81,7 @@ google_adsense:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: # [light|dark]
+theme_mode: light # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url

@@ -2,5 +2,5 @@
 layout: blog
 title: Blog
 icon: fas fa-coffee
-order: 1
+order: 2
 ---

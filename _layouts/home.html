@@ -5,43 +5,70 @@ layout: page
 
 {% include lang.html %}
 
-{% assign pinned = site.posts | where: "pin", "true" %}
-{% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
-{% assign posts = "" | split: "" %}
+{% comment %} Featured = pinned posts; Latest = recent non-pinned posts {% endcomment %}
+{% assign featured = site.posts | where: "pin", "true" %}
+{% if featured.size == 0 %}
+  {% assign featured = site.posts | where_exp: "item", "item.categories contains 'Research'" %}
+{% endif %}
+{% assign latest = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
-<h1> Hello, Stranger </h1>
-
-<!-- About -->
-<div id="home-about">
-  <h2 id="-about">🧑‍💻 About</h2>
-  <li>Name: {{ site.data.authors.author.bio.name }} ( {{ site.data.authors.author.bio.nick }})</li>
-  <li>Location: {{ site.data.authors.author.bio.location }}</li>
-  <li>Careers: <a href="/career/">here</a></li>
+<!-- Editorial hero -->
+<div id="bc-hero">
+  <div class="bc-hero-grid">
+    <h1 class="bc-hero-title">Offensive<br>security<br>research</h1>
+    <div class="bc-hero-lede">
+      <p>
+        By {{ site.data.authors.author.bio.name }} ({{ site.data.authors.author.bio.nick }}) —
+        exploit development, reversing, and vulnerability research on AI systems,
+        hypervisors, and the things people trust. Recent work includes a critical
+        LiteLLM RCE (silently patched before a planned Pwn2Own&nbsp;2026 entry) and
+        a Claude&nbsp;Code trust-model analysis disclosed through HackerOne.
+      </p>
+      <p class="bc-hero-teams">
+        Focus:
+        <a href="{{ '/categories/ai-security/' | relative_url }}">AI / LLM Security</a>
+        <a href="{{ '/categories/hyper-v/' | relative_url }}">Hypervisors</a>
+        <a href="{{ '/categories/reversing/' | relative_url }}">Reversing</a>
+        <a href="{{ '/categories/research/' | relative_url }}">Research</a>
+      </p>
+    </div>
+  </div>
 </div>
-<!-- Major -->
-{% if site.data.authors.author.Majors.size > 0 %}
-<div id="home-major">
-  <h2 id="-major">💻 Major</h2>
-  {% for item in site.data.authors.author.Majors %}
-  <li>{{ item.Major }}</li>
+
+<!-- Featured research -->
+{% if featured.size > 0 %}
+<hr class="bc-rule">
+<h2 class="bc-section">Featured research</h2>
+<ul class="bc-pub-list">
+  {% for post in featured limit: 5 %}
+  <li class="bc-pub">
+    <div class="bc-pub-meta">
+      <span class="bc-pub-cat">{{ post.categories | join: " · " }}</span>
+      <span class="bc-pub-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <a class="bc-pub-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}
+    <p class="bc-pub-desc">{{ post.description | strip_html | strip_newlines | truncate: 160 }}</p>
+    {% endif %}
+  </li>
   {% endfor %}
-</div>
+</ul>
 {% endif %}
 
-<!-- Interests -->
-{% if site.data.authors.author.Interests.size > 0 %}
-<div id="home-interests">
-  <h2 id="-interests">🤩 Interests</h2>
-  {% for item in site.data.authors.author.Interests %}
-  <li>{{ item.Interest }}</li>
+<!-- Latest writing -->
+{% if latest.size > 0 %}
+<hr class="bc-rule">
+<h2 class="bc-section">Latest</h2>
+<ul class="bc-pub-list bc-pub-list--compact">
+  {% for post in latest limit: 6 %}
+  <li class="bc-pub">
+    <div class="bc-pub-meta">
+      <span class="bc-pub-cat">{{ post.categories | join: " · " }}</span>
+      <span class="bc-pub-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <a class="bc-pub-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
   {% endfor %}
-</div>
+</ul>
+<p class="bc-viewall"><a href="{{ '/blog/' | relative_url }}">View all writing &rarr;</a></p>
 {% endif %}
-
-<!-- Contact -->
-<div id="home-contact">
-  <h2 id="-contact">🔗 Contact</h2>
-  <li>E-mail: 📨 <a href="mailto://{{ site.data.authors.author.bio.email }}">{{ site.data.authors.author.bio.email }}</a></li>
-  <li>SNS: <a href="https://www.linkedin.com/in/{{ site.data.authors.author.sns.linkedin }}/">Linkedin</a> / <a href="https://twitter.com/{{ site.data.authors.author.sns.twitter }}">Twitter</a></li></li>
-  <li>Blog: <a href="{{ site.data.authors.author.url.tistory }}">Tistory</a></li>
-</div>

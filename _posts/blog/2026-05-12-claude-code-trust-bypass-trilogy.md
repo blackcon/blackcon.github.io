@@ -3,6 +3,8 @@ title: Claude Code의 trust prompt 우회 3종 — HackerOne 제보와 "intended
 categories: [Research, AI-Security]
 tags: [AI, security, Claude Code, HackerOne, trust model, Pwn2Own, RCE]
 date: 2026-05-12 22:00:00 +0900
+description: Three independent ways to bypass Claude Code's trust prompt for silent shell execution from a cloned repo — and why Anthropic closed all three as intended behavior.
+pin: true
 ---
 
 안녕하세요! [지난 LiteLLM SSTI 글](https://blackcon.github.io/posts/litellm-jinja2-ssti/)에 이어 `Pwn2Own Berlin 2026` 준비 과정에서 발견한 또 다른 이야기로 찾아왔어요. 
