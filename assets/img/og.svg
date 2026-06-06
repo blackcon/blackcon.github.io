@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="blackcon — Offensive security research">
+  <rect width="1200" height="630" fill="#faf9f5"/>
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <rect x="84" y="64" width="64" height="64" rx="14" fill="#141413"/>
+    <text x="116" y="113" text-anchor="middle" font-weight="800" font-size="42" fill="#faf9f5">b</text>
+    <circle cx="138" cy="76" r="6" fill="#b04a2a"/>
+    <text x="166" y="108" font-weight="700" font-size="30" fill="#141413" letter-spacing="-0.5">blackcon</text>
+    <text x="82" y="280" font-weight="800" font-size="96" fill="#141413" letter-spacing="-3">Offensive</text>
+    <text x="82" y="378" font-weight="800" font-size="96" fill="#141413" letter-spacing="-3">security research</text>
+    <rect x="84" y="420" width="120" height="8" rx="4" fill="#b04a2a"/>
+  </g>
+  <g font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" fill="#3a3935">
+    <text x="84" y="512" font-size="30">Exploit development, reversing, and vulnerability research on</text>
+    <text x="84" y="552" font-size="30">AI systems, hypervisors, and the things people trust.</text>
+  </g>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" fill="#6b6a65" font-size="22">
+    <text x="84" y="598">AI / LLM Security    Hypervisors    Reversing</text>
+    <text x="1116" y="598" text-anchor="end">Jihwan Yoon</text>
+  </g>
+</svg>

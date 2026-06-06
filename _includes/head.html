@@ -56,7 +56,18 @@
     {% endfor %}
   {% endif %}
 
+  {% comment %} Default social share image when a page defines none {% endcomment %}
+  {% unless seo_tags contains 'og:image' %}
+    {% assign seo_tags = seo_tags | replace: 'twitter:card" content="summary"', 'twitter:card" content="summary_large_image"' %}
+  {% endunless %}
+
   {{ seo_tags }}
+
+  {% unless seo_tags contains 'og:image' %}
+    {% assign default_og = site.url | append: '/assets/img/og.png' %}
+    <meta property="og:image" content="{{ default_og }}">
+    <meta name="twitter:image" content="{{ default_og }}">
+  {% endunless %}
 
   <title>
   {%- unless page.layout == "home" -%}

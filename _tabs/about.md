@@ -9,6 +9,9 @@ South Korea 🇰🇷. I work across exploit development, reversing, and vulnerab
 research — with a focus on **AI / LLM infrastructure, hypervisors, and the trust
 boundaries software relies on**.
 
+**Background:** [BoB](https://www.kitribob.kr/) 3rd (Best of the Best) · Naver Cloud /
+NBP — see the full [career timeline](/career/).
+
 ## Focus areas
 
 - **AI / LLM security** — LLM proxies, agents, and the Model Context Protocol (MCP)

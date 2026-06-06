@@ -6,7 +6,7 @@ order: 3
 
 ###  Research
 
-|이름|기술스택|설명|별|
+|Name|Stack|Description|Stars|
 |----|-------|----|--|
 |[blackcon/gpu-keylogger](https://github.com/blackcon/gpu-keylogger)|![c++](https://img.shields.io/badge/-C++-000000?logo=c%2B%2B&style=flat)|It is a PoC code of a keylogger in GPU memory.|[![GitHub stars](https://img.shields.io/github/stars/blackcon/gpu-keylogger?style=social&label=Star&maxAge=2592000)](https://GitHub.com/blackcon/gpu-keylogger/stargazers/)
 |[blackcon/HVFUZZ](https://github.com/blackcon/HVFUZZ)|![c++](https://img.shields.io/badge/-C++-000000?logo=c%2B%2B&style=flat)|Hyper-V Fuzzer using hAFL2|[![GitHub stars](https://img.shields.io/github/stars/blackcon/HVFUZZ?style=social&label=Star&maxAge=2592000)](https://GitHub.com/blackcon/HVFUZZ/stargazers/)
@@ -15,12 +15,12 @@ order: 3
 
 ### Contribute
 
-|이름|역할|설명|
+|Name|Role|Description|
 |----|-------|----|
-|[DeFi Hacks Analysis - Root Cause](https://web3sec.notion.site/web3sec/Web3-security-ddaa8bf9a985494dbaf70d698345b899)|한국어 번역|DeFi에서 발생한 보안 사례를 정리하고, 각 사례별로 취약점을 정리한 사이트이다.
+|[DeFi Hacks Analysis - Root Cause](https://web3sec.notion.site/web3sec/Web3-security-ddaa8bf9a985494dbaf70d698345b899)|Korean translation|A catalog of real-world DeFi security incidents with per-case root-cause analysis.
 
 ### Just For Fun
 
-|이름|기술스택|설명|별|
+|Name|Stack|Description|Stars|
 |----|-------|----|--|
 |[blackcon/VicunaWithGUI](https://github.com/blackcon/VicunaWithGUI)|![python](https://img.shields.io/badge/-python-000000?logo=python&style=flat) ![typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)|A guide designed to connect the GUI to the AI model Vicuna.|[![GitHub stars](https://img.shields.io/github/stars/blackcon/VicunaWithGUI?style=social&label=Star&maxAge=2592000)](https://GitHub.com/blackcon/VicunaWithGUI/stargazers/)

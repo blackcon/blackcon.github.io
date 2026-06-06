@@ -173,6 +173,14 @@ code, pre, kbd, .highlight, samp {
   }
 }
 
+/* Single-column editorial home: drop the right panel on the home page only */
+@media (min-width: 1200px) {
+  #core-wrapper:has(#bc-hero) ~ #panel-wrapper,
+  #core-wrapper:has(#bc-hero) + #panel-wrapper {
+    display: none;
+  }
+}
+
 /* Thin hairline rule between sections */
 .bc-rule {
   border: 0;
