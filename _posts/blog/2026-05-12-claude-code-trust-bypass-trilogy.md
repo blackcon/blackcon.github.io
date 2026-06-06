@@ -1,7 +1,7 @@
 ---
 title: Claude Code의 trust prompt 우회 3종 — HackerOne 제보와 "intended behavior" 종결
 categories: [Research, AI-Security]
-tags: [AI, security, Claude Code, HackerOne, trust model, Pwn2Own, RCE]
+tags: [AI, security, Claude Code, HackerOne, trust model, Pwn2Own, RCE, disclosure]
 date: 2026-05-12 22:00:00 +0900
 description: Three independent ways to bypass Claude Code's trust prompt for silent shell execution from a cloned repo — and why Anthropic closed all three as intended behavior.
 pin: true

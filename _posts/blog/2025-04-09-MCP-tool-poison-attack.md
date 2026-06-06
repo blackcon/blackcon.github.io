@@ -1,8 +1,9 @@
 ---
 title: MCP 보안 취약점, Tool-Poison-Attack
 categories: [Research, MCP]
-tags: [AI, security, MCP]
+tags: [AI, security, MCP, disclosure]
 date: 2025-04-10 23:00:00 +0900
+description: How Tool Poisoning hides malicious instructions inside MCP tool descriptions to manipulate the LLM that consumes them.
 ---
 
 ![2025-04-10-mcp-architecture-thumnail](/posts/2025-04-10-mcp-architecture-thumnail.png)

@@ -1,7 +1,7 @@
 ---
 title: LiteLLM에서 발견한 Jinja2 SSTI 취약점 — Pwn2Own 2026 출전 시도와 silent fix 분석
 categories: [Research, AI-Security]
-tags: [AI, security, SSTI, LiteLLM, Pwn2Own, Jinja2, RCE]
+tags: [AI, security, SSTI, LiteLLM, Pwn2Own, Jinja2, RCE, disclosure]
 date: 2026-05-03 22:00:00 +0900
 description: A single unauthenticated request reached uid=0 on the LiteLLM proxy via Jinja2 SSTI — a critical RCE silently patched days before a planned Pwn2Own Berlin 2026 entry.
 pin: true

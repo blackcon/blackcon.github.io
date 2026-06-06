@@ -20,27 +20,24 @@ NBP — see the full [career timeline](/career/).
 
 ## Selected research &amp; disclosures
 
-- **LiteLLM — Jinja2 SSTI → unauthenticated RCE** *(2026)*
-  A single unauthenticated request reached `uid=0` on the LiteLLM proxy. Silently
-  patched in [PR #25445](https://github.com/BerriAI/litellm/pull/25445) days before
-  a planned Pwn2Own Berlin 2026 entry.
-  → [Write-up](/posts/litellm-jinja2-ssti/)
+{% assign disclosures = site.posts | where_exp: "item", "item.tags contains 'disclosure'" %}
+<ul class="bc-pub-list">
+{% for post in disclosures %}
+  <li class="bc-pub">
+    <div class="bc-pub-meta">
+      <span class="bc-pub-cat">{{ post.categories | join: " · " }}</span>
+      <span class="bc-pub-date">{{ post.date | date: "%b %Y" }}</span>
+    </div>
+    <a class="bc-pub-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}
+    <p class="bc-pub-desc">{{ post.description | strip_html | strip_newlines }}</p>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
 
-- **Claude Code — trust-prompt bypass ×3** *(2026)*
-  Three independent paths to silent shell execution from a cloned repository.
-  Reported via HackerOne; closed by Anthropic as **Informative / intended behavior**.
-  → [Write-up](/posts/claude-code-trust-bypass-trilogy/)
-
-- **MCP — Tool Poisoning &amp; Advanced Tool Poisoning** *(2025)*
-  Instruction injection through MCP tool descriptions, and the harder variant that
-  hides in tool *outputs* to defeat description-only defenses.
-  → [TPA](/posts/MCP-tool-poison-attack/) · [ATPA](/posts/mcp-security-atpa/)
-
-- **HVFUZZ — Hyper-V hypercall fuzzer** *(2022)*
-  A fuzzer built on hAFL2 for hunting bugs in the Microsoft virtualization stack.
-  → [Write-up](/posts/HVFUZZ/) · [GitHub](https://github.com/blackcon/HVFUZZ)
-
-More projects and PoCs are on the [Projects](/projects/) page.
+This list is generated automatically from posts tagged `disclosure`. More
+projects and PoCs are on the [Projects](/projects/) page.
 
 ## Contact
 
