@@ -50,8 +50,12 @@ layout: page
 
       <div class="post-content">
         <p>
-          {% include no-linenos.html content=post.content %}
-          {{ content | markdownify | strip_html | truncate: 200 | escape }}
+          {% if post.description %}
+            {{ post.description | strip_html | strip_newlines | truncate: 160 }}
+          {% else %}
+            {% include no-linenos.html content=post.content %}
+            {{ content | markdownify | strip_html | truncate: 160 | escape }}
+          {% endif %}
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-# The Home page layout (premium landing)
+# The Home page layout — Swiss typographic index
 ---
 
 {% include lang.html %}
@@ -11,78 +11,61 @@ layout: page
 {% endif %}
 {% assign latest = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
-<!-- ===== Hero ===== -->
-<section id="bc-hero" data-reveal>
-  <div class="bc-eyebrow">Offensive Security Research</div>
-  <h1 class="bc-hero-title">
-    Breaking AI,<br>hypervisors &amp;<br>
-    <span class="bc-grad">the things you trust.</span>
-  </h1>
-  <p class="bc-hero-sub">
-    {{ site.data.authors.author.bio.name }}({{ site.data.authors.author.bio.nick }})의 공격 보안 연구
-    공간입니다. AI/LLM 인프라와 가상화 스택을 파고들며, 익스플로잇 개발·리버싱·취약점 분석을
-    기록합니다. 최신 연구는 아래에서 확인하세요.
-  </p>
-  <div class="bc-cta">
-    <a class="bc-cta-primary" href="#bc-featured">연구 보기 <span aria-hidden="true">→</span></a>
-    <a class="bc-cta-ghost" href="{{ '/about/' | relative_url }}">About</a>
-  </div>
-</section>
+<div id="bc-home">
 
-<!-- ===== Focus marquee ===== -->
-<div class="bc-marquee" data-reveal>
-  <div class="bc-marquee-track">
-    {% assign chips = "AI / LLM Security,Hypervisors,Reversing,Exploit Dev,MCP Security,Jinja2 SSTI,Pwn2Own,HackerOne,Fuzzing,RCE" | split: "," %}
-    {% for c in chips %}<span class="bc-chip">{{ c }}</span>{% endfor %}
-    {% for c in chips %}<span class="bc-chip">{{ c }}</span>{% endfor %}
-  </div>
+  <!-- Masthead -->
+  <header class="bc-mast">
+    <p class="bc-eyebrow">Offensive Security Research</p>
+    <h1 class="bc-h1">Exploit&nbsp;development,<br>reversing &amp; vulnerability<br>research.</h1>
+    <p class="bc-intro">
+      {{ site.data.authors.author.bio.name }}({{ site.data.authors.author.bio.nick }})의 연구 공간.
+      AI/LLM 인프라와 가상화 스택을 파고듭니다. 최신 작업은 아래 색인에서 확인하세요.
+    </p>
+  </header>
+
+  <!-- Featured index -->
+  {% if featured.size > 0 %}
+  <section class="bc-block">
+    <div class="bc-block-head">
+      <span class="bc-block-label">Featured research</span>
+      <span class="bc-block-count bc-meta">{{ featured.size }} entries</span>
+    </div>
+    <ol class="bc-index">
+      {% for post in featured limit: 5 %}
+      <li>
+        <a class="bc-idx-row" href="{{ post.url | relative_url }}">
+          <span class="bc-idx-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          <span class="bc-idx-main">
+            <span class="bc-idx-title">{{ post.title }}</span>
+            {% if post.description %}<span class="bc-idx-desc">{{ post.description | strip_html | strip_newlines | truncate: 130 }}</span>{% endif %}
+          </span>
+          <span class="bc-idx-meta bc-meta">{{ post.categories | join: " · " }} — {{ post.date | date: "%Y.%m.%d" }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <!-- Latest index -->
+  {% if latest.size > 0 %}
+  <section class="bc-block">
+    <div class="bc-block-head">
+      <span class="bc-block-label">Latest</span>
+      <a class="bc-block-count bc-meta" href="{{ '/blog/' | relative_url }}">View all →</a>
+    </div>
+    <ol class="bc-index bc-index--compact">
+      {% for post in latest limit: 6 %}
+      <li>
+        <a class="bc-idx-row" href="{{ post.url | relative_url }}">
+          <span class="bc-idx-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          <span class="bc-idx-main"><span class="bc-idx-title">{{ post.title }}</span></span>
+          <span class="bc-idx-meta bc-meta">{{ post.categories | first }} — {{ post.date | date: "%Y.%m.%d" }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
 </div>
-
-<!-- ===== Featured research — bento ===== -->
-{% if featured.size > 0 %}
-<h2 id="bc-featured" class="bc-section" data-reveal>Featured research</h2>
-<p class="bc-section-note" data-reveal>엄선한 취약점 연구와 공개 자료.</p>
-<div class="bc-bento">
-  {% for post in featured limit: 5 %}
-  <a class="bc-cell {% if forloop.first %}bc-cell--lg{% endif %}"
-     href="{{ post.url | relative_url }}" data-reveal style="--i: {{ forloop.index0 }}">
-    <span class="bc-cell-cat">{{ post.categories | join: " · " }}</span>
-    <span class="bc-cell-title">{{ post.title }}</span>
-    {% if post.description %}
-    <p class="bc-cell-desc">{{ post.description | strip_html | strip_newlines | truncate: 150 }}</p>
-    {% endif %}
-    <span class="bc-cell-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-  </a>
-  {% endfor %}
-</div>
-{% endif %}
-
-<!-- ===== Latest ===== -->
-{% if latest.size > 0 %}
-<h2 class="bc-section" data-reveal>Latest</h2>
-<div class="bc-rows">
-  {% for post in latest limit: 6 %}
-  <a class="bc-row" href="{{ post.url | relative_url }}" data-reveal style="--i: {{ forloop.index0 }}">
-    <span class="bc-row-title">{{ post.title }}</span>
-    <span class="bc-row-meta">{{ post.categories | first }} · {{ post.date | date: "%Y.%m.%d" }}</span>
-  </a>
-  {% endfor %}
-</div>
-<p class="bc-viewall" data-reveal><a href="{{ '/blog/' | relative_url }}">View all writing →</a></p>
-{% endif %}
-
-<script>
-(function () {
-  var els = document.querySelectorAll('[data-reveal]');
-  if (!('IntersectionObserver' in window)) {
-    els.forEach(function (el) { el.classList.add('is-in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12 });
-  els.forEach(function (el) { io.observe(el); });
-})();
-</script>

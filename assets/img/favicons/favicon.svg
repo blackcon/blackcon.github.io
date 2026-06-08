@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="blackcon">
-  <rect width="64" height="64" rx="14" fill="#141413"/>
-  <text x="32" y="35" text-anchor="middle" dominant-baseline="central"
+  <rect x="1" y="1" width="62" height="62" rx="4" fill="#fcfcfb" stroke="#0f0f0f" stroke-width="2"/>
+  <text x="31" y="36" text-anchor="middle" dominant-baseline="central"
         font-family="Inter, Helvetica, Arial, sans-serif" font-weight="800"
-        font-size="46" letter-spacing="-2" fill="#faf9f5">b</text>
-  <circle cx="46" cy="21" r="4.5" fill="#b04a2a"/>
+        font-size="46" letter-spacing="-3" fill="#0f0f0f">b</text>
+  <rect x="46" y="10" width="7" height="7" fill="#d62418"/>
 </svg>
