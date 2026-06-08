@@ -1,74 +1,88 @@
 ---
 layout: page
-# The Home page layout
+# The Home page layout (premium landing)
 ---
 
 {% include lang.html %}
 
-{% comment %} Featured = pinned posts; Latest = recent non-pinned posts {% endcomment %}
 {% assign featured = site.posts | where: "pin", "true" %}
 {% if featured.size == 0 %}
   {% assign featured = site.posts | where_exp: "item", "item.categories contains 'Research'" %}
 {% endif %}
 {% assign latest = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
-<!-- Editorial hero -->
-<div id="bc-hero">
-  <div class="bc-hero-grid">
-    <h1 class="bc-hero-title">Offensive<br>security<br>research</h1>
-    <div class="bc-hero-lede">
-      <p>
-        By {{ site.data.authors.author.bio.name }} ({{ site.data.authors.author.bio.nick }}) —
-        exploit development, reversing, and vulnerability research on AI systems,
-        hypervisors, and the things people trust. Recent work includes a critical
-        LiteLLM RCE (silently patched before a planned Pwn2Own&nbsp;2026 entry) and
-        a Claude&nbsp;Code trust-model analysis disclosed through HackerOne.
-      </p>
-      <p class="bc-hero-teams">
-        Focus:
-        <a href="{{ '/categories/ai-security/' | relative_url }}">AI / LLM Security</a>
-        <a href="{{ '/categories/hyper-v/' | relative_url }}">Hypervisors</a>
-        <a href="{{ '/categories/reversing/' | relative_url }}">Reversing</a>
-        <a href="{{ '/categories/research/' | relative_url }}">Research</a>
-      </p>
-    </div>
+<!-- ===== Hero ===== -->
+<section id="bc-hero" data-reveal>
+  <div class="bc-eyebrow">Offensive Security Research</div>
+  <h1 class="bc-hero-title">
+    Breaking AI,<br>hypervisors &amp;<br>
+    <span class="bc-grad">the things you trust.</span>
+  </h1>
+  <p class="bc-hero-sub">
+    {{ site.data.authors.author.bio.name }}({{ site.data.authors.author.bio.nick }})의 공격 보안 연구
+    공간입니다. AI/LLM 인프라와 가상화 스택을 파고들며, 익스플로잇 개발·리버싱·취약점 분석을
+    기록합니다. 최신 연구는 아래에서 확인하세요.
+  </p>
+  <div class="bc-cta">
+    <a class="bc-cta-primary" href="#bc-featured">연구 보기 <span aria-hidden="true">→</span></a>
+    <a class="bc-cta-ghost" href="{{ '/about/' | relative_url }}">About</a>
+  </div>
+</section>
+
+<!-- ===== Focus marquee ===== -->
+<div class="bc-marquee" data-reveal>
+  <div class="bc-marquee-track">
+    {% assign chips = "AI / LLM Security,Hypervisors,Reversing,Exploit Dev,MCP Security,Jinja2 SSTI,Pwn2Own,HackerOne,Fuzzing,RCE" | split: "," %}
+    {% for c in chips %}<span class="bc-chip">{{ c }}</span>{% endfor %}
+    {% for c in chips %}<span class="bc-chip">{{ c }}</span>{% endfor %}
   </div>
 </div>
 
-<!-- Featured research -->
+<!-- ===== Featured research — bento ===== -->
 {% if featured.size > 0 %}
-<hr class="bc-rule">
-<h2 class="bc-section">Featured research</h2>
-<ul class="bc-pub-list">
+<h2 id="bc-featured" class="bc-section" data-reveal>Featured research</h2>
+<p class="bc-section-note" data-reveal>엄선한 취약점 연구와 공개 자료.</p>
+<div class="bc-bento">
   {% for post in featured limit: 5 %}
-  <li class="bc-pub">
-    <div class="bc-pub-meta">
-      <span class="bc-pub-cat">{{ post.categories | join: " · " }}</span>
-      <span class="bc-pub-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    </div>
-    <a class="bc-pub-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <a class="bc-cell {% if forloop.first %}bc-cell--lg{% endif %}"
+     href="{{ post.url | relative_url }}" data-reveal style="--i: {{ forloop.index0 }}">
+    <span class="bc-cell-cat">{{ post.categories | join: " · " }}</span>
+    <span class="bc-cell-title">{{ post.title }}</span>
     {% if post.description %}
-    <p class="bc-pub-desc">{{ post.description | strip_html | strip_newlines | truncate: 160 }}</p>
+    <p class="bc-cell-desc">{{ post.description | strip_html | strip_newlines | truncate: 150 }}</p>
     {% endif %}
-  </li>
+    <span class="bc-cell-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+  </a>
   {% endfor %}
-</ul>
+</div>
 {% endif %}
 
-<!-- Latest writing -->
+<!-- ===== Latest ===== -->
 {% if latest.size > 0 %}
-<hr class="bc-rule">
-<h2 class="bc-section">Latest</h2>
-<ul class="bc-pub-list bc-pub-list--compact">
+<h2 class="bc-section" data-reveal>Latest</h2>
+<div class="bc-rows">
   {% for post in latest limit: 6 %}
-  <li class="bc-pub">
-    <div class="bc-pub-meta">
-      <span class="bc-pub-cat">{{ post.categories | join: " · " }}</span>
-      <span class="bc-pub-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    </div>
-    <a class="bc-pub-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  </li>
+  <a class="bc-row" href="{{ post.url | relative_url }}" data-reveal style="--i: {{ forloop.index0 }}">
+    <span class="bc-row-title">{{ post.title }}</span>
+    <span class="bc-row-meta">{{ post.categories | first }} · {{ post.date | date: "%Y.%m.%d" }}</span>
+  </a>
   {% endfor %}
-</ul>
-<p class="bc-viewall"><a href="{{ '/blog/' | relative_url }}">View all writing &rarr;</a></p>
+</div>
+<p class="bc-viewall" data-reveal><a href="{{ '/blog/' | relative_url }}">View all writing →</a></p>
 {% endif %}
+
+<script>
+(function () {
+  var els = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>

@@ -10,332 +10,415 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* ==========================================================================
-   blackcon — research-lab editorial theme (light, Anthropic-inspired)
-   Warm cream background, near-black ink, restrained clay accent,
-   Inter (sans) for headings/UI, Source Serif 4 for body & lede.
-   Overrides come after the theme import so equal-specificity rules win.
+   blackcon — premium dark landing theme (supanova-inspired)
+   Zinc-950 base, single desaturated warm accent, glassmorphism, mesh +
+   noise surfaces, bento grid, marquee, scroll-reveal motion.
    ========================================================================== */
 
-$bc-cream: #faf9f5; /* warm off-white background */
-$bc-paper: #ffffff; /* cards / surfaces */
-$bc-ink: #141413; /* primary text */
-$bc-muted: #6b6a65; /* meta / dates */
-$bc-hairline: #e6e3db; /* thin dividers */
-$bc-clay: #b04a2a; /* restrained accent, text-safe (AA 5.17:1 on cream) */
-$bc-clay-soft: #cc785c; /* decorative only — borders/bg/hover, not text */
+$bg: #0a0a0b;          /* near-black, faint warm */
+$bg-2: #0e0d0c;
+$ink: #ededf0;         /* primary text */
+$muted: #8b8a90;       /* meta */
+$line: rgba(255, 255, 255, 0.09);
+$glass: rgba(255, 255, 255, 0.035);
+$glass-2: rgba(255, 255, 255, 0.06);
+$accent: #e0a36a;      /* single desaturated warm accent */
+$accent-2: #d8835a;    /* gradient pair (stays in warm family) */
 
-$bc-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+$display: "Outfit", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+$sans: "Pretendard", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
   sans-serif;
-$bc-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo, Consolas,
+  monospace;
 
-/* --- Palette: repaint the light scheme to warm cream + clay --------------- */
-html[data-mode="light"],
+/* --- Repaint the dark scheme to premium zinc + warm accent ---------------- */
+html[data-mode="dark"],
 html:not([data-mode]) {
-  --body-bg: #{$bc-cream};
-  --main-wrapper-bg: #{$bc-cream};
-  --main-border-color: #{$bc-hairline};
+  --body-bg: #{$bg};
+  --main-wrapper-bg: #{$bg};
+  --main-border-color: #{$line};
 
-  --text-color: #{$bc-ink};
-  --text-muted-color: #{$bc-muted};
-  --heading-color: #{$bc-ink};
-  --link-color: #{$bc-clay};
-  --link-underline-color: #{rgba(#c15f3c, 0.35)};
-  --blockquote-border-color: #{$bc-hairline};
-  --blockquote-text-color: #5f5e58;
+  --text-color: #{$ink};
+  --text-muted-color: #{$muted};
+  --heading-color: #fafafa;
+  --link-color: #{$accent};
+  --link-underline-color: #{rgba(#e0a36a, 0.4)};
+  --blockquote-border-color: #{rgba(#e0a36a, 0.5)};
+  --blockquote-text-color: #b9b8bd;
 
-  --sidebar-bg: #{$bc-cream};
-  --sidebar-muted-color: #9a988f;
-  --sidebar-active-color: #{$bc-ink};
-  --nav-cursor-color: #{$bc-clay};
+  --sidebar-bg: #08080a;
+  --sidebar-muted-color: #6f6e74;
+  --sidebar-active-color: #fafafa;
+  --nav-cursor-color: #{$accent};
 
-  --topbar-wrapper-bg: #{$bc-cream};
-  --topbar-text-color: #{$bc-ink};
-  --search-wrapper-bg: #fff;
-  --search-wrapper-border-color: #{$bc-hairline};
+  --topbar-wrapper-bg: rgba(10, 10, 11, 0.72);
+  --topbar-text-color: #{$ink};
+  --search-wrapper-bg: #{$glass};
+  --search-wrapper-border-color: #{$line};
+  --search-icon-color: #{$muted};
 
-  --post-list-text-color: #4a4944;
-  --card-bg: #{$bc-paper};
-  --card-border-color: #{$bc-hairline};
-  --tag-bg: #f1efe8;
-  --tag-hover: #{rgba(#c15f3c, 0.14)};
-  --checkbox-checked-color: #{$bc-clay};
-  --pin-color: #{$bc-clay};
-  --pin-bg: #{rgba(#c15f3c, 0.1)};
-  --btn-paginator-hover-color: #f1efe8;
-  --prompt-tip-bg: #{rgba(#c15f3c, 0.1)};
-  --prompt-tip-icon-color: #{$bc-clay};
-
-  --categories-border: #{$bc-hairline};
-  --timeline-color: #{$bc-hairline};
+  --post-list-text-color: #b9b8bd;
+  --card-bg: #{$glass};
+  --card-border-color: #{$line};
+  --tag-bg: #{$glass-2};
+  --tag-hover: #{rgba(#e0a36a, 0.18)};
+  --checkbox-checked-color: #{$accent};
+  --pin-color: #{$accent};
+  --btn-paginator-hover-color: #{$glass-2};
+  --prompt-tip-bg: #{rgba(#e0a36a, 0.12)};
+  --prompt-tip-icon-color: #{$accent};
+  --categories-border: #{$line};
+  --timeline-color: #{$line};
+  --inline-code-bg: rgba(255, 255, 255, 0.07);
 }
 
-/* --- Base typography: serif body, sans headings --------------------------- */
+/* --- Ambient surfaces: mesh gradient + noise grain ------------------------ */
 body {
-  font-family: $bc-serif;
-  font-size: 1.02rem;
+  font-family: $sans;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  word-break: keep-all; /* Korean: don't break mid-word */
 }
 
-h1, h2, h3, h4, h5, h6,
-.site-title, .nav-link span, #topbar-wrapper,
-.post-meta, .label, button, .btn {
-  font-family: $bc-sans;
+body::before { /* mesh gradient glow */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 78% -8%, rgba(224, 163, 106, 0.10), transparent 60%),
+    radial-gradient(48rem 36rem at 8% 12%, rgba(216, 131, 90, 0.06), transparent 55%),
+    radial-gradient(60rem 50rem at 50% 108%, rgba(120, 120, 140, 0.05), transparent 60%);
 }
 
-/* Keep code / kbd monospace where it belongs */
-code, pre, kbd, .highlight, samp {
-  font-family: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo,
-    Consolas, monospace;
+body::after { /* subtle noise grain */
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Inline code sizes relative to its context (em, not rem) so it scales
-   inside headings instead of staying locked at the root 0.85rem. */
-code.highlighter-rouge {
-  font-size: 0.85em;
-}
+/* Only #main-wrapper is static; lift it above the fixed mesh (z-index 0).
+   #sidebar (z-index 99) and #topbar-wrapper (z-index 50) are already
+   positioned above the mesh — do NOT touch their position. */
+#main-wrapper { position: relative; z-index: 1; }
 
-/* --- Sidebar identity: clean sans, no terminal motif ---------------------- */
+/* Headings & display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+code, pre, kbd, .highlight, samp { font-family: $mono; }
+/* Inline code scales with context, not the root */
+code.highlighter-rouge { font-size: 0.85em; }
+
+/* --- Sidebar identity ----------------------------------------------------- */
 #sidebar {
   border-right: 1px solid var(--main-border-color);
 
   .site-title a {
-    font-family: $bc-sans;
-    font-weight: 700;
-    font-size: 1.45rem;
-    letter-spacing: -0.5px;
+    font-family: $display;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
     color: var(--sidebar-active-color);
   }
-
   .site-subtitle {
-    font-family: $bc-sans;
+    font-family: $sans;
     font-style: normal;
-    font-size: 0.8rem;
-    letter-spacing: 0.2px;
+    font-size: 0.78rem;
     color: var(--sidebar-muted-color);
   }
-
-  #avatar > a {
-    border-radius: 50%;
-    border: 1px solid var(--main-border-color);
-  }
-
-  .nav-link span {
-    font-size: 0.82rem;
-    letter-spacing: 0.3px;
-  }
+  #avatar > a { border-radius: 14px; border: 1px solid var(--main-border-color); }
+  .nav-link span { font-size: 0.82rem; letter-spacing: 0.02em; }
 }
 
-/* --- Home: editorial hero ------------------------------------------------- */
-#bc-hero {
-  margin: 1.75rem 0 0;
+/* Glassy sticky topbar */
+#topbar-wrapper {
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid var(--main-border-color);
+}
 
-  .bc-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.2rem;
+/* ========================================================================== */
+/* HOME — premium landing                                                     */
+/* ========================================================================== */
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+[data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+/* Hero */
+#bc-hero {
+  padding: 2rem 0 1rem;
+
+  .bc-eyebrow {
+    font-family: $sans;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 1.2rem;
   }
 
   .bc-hero-title {
-    font-family: $bc-sans;
+    font-family: $display;
     font-weight: 800;
-    font-size: clamp(2.4rem, 6vw, 3.6rem);
-    letter-spacing: -1.5px;
-    line-height: 1.02;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
     margin: 0;
-    color: $bc-ink;
+    color: #fafafa;
+  }
+  .bc-grad {
+    background: linear-gradient(100deg, #{$accent} 0%, #{$accent-2} 60%, #f0c89a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
-  .bc-hero-lede {
-    font-family: $bc-serif;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #2b2a27;
-    max-width: 42rem;
-
-    p { margin: 0 0 0.9rem; }
+  .bc-hero-sub {
+    font-family: $sans;
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: #c4c3c9;
+    max-width: 40rem;
+    margin: 1.5rem 0 2rem;
   }
 
-  .bc-hero-teams {
-    font-family: $bc-sans;
-    font-size: 0.82rem !important;
-    color: $bc-muted;
-
+  .bc-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
     a {
-      color: $bc-ink;
-      margin-left: 0.5rem;
-      border-bottom: 1px solid var(--link-underline-color);
-
-      &:hover { color: $bc-clay; text-decoration: none; }
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: $sans;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 12px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bc-cta-primary {
+      background: linear-gradient(180deg, #{$accent}, #{$accent-2});
+      color: #1a1205;
+      box-shadow: 0 10px 30px -8px rgba(216, 131, 90, 0.5);
+      &:hover { transform: translateY(-2px) scale(1.02); text-decoration: none; }
+      &:active { transform: scale(0.98); }
+    }
+    .bc-cta-ghost {
+      color: #ededf0;
+      background: $glass;
+      border: 1px solid var(--main-border-color);
+      backdrop-filter: blur(8px);
+      &:hover { background: $glass-2; transform: translateY(-2px); text-decoration: none; }
+      &:active { transform: scale(0.98); }
     }
   }
 }
 
-@media (min-width: 992px) {
-  #bc-hero .bc-hero-grid {
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
-}
-
-/* Single-column editorial home: drop the right panel on the home page only */
-@media (min-width: 1200px) {
-  #core-wrapper:has(#bc-hero) ~ #panel-wrapper,
-  #core-wrapper:has(#bc-hero) + #panel-wrapper {
-    display: none;
-  }
-}
-
-/* Thin hairline rule between sections */
-.bc-rule {
-  border: 0;
-  border-top: 1px solid var(--main-border-color);
-  margin: 2.4rem 0 1.6rem;
-}
-
+/* Section heading */
 .bc-section {
-  font-family: $bc-sans;
+  font-family: $display;
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.2px;
-  margin: 0 0 1.2rem;
-  color: $bc-ink;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  margin: 3.5rem 0 0.4rem;
+  color: #fafafa;
+}
+.bc-section-note { color: $muted; font-size: 0.9rem; margin: 0 0 1.5rem; }
+
+/* --- Bento grid for featured research ------------------------------------- */
+.bc-bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .bc-bento { grid-template-columns: repeat(2, 1fr); }
+  .bc-bento .bc-cell--lg { grid-column: span 2; }
 }
 
-/* --- Editorial publication list (Anthropic-style) ------------------------- */
-.bc-pub-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+.bc-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 12rem;
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: $glass;
+  border: 1px solid var(--main-border-color);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.45s ease, background 0.45s ease;
 
-.bc-pub {
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--main-border-color);
-
-  &:last-child { border-bottom: 1px solid var(--main-border-color); }
-
-  .bc-pub-meta {
-    font-family: $bc-sans;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 0.35rem;
-
-    .bc-pub-cat { color: $bc-clay; font-weight: 600; }
-    .bc-pub-date { color: $bc-muted; margin-left: 0.6rem; }
+  &::after { /* corner glow */
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -30%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(224, 163, 106, 0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+  }
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(224, 163, 106, 0.45);
+    background: $glass-2;
+    text-decoration: none;
+    &::after { opacity: 1; }
   }
 
-  .bc-pub-title {
-    display: inline-block;
-    font-family: $bc-sans;
-    font-weight: 700;
-    font-size: 1.18rem;
-    line-height: 1.3;
-    letter-spacing: -0.3px;
-    color: $bc-ink;
-
-    &:hover { color: $bc-clay; text-decoration: none; }
-  }
-
-  .bc-pub-desc {
-    font-family: $bc-serif;
-    font-size: 0.98rem;
-    line-height: 1.5;
-    color: #4a4944;
-    margin: 0.35rem 0 0;
-    max-width: 46rem;
-  }
-}
-
-/* Compact variant for the Latest list (title only, tighter rows) */
-.bc-pub-list--compact .bc-pub {
-  padding: 0.85rem 0;
-
-  .bc-pub-title { font-size: 1.05rem; }
-}
-
-.bc-viewall {
-  margin: 1.3rem 0 0;
-  font-family: $bc-sans;
-  font-size: 0.9rem;
-
-  a {
-    color: $bc-ink;
+  .bc-cell-cat {
+    font-family: $sans;
+    font-size: 0.68rem;
     font-weight: 600;
-    border-bottom: 1px solid var(--link-underline-color);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $accent;
+  }
+  .bc-cell-title {
+    font-family: $display;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #fafafa;
+    margin: 0.5rem 0 0.4rem;
+  }
+  .bc-cell--lg .bc-cell-title { font-size: 1.6rem; }
+  .bc-cell-desc {
+    font-family: $sans;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #b9b8bd;
+    margin: 0;
+  }
+  .bc-cell-date { font-family: $mono; font-size: 0.72rem; color: $muted; margin-top: 0.8rem; }
+}
 
-    &:hover { color: $bc-clay; text-decoration: none; }
+/* --- Focus marquee -------------------------------------------------------- */
+.bc-marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+
+  .bc-marquee-track {
+    display: inline-flex;
+    gap: 0.7rem;
+    white-space: nowrap;
+    animation: bc-scroll 28s linear infinite;
+  }
+  &:hover .bc-marquee-track { animation-play-state: paused; }
+
+  .bc-chip {
+    font-family: $mono;
+    font-size: 0.82rem;
+    color: #cfcdd3;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: $glass;
+    border: 1px solid var(--main-border-color);
+  }
+}
+@keyframes bc-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* --- Latest (glass rows) -------------------------------------------------- */
+.bc-rows { display: flex; flex-direction: column; gap: 0.6rem; }
+.bc-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    background: $glass;
+    border-color: var(--main-border-color);
+    transform: translateX(4px);
+    text-decoration: none;
+  }
+  .bc-row-title {
+    font-family: $sans;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: #ededf0;
+  }
+  .bc-row-meta { font-family: $mono; font-size: 0.72rem; color: $muted; white-space: nowrap; }
+}
+.bc-viewall {
+  margin-top: 1.4rem;
+  a {
+    font-family: $sans; font-weight: 600; color: $accent;
+    &:hover { color: #f0c89a; text-decoration: none; }
   }
 }
 
-/* --- Home info blocks: clean sans headings, serif content ----------------- */
-#home-about h2,
-#home-major h2,
-#home-interests h2,
-#home-contact h2 {
-  font-family: $bc-sans;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.2px;
-  margin: 2rem 0 0.8rem;
-  padding-top: 1.6rem;
-  border-top: 1px solid var(--main-border-color);
-}
-
-#home-about li,
-#home-major li,
-#home-interests li,
-#home-contact li {
-  font-family: $bc-serif;
-  line-height: 1.7;
-}
-
-/* --- Content links: quiet clay underline ---------------------------------- */
-.post-content a:hover,
-#bc-featured a:hover { text-decoration-color: $bc-clay; }
-
-/* --- Search results: single-column editorial list ------------------------- */
+/* --- Search results: single-column, glass rows ---------------------------- */
 #search-results {
   flex-direction: column !important;
   align-items: stretch !important;
 
-  a { /* result title */
-    font-family: $bc-sans !important;
+  a {
+    font-family: $display !important;
     font-weight: 700;
     font-size: 1.18rem !important;
     line-height: 1.4 !important;
-    letter-spacing: -0.3px;
-    color: $bc-ink !important;
-
-    &:hover { color: $bc-clay !important; }
+    letter-spacing: -0.01em;
+    color: #fafafa !important;
+    &:hover { color: $accent !important; }
   }
-
   > div {
     width: 100% !important;
     max-width: 760px;
     margin: 0 auto 0 0 !important;
     padding: 1.1rem 0;
     border-top: 1px solid var(--main-border-color);
-
     &:last-child { border-bottom: 1px solid var(--main-border-color); }
-
     .post-meta { font-size: 0.78rem; }
-
-    > p {
-      font-family: $bc-serif;
-      font-size: 0.98rem;
-      color: var(--post-list-text-color);
-      margin-top: 0.4rem;
-    }
+    > p { font-family: $sans; font-size: 0.95rem; color: var(--post-list-text-color); margin-top: 0.4rem; }
   }
 }
-
-/* Override the theme's 46% two-column grid on wide screens */
 @media (min-width: 1200px) {
-  #search-results > div {
-    width: 100% !important;
-    margin-right: auto !important;
-  }
+  #search-results > div { width: 100% !important; margin-right: auto !important; }
 }
+
+/* Single-column editorial home: hide the right panel on the home page only */
+@media (min-width: 1200px) {
+  #core-wrapper:has(#bc-hero) ~ #panel-wrapper,
+  #core-wrapper:has(#bc-hero) + #panel-wrapper { display: none; }
+}
+
+/* Tabular numerals for any metric-like text */
+.post-content time, .bc-cell-date, .bc-row-meta { font-variant-numeric: tabular-nums; }
