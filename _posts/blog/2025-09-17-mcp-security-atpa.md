@@ -4,7 +4,7 @@ categories: [Research, MCP]
 tags: [AI, security, MCP, disclosure]
 date: 2025-04-10 23:00:00 +0900
 description: Advanced Tool Poisoning hides malicious instructions in MCP tool outputs rather than descriptions, defeating defenses that only inspect tool metadata.
-pin: true
+pin: false
 ---
 
 
