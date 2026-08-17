@@ -65,19 +65,21 @@ _Communication with ParentHost_
 _V2S_REQ_BROADCAST_STREAM_VER2_
 
 - Header (파란색 박스)
+
   ```python
   Version Info (2byte): 0x202 # Default
   Command (2 byte): 0xCB2E # V2S_REQ_BROADCAST_STREAM_VER2
   Body Size (4 byte): 0x0000000c
   Check Sum (4byte): 0x0000C920 # checksum = version ^ command ^ body_size
   ??? (4byte): 0x19F928
-  
+  ```
 - Body (빨간색 박스)
+
   ```python
   Broad Cast ID (4byte) : 0x0ee7cba1 # 생방송 ID
   Node Key (4byte) : 0x000014b8 # Child(me)의 ID
   Quality (4byte) : 0x00000001 # 화질 정보 (1=720p, 4=540p, 8=360p)
-  
+  ```
 
 ## 2) P2P_ACK_BROADCAST_STREAM_RIGHT_VER2 (PARENT -> ME)
 
@@ -87,14 +89,16 @@ _V2S_REQ_BROADCAST_STREAM_VER2_
 _P2P_ACK_BROADCAST_STREAM_RIGHT_VER2_
 
 - Header (파란색 박스)
+
   ```python
   Version Info (2byte): 0x202 # Default
   Command (2 byte): 0x1BC7 # P2P_ACK_BROADCAST_STREAM_RIGHT_VER2
   Body Size (4 byte): 0x00000018
   Check Sum (4byte): 0x000019DD # checksum = version ^ command ^ body_size
   ??? (4byte): 0x544c5553 # garbage data?
-  
+  ```
 - Body (빨간색 박스)
+
   ```python
   Quality (4byte) : 0x00000001 # 화질 정보 (1=720p, 4=540p, 8=360p)
   Last Frame Number (new) (4byte) : 0x0030df54
@@ -102,7 +106,7 @@ _P2P_ACK_BROADCAST_STREAM_RIGHT_VER2_
   Last PTS (new) (4byte) : 0xc1c80d3b # PTS: 재생 시간 타임스탬프 (Presentation Timestamp)
   Last PTS (before) (4byte) : 0x00000610
   ??? (4byte) : 0x00000001 # 처리 로직이 안보이네요;
-  
+  ```
 
 ## 3) V2S_REQ_CACHE_DATA_VER2 (ME -> PARENT)
 
@@ -112,21 +116,23 @@ _P2P_ACK_BROADCAST_STREAM_RIGHT_VER2_
 _V2S_REQ_CACHE_DATA_VER2_
 
 - Header (파란색 박스)
+
   ```python
   Version Info (2byte): 0x202 # Default
   Command (2 byte): 0xCB30 # V2S_REQ_CACHE_DATA_VER2
   Body Size (4 byte): 0x00000010
   Check Sum (4byte): 0x0000C922 # checksum = version ^ command ^ body_size
   ??? (4byte): 0x00D8D210
-  
+  ```
 - Body (빨간색 박스)
+
   ```python
   Status (4byte) : 0x00000001 # 해상도?
      # {1: Original, 2: 2000K, 4: 1000K, 8: 500K, 0x10: 4000K, 0x20: 8000K}
   Last Frame number (new) (4byte) : 0x0030DF5C
   Last Frame number (before) (4byte) : 0x00000000
   ConnectStatus  (4byte): 0xFFFFFFFF # 최초연결: 0xffffffff, 기존연결: 0x00000006
-  
+  ```
 
 ## 4) S2V_REP_CACHE_DATA_VER2 (PARENT -> ME) // 영상데이터
 
@@ -136,14 +142,16 @@ _V2S_REQ_CACHE_DATA_VER2_
 _S2V_REP_CACHE_DATA_VER2_
 
 - Header (파란색 박스)
+
   ```python
   Version Info (2byte): 0x202 # Default
   Command (2 byte): 0xC748 # S2V_REP_CACHE_DATA_VER2
   Body Size (4 byte): 0x0000047b
   Check Sum (4byte): 0x0000C131 # checksum = version ^ command ^ body_size
   ??? (4byte): 0x00000000
-  
+  ```
 - Body (빨간색 박스)
+
   ```python
   Header (2byte) : 0x0001
   Size of header in body (2byte) : 0x0045
@@ -155,7 +163,7 @@ _S2V_REP_CACHE_DATA_VER2_
   Frame Type (1byte. offset: 0x28): 0x50 # {"A": "AAC", "I": "H264", "P": "H264"}
   media raw data (0x45 ~ Raw data size 만큼의 크기) # ts파일의 body만 있는듯 합니다. 
   				 	 	 # 영상으로 변환은 다음 포스팅에서 소개하겠습니다.
-  
+  ```
 
 # 3. POC
 

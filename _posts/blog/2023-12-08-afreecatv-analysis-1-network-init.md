@@ -22,20 +22,24 @@ pin: false
 
 - PATH: %HOMEPATH%\AppData\Local\afreeca\afreecatvpackage.exe
 - Process List
+
   ![](/posts/afreecatv-analysis-1/afreeca1-01.png)
 - Listening
+
   ![](/posts/afreecatv-analysis-1/afreeca1-02.png)
 
 ## 2) afreecatvstreamer.exe
 
 - PATH: %HOMEPATH%\AppData\Local\afreeca\afreecatvstreamer.exe
 - Process List
+
   ![](/posts/afreecatv-analysis-1/afreeca1-03.png)
 
 ## 3) 기타 설치된 프로그램들
 
 - PATH: `C:\Users\사용자\AppData\Local\afreeca\`
 - List
+
   ![Afreeca TV 설치파일](/posts/afreecatv-analysis-1/afreeca1-04.png)
   _Afreeca TV 설치파일_
 
@@ -65,13 +69,15 @@ _Afreeca Network_
 - Afreeca Server 중에서도 Gate 및 Center 서버로부터 방송 정보를 주고받음
 - 샘플 데이터
     - (Send )브라우저-> HTMLPLAYER_PORT
+
       ```bash
       {"SVC":40,"RESULT":0,"DATA":{"gate_ip":"218.xxx.xxx.xxx","gate_port":3456,"center_ip":"110.xxx.xxx.xxx","center_port":19000,"broadno":249417161,"cookie":"","guid":"xxxxxxxxx~~","cli_type":42,"passwd":"","category":"00570002","JOINLOG":"log\u0011\u0006&\u0006uuid\u0006=\u00064b05002dc64e43052a2dd6a8ba378d42\u0006&\u0006geo_cc\u0006=\u0006KR\u0006&\u0006geo_rc\u0006=\u000641\u0006&\u0006acpt_lang\u0006=\u0006ko\u0006&\u0006svc_lang\u0006=\u0006ko_KR\u0006&\u0006os\u0006=\u0006win\u0006&\u0006is_streamer\u0006=\u0006true\u0006&\u0006is_row_latency\u0006=\u0006false\u0006&\u0006is_rejoin\u0006=\u0006false\u0006&\u0006is_auto\u0006=\u0006false\u0006&\u0006is_support_adaptive\u0006=\u0006true\u0006&\u0006uuid_3rd\u0006=\u000xxxxxxxxa2dd6a8ba378d42\u0012liveualog\u0011\u0006&\u0006is_clearmode\u0006=\u0006false\u0012","BJID":"xxxxxxxx","fanticket":"xxxxxxxxxad6ea4b05c_xxxxxx_2xxxx1_html5","addinfo":"ad_lang\u0011ko\u0012is_auto\u00110\u0012","update_info":0}}
-      
+      ```
     - (recv) HTMLPLAYER_PORT -> 브라우저
+
       ```json
       {"DATA":{"cSkinFile":"ps_Afreeca","cUserId":"","iExpireTime":0,"iFreeEventType":0,"iIpAddr":0,"iKeepAliveTime":330,"iMode":2},"RESULT":0,"SVC":41}
-      
+      ```
 
 # 3. To be continue..
 

@@ -22,22 +22,27 @@ pin: false
 - UUID, OS, Language 등을 비롯한 기본 정보도 전달되며,
 - path_key, ticket과 같이 Center와 연결에 필요한 식별 정보도 함께 전달됨
 - 참고) UUID와 path_key가 동일한 값
+
   ![Send data from Client to Center](/posts/afreecatv-analysis-2/afreeca2-01.png)
   _Send data from Client to Center_
 
 ## 2) Center -> Client
 
 - 1440p 지원여부, 인증정보 등 방송 정보를 전달하며,
+
   ![Send information from Center to Client (1)](/posts/afreecatv-analysis-2/afreeca2-02.png)
   _Send information from Center to Client (1)_
 - 실시간 방송의 채팅방 정보(broadno, chat IP, chat Port, chat roomno, title)를 전달함
+
   ![Send information from Center to Client (2)](/posts/afreecatv-analysis-2/afreeca2-03.png)
   _Send information from Center to Client (2)_
 - Parent IP, Parent Port라는 정보를 전달함 (다음 목차에서 Detail하게 다룰 내용)
     - 아래 이미지는 최초로 제공되는 Parent IP, Port 이며, 스트리밍 데이터를 제공해주는 Host
+
       ![Main parent](/posts/afreecatv-analysis-2/afreeca2-04.png)
       _Main parent_
     - 추가로 3개의 Parent IP와 Port를 제공 받으며, 아마도 예비용 Parent 정보로 보여집니다.
+
       ![Sub parents](/posts/afreecatv-analysis-2/afreeca2-05.png)
       _Sub parents_
 
@@ -71,10 +76,12 @@ _Receive data from parent host_
 그리고 아래 데이터는 포스팅 초반에 언급되었던 Parent IP와 Parent Port인데요. 아래의 형태로 Center 서버로부터 전달받았으며, 10진수의 값들을 IP형태로 변환해본 코드입니다.
 
 - Center로 부터 전달받은 데이터 ("parent_ip":2648665566, "parent_port":11815)
+
   ```json
   {"list":[{"cur_frame_no":29474472,"cur_pts":0,"cur_seq_audio":950753,"cur_seq_video":28523717,"parent_ip":2648665566,"parent_port":11815,"parent_sess":22266,"quality":1,"skip_frame":0}]}
-  
+  ```
 - 단순 IP 및 Port 형태로 변환
+
   ```python
   ip = 2648665566
   port = 11815
@@ -85,7 +92,7 @@ _Receive data from parent host_
   print(f"Parent IP: {ip_1}.{ip_2}.{ip_3}.{ip_4}:{port}")
 
   # Outupt: Parent IP: 157.223.109.222:11815
-  
+  ```
 
 예상과는 다른 결과가 나와서 놀랐습니다. 실제 네트워크 패킷에서의 Source IP는 `222.109.223.157`이고 Port는 `10030`이었지만, 10진수를 단순히 IP형태로 변환한 코드에서는 `157.223.109.222:11815`가 출력되었습니다.
 
@@ -113,6 +120,7 @@ print(f"Parent Port: {parent_port}")
 Parent IP: 222.109.223.157 
 Parent Port: 10030 
 '''
+```
 
 ### C) Frida를 이용한 Parent IP, Port 정보 획득
 
@@ -120,8 +128,10 @@ Parent Port: 10030
 
 - 후킹할 지점 (module: NetControl.dll, offset: 0xe5dd)
     - Disassembly
+
       ![](/posts/afreecatv-analysis-2/afreeca2-08.png)
     - Hex-ray
+
       ![](/posts/afreecatv-analysis-2/afreeca2-09.png)
 - Frida Code
 
@@ -170,6 +180,7 @@ def main():
     fsc = get_parent_info() 
     script = session.create_script( fsc)
 
+
     script.on( "message", on_message )
     script.load()
     print("=======================================")
@@ -179,6 +190,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+```
 
 - 실행 결과
 
