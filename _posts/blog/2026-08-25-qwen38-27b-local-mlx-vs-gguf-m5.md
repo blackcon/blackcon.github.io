@@ -2,7 +2,7 @@
 title: "M5 맥북에서 로컬 Qwen3.8-27B, MLX가 GGUF보다 빠를까? — 실측 A/B 벤치 후기"
 categories: [Research, LLM]
 tags: [Qwen, Qwen3.8-27B, MLX, llama.cpp, GGUF, Apple-Silicon, M5, local-llm, quantization, KV-cache, Qwen-Code, uncensored, abliteration, benchmark, inference]
-date: 2026-08-25 21:00:00 +0900
+date: 2026-08-25 15:00:00 +0900
 description: "M5 맥북(32GB)에 uncensored Qwen3.8-27B를 로컬로 세우고 Qwen Code에 붙인 뒤, 'Apple Silicon에선 MLX가 llama.cpp보다 몇 배 빠르다'는 통념을 실제 워크로드로 검증한 기록입니다. 결론부터 말하면 — 이 모델·이 램에서는 GGUF(llama.cpp)가 이겼고, MLX는 절반의 회차에서 타임아웃으로 죽었습니다. 문제는 속도가 아니라 메모리였어요."
 pin: false
 ---
